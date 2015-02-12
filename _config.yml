@@ -1,7 +1,6 @@
-name: ""
-description: ""
-url: "[YOUR DOMAIN]"
-paginate: 10
+name: "OpenCart Documentation"
+description: "Documentation for the OpenCart script from www.opencart.com"
+url: "http://www.opencart.com"
+baseurl: "http://opencart.github.io/"
 markdown: rdiscount
 permalink: pretty
-pygments: true
