@@ -3,3 +3,23 @@ layout: default
 title: "OpenCart Documentation"
 slug: home
 ---
+<h1>Installing 3rd party modules</h1>
+<h2>Installing 3rd party modules</h2>
+<h3>Downloading a 3rd Party Module</h3>
+<p>The <a href="http://www.opencart.com/index.php?route=extension/extension&amp;path=5">Extension Directory</a> lists ~1700 modules available for purchase and download. Clicking on a the thumbnail image of the module from the Extension Directory will direct the user to the module page. This page displays the developer information, the description of the module, price, customer rating, and other important information relating to that module. To download the module, go to Download on the module page. You will usually need to purchase a license from the developer to use the module on your site. The notice, &quot;You must buy a license to download this extension&quot;, will be visible in the Download section if this is the case. Pressing &quot;Download&quot; next to the module download will direct you to a payment page. You will need to agree to the developer&#39;s term &amp; conditions to purchase the module download. After the payment has been made, a download will be provided. You may then download the files to your computer.</p>
+<h3>Uploading the module to OpenCart</h3>
+<p>Oftentimes developers will include specific install information in the module download package in a txt file. Most module files just need to be uploaded to the catalog and admin folders of the store. These files can be uploaded via a FTP client like Filezilla.</p>
+<p>In the screenshot below, the FTP client is connected to our store located in public_html/opencart. We saved our module,<a href="http://opencart.hostjars.com/visitor-counter?filter_name=visitor"> VisitorCounter</a> on our computer&#39;s Desktop. We now need to transfer the contents of the module&#39;s catalog and admin folders from our desktop to our store&#39;s catalog and admin folders. This can be achieved by selecting and dragging the catalog and admin folders from the left side(Local Site) to the scroll bar on right side(Remote Site). The contents of these folders will be automatically sorted into their correct file path. The module files should not overwrite any existing files in the OpenCart store directory.</p>
+<p><img alt="upload catalog admin" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/upload%20catalog%20admin.png" /></p>
+<h3>Enabling the module in the administration</h3>
+<p>The newly uploaded module now needs to be installed in the administration. Log into the administration side of the store, and go to Extensions &gt; Modules. In the list of core modules, we can see our Visitor Counter placed among the modules in alphabetical order. Click &quot;Install&quot; to use the module. The module can be edited under &quot;Action&quot; &gt; &quot;Edit&quot;. The status under edit will need to be enabled to see the module in the store front.</p>
+<table class="BlueBox">
+  <tbody>
+    <tr>
+      <td><img alt="information" src="images/information.png" /></td>
+      <td>You need to make sure that the module is enabled under User Group Modify and Access Permissions for the Top Administrator. Otherwise you will not be able to edit or access this module. See <a href="http://docs.opencart.com/Users">User Groups</a> for more information.</td>
+    </tr>
+  </tbody>
+</table>
+<p><img alt="install module back office" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/install%20module%20back%20office.png" /></p>
+<p>With the new module installed in Extensions, you are now free to play around with its features in the administration interface to see how it changes the store front.</p>

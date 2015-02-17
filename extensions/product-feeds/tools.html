@@ -3,3 +3,29 @@ layout: default
 title: "OpenCart Documentation"
 slug: home
 ---
+<h1>Product feed tools</h1>
+<h2>Product feed tools</h2>
+<p>Product feeds are a valuable tool in the eCommerce sphere. Having your store&#39;s entire product catalog in a single file can open up the possibilities of what you can do with your store. Product feeds are useful for marketing, search engines, transferring product to multiple stores, sending product data to affiliates, and more. OpenCart provides a <a href="http://docs.opencart.com/Product-Feeds">Product Feed </a>section in the admin side of your store for these product feed tools. Currently there are ~100 product feed tools in the <a href="http://www.opencart.com/index.php?route=extension/extension&amp;path=19">Extension </a>Store.</p>
+<h3>Exporting from the admin interface</h3>
+<p><a href="http://opencart.hostjars.com/any-feed">Any Feed</a> is the leading OpenCart product export tool, created by <a href="http://opencart.hostjars.com/">HostJars</a>. <a href="http://opencart.hostjars.com/any-feed">Any Feed</a> gives you the flexibility to select which product information you want to export, along with what type of format you need it in: XML or CSV.</p>
+<p>The fields available for export are displayed in this screenshot of Any Feed&#39;s admin interface:</p>
+<p><img alt="any feed back end" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/af.png?dc=201412181735-31" /></p>
+<p>These fields correspond to OpenCart core fields that were submitted for each product when they were created in <a href="http://docs.opencart.com/Products">Products</a>. Additionally, each individual field name can be changed to a name of your choice. Any Feed will take the product info from the database for that field, and assign it to the new field name you created.</p>
+<p><img alt="any feed width" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/af_width.png" /></p>
+<p>For example, if your affiliate needs the &quot;width&quot; field to be categorized as &quot;depth&quot;, you would only need to click on the width field and enter in &quot;depth&quot;.</p>
+<p>The &quot;Create a new feed&quot; button lets you choose between creating an empty feed, without any fields assigned to it, or a basic feed, where several default fields have been added. Every feed created can have fields added or removed to them at any time.</p>
+<p><img alt="any feed new" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/af_new.png" /></p>
+<p>Creating a new feed will allow you to edit the feed settings and fields included in a feed box. In the NEW_PRODUCTS feed we created, we removed several fields that were in the basic feed, but potentially we could have added all of the feeds above. The fields added to your feed are up to you.</p>
+<p><img alt="any feed settings" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/af_settings.png" /></p>
+<p>If we wanted to rearrange the order of the fields we simply click on a field, drag, and drop it in the order we want, like so:</p>
+<p><img alt="any feed drag and drop" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/af_drag.png" /></p>
+<p>If we want to add another field to the feed box, we simply drag and drop a field from the Available Fields box above it.</p>
+<p><img alt="any feed drag field" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/af_drag_field.png" /></p>
+<p>Next, we save the feed, then click &quot;Click here for feed&quot; in the feed box under Feed Settings. When we open our feed, we can see the product fields information for each product, with the product field names displayed as the column headings. In the case of an XML feed, the product field name will be the field tag within the product tag; for example, the price would be
+  <price></price>
+  , with the product information displayed within the tag.</p>
+<p><img alt="any feed excel" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/af_excel.png" /></p>
+<p>With <a href="http://opencart.hostjars.com/any-feed">Any Feed</a>, you can create multiple feeds at once, even with different product fields and file formats. This way, you can get the product feeds created and organized to suit your specific needs:</p>
+<p><img alt="any feeds" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/af_feeds.png" /></p>
+<h4>Demo</h4>
+<p>Try Any Feed out in the HostJars OpenCart <a href="http://demo.hostjars.com/opencart/admin/index.php?route=feed/any_feed">demo store</a> today.</p>
