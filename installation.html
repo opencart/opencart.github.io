@@ -28,7 +28,7 @@ slug: installation
 <h3>Installing and configuring the FTP client</h3>
 <p>We recommend using Filezilla as your FTP client. Filezilla is a free FTP client that will transfer the OpenCart files to any web server specified. The FileZilla client (not the server) can be downloaded from <a href="http://filezilla-project.org/">http://filezilla-project.org/</a> and installed onto a computer.</p>
 <p>When you open Filezilla you should see your computer&#39;s file directory on the left side. The next step is to locate where you saved the uncompressed OpenCart archive and click on the &quot;upload&quot; folder, and the files should appear below it. The directory needs to be left open as we continue. The right hand side is blank at the moment because the target website hasn&#39;t been connected to. When connected it will display the file directory of the web server.</p>
-<p><img alt="filezilla disconnect" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/filezilla-disconnect.png" /></p>
+<p><img alt="filezilla disconnect" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/filezilla-disconnect.png" class="img-responsive" /></p>
 <p>Before we continue, we need to make sure that you have the following information about your website:</p>
 <ul>
   <li>the host name</li>
@@ -38,13 +38,13 @@ slug: installation
 <p>This information can be obtained by contacting your hosting provider.</p>
 <h3>Connecting to the Site Manager</h3>
 <p>Under the &ldquo;File&rdquo; menu, &ldquo;Site Manager&rdquo; should be opened in Filezilla. A window will pop up with the General tab open. You should fill in the information gathered above regarding hosting information, and press &ldquo;Connect&rdquo;. The right &ldquo;Remote Site&rdquo; side will now display the file directory of your website.</p>
-<p><img alt="filezilla site manager" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/filezilla%20site%20manager.png" /></p>
+<p><img alt="filezilla site manager" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/filezilla%20site%20manager.png" class="img-responsive" /></p>
 <h3>Uploading OpenCart&#39;s files</h3>
 <p>If you haven&#39;t already located the OpenCart upload folder on the left side, you need to do so now and keep it open. In the Remote Site directory (right side), you need to open the folder that the OpenCart shop will be located in. The location of shop varies based on whether the you want the shop to be seen on the main page, a sub-folder, a subdomain, etc. If you want to make OpenCart the main page, you would need to upload files to the root folder of their website.</p>
 <table class="BlueBox">
   <tbody>
     <tr>
-      <td><img alt="information" src="/userfiles/1869/2899/ckfinder/images/information.png" /></td>
+      <td><img alt="information" src="/userfiles/1869/2899/ckfinder/images/information.png" class="img-responsive" /></td>
       <td>Be aware that some hosting services require public files to be upload to a public directory, such as public_html, if they are to be visible on the website. You should check with your hosting provider to see where you can upload public files.</td>
     </tr>
   </tbody>
@@ -53,29 +53,29 @@ slug: installation
 <table class="RedBox">
   <tbody>
     <tr>
-      <td><img alt="forbidden" src="/userfiles/1869/2899/ckfinder/images/forbidden.png" /></td>
+      <td><img alt="forbidden" src="/userfiles/1869/2899/ckfinder/images/forbidden.png" class="img-responsive" /></td>
       <td><p>If you want the shop to be on the main page, for example www.shopnow.com, you must upload the contents of the &ldquo;upload&rdquo; folder, but not the &ldquo;upload&rdquo; folder itself. Including the &ldquo;upload&rdquo; folder will create a sub-folder, making the shop available only on www.shopnow.com/upload.</p></td>
     </tr>
   </tbody>
 </table>
 <p>After Filezilla finishes uploading the files to the location specified, you should see the same files on both the left side(computer) and on the right side (the website); as seen in the screenshot below:</p>
-<p><img alt="filezilla file transfer-png" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/filezilla-file-transfer.png" /></p>
+<p><img alt="filezilla file transfer-png" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/filezilla-file-transfer.png" class="img-responsive" /></p>
 <p>The Filezilla window should look similar to the above image (minus some directory details). This means that the OpenCart files were successfully transferred the target site. The site now contains the files necessary to setup an OpenCart shop.</p>
 <h2>Creating a database for the shop</h2>
 <p>The next step is to create a database on the MySQL server for OpenCart to store a shop&#39;s data on. You should log into the site&rsquo;s control panel and locate MySQL Databases. Using MySQL Databases, you can create a new database by entering a database name and a username/password to access this database. The user that was just created needs to be added to the database, along with enabling all of the necessary permissions. We will use this database information later when we are configuring OpenCart using the auto-installer.</p>
 <h2>Launch the auto-installer</h2>
 <p>With a new database freshly created, we are now ready to install OpenCart directly onto a website. You should open up a web browser and enter in the web address of where they uploaded OpenCart. If the &quot;install&quot; folder in &quot;upload&quot; was uploaded correctly, you should be automatically greeted by the following page:</p>
-<p><img alt="opencart step1" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/opencart%20step%201.png" /></p>
+<p><img alt="opencart step1" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/opencart%20step%201.png" class="img-responsive" /></p>
 <p>This page is the installation page. The following steps will help you complete the installation process for OpenCart.</p>
 <h3>Step 1. License</h3>
 <p>You may read through the license, check &quot;I agree to the license&quot;, and press &ldquo;Continue&rdquo;.</p>
 <h3>Step 2. Pre-Installation</h3>
 <p>This step checks to see if the web server has the technical requirements and correct permissions to setup OpenCart properly. If red marks are visible on #1 or #2, you need to make sure that these components are properly installed onto the web server. You should contact your hosting service if there are any issues with this. If there are red marks on #3 or #4, there might have been an issue with uploading the files using the FTP client. If everything is configured correctly and green marks are visible (as seen below), you may press &quot;Continue&quot;.</p>
-<p><img alt="opencart step2" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/opencart-step-2.png" /></p>
+<p><img alt="opencart step2" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/opencart-step-2.png" class="img-responsive" /></p>
 <table class="BlueBox">
   <tbody>
     <tr>
-      <td><img alt="information" src="/userfiles/1869/2899/ckfinder/images/information.png" /></td>
+      <td><img alt="information" src="/userfiles/1869/2899/ckfinder/images/information.png" class="img-responsive" /></td>
       <td>As of version 1.5.5, the following files need to be renamed to continue to Step 3:</td>
     </tr>
   </tbody>
@@ -86,12 +86,12 @@ slug: installation
 </ul>
 <h3>Step 3. Configuration</h3>
 <p>You need to fill in the spaces below #1 by adding the database connection details (username/password, database name) established when you created the store&#39;s database using MySQL Databases. Under #2, you should create a new username and password for administration access to the OpenCart shop. When finished, you may press &quot;Continue&quot;.</p>
-<p><img alt="opencart step3" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/opencart%20step%203.png" /></p>
+<p><img alt="opencart step3" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/opencart%20step%203.png" class="img-responsive" /></p>
 <h2>Completing the installation</h2>
 <h3>&nbsp;</h3>
 <h3>Step 4. Finished</h3>
 <p>Now that installation is complete, the &quot;install&quot; folder is no longer required. You should delete the &ldquo;install&rdquo; folder in the Remote Site section of Filezilla for security reasons. You now have the option to browse the frontend of your shop or choose to log into the administration side.</p>
-<p><img alt="opencart step4" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/opencart%20step%204.png" /></p>
+<p><img alt="opencart step4" src="http://docs.opencart.com/userfiles/1869/2899/ckfinder/images/documentation/opencart%20step%204.png" class="img-responsive" /></p>
 <p>After the install, you should make the necessary steps towards improving the security of your server and OpenCart store directory. These steps are detailed in <a href="http://docs.opencart.com/basic-security-practices">Basic security practices</a>.</p>
 <h2>Installing vQmod</h2>
 <p>vQmod for OpenCart lets you add modules to your store without modifying the core OpenCart code. See vQmod for more information on how to download and install <a href="http://docs.opencart.com/vqmod">vQmod </a>for your store.</p>
