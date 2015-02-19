@@ -13,9 +13,10 @@
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
-	content: '\f0da';
+	content: '\f0da ';
+	
 }
-#menu a.parent .open {
+#menu a.parent:before .open {
 	font-family: FontAwesome;
-	content: '\f0da';
+	content: '\f0da ';
 }
