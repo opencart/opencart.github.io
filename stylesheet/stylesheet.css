@@ -6,7 +6,7 @@
 
 #menu ul ul {
 	margin-left: 10px;
-	
+	display: none;
 }
 
 #menu a.parent {

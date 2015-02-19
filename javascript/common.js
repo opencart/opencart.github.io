@@ -3,7 +3,7 @@ $(document).on('ready', function() {
 		e.preventDefault();
 		
 		$(this).parent().slideToggle(400, function() {
-			
+			$(this).addClass('open');
 		});
 	});
 });
