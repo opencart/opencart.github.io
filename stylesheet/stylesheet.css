@@ -8,12 +8,14 @@
 	margin-left: 10px;
 	display: none;
 }
-
-#menu a.parent {
+#menu a {
 	padding-left: 25px;
-	background-image: '\f0da';
 }
-
+#menu a.parent:before {
+	font-family: FontAwesome;
+	content: '\f0da';
+}
 #menu a.parent .open {
-	background-image: '\f0d7';
+	font-family: FontAwesome;
+	content: '\f0da';
 }
