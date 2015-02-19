@@ -1,4 +1,4 @@
-$(document).on('ready', function() {
+$(document).ready(function() {
 	$('#menu .parent').on('click', function(e) {
 		e.preventDefault();
 		
