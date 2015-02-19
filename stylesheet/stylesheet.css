@@ -1,4 +1,4 @@
-#menu ul {
+#menu, #menu ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -7,4 +7,13 @@
 #menu ul ul {
 	margin-left: 10px;
 	
+}
+
+#menu a.parent {
+	padding-left: 25px;
+	background-image: '\f0da';
+}
+
+#menu a.parent .open {
+	background-image: '\f0d7';
 }
