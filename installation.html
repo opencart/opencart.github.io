@@ -43,14 +43,7 @@ slug: installation
 <p>If you haven&#39;t already located the OpenCart upload folder on the left side, you need to do so now and keep it open. In the Remote Site directory (right side), you need to open the folder that the OpenCart shop will be located in. The location of shop varies based on whether the you want the shop to be seen on the main page, a sub-folder, a subdomain, etc. If you want to make OpenCart the main page, you would need to upload files to the root folder of their website.</p>
 <div class="alert alert-info" role="alert"> <i class="fa fa-info-circle"></i> Be aware that some hosting services require public files to be upload to a public directory, such as public_html, if they are to be visible on the website. You should check with your hosting provider to see where you can upload public files. </div>
 <p>Once the location of the OpenCart shop has been determined, all the content within the &ldquo;upload&rdquo; folder on the computer&#39;s (left) side of Filezilla must be selected, right-clicked, and uploaded. Uploading all the files might take a few minutes on the FTP client.</p>
-<table class="RedBox">
-  <tbody>
-    <tr>
-      <td><img src="image/forbidden.png" alt="forbidden" class="img-thumbnail" /></td>
-      <td><p>If you want the shop to be on the main page, for example www.shopnow.com, you must upload the contents of the &ldquo;upload&rdquo; folder, but not the &ldquo;upload&rdquo; folder itself. Including the &ldquo;upload&rdquo; folder will create a sub-folder, making the shop available only on www.shopnow.com/upload.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> If you want the shop to be on the main page, for example www.shopnow.com, you must upload the contents of the &ldquo;upload&rdquo; folder, but not the &ldquo;upload&rdquo; folder itself. Including the &ldquo;upload&rdquo; folder will create a sub-folder, making the shop available only on www.shopnow.com/upload.</div>
 <p>After Filezilla finishes uploading the files to the location specified, you should see the same files on both the left side(computer) and on the right side (the website); as seen in the screenshot below:</p>
 <p><img src="image/filezilla-file-transfer.png" alt="filezilla file transfer-png" class="img-thumbnail" /></p>
 <p>The Filezilla window should look similar to the above image (minus some directory details). This means that the OpenCart files were successfully transferred the target site. The site now contains the files necessary to setup an OpenCart shop.</p>
@@ -90,13 +83,6 @@ slug: installation
   <li>Delete the files/folders in the location you uploaded them to in Filezilla. &nbsp;</li>
   <li>Delete the OpenCart database from MySQL Databases or phpMyAdmin.</li>
 </ol>
-<table class="RedBox">
-  <tbody>
-    <tr>
-      <td><img alt="forbidden" src="image/forbidden.png" /></td>
-      <td>Once OpenCart is uninstalled, all product and customer information will be lost. You can save a backup database file in case you want to reinstall OpenCart at a later time. See <a href="http://docs.opencart.com/backup/restore">Backup/Restore</a> for more information.</td>
-    </tr>
-  </tbody>
-</table>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> Once OpenCart is uninstalled, all product and customer information will be lost. You can save a backup database file in case you want to reinstall OpenCart at a later time. See <a href="http://docs.opencart.com/backup/restore">Backup/Restore</a> for more information.</div>
 <h2>Support</h2>
 <p>If there are any issues regarding your store&#39;s installation or update, please visit the&nbsp; <a href="http://forum.opencart.com/">Installation, Upgrade, &amp; Config Support</a> section of the OpenCart community forum.</p>
