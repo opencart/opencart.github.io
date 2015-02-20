@@ -4,14 +4,16 @@
 	list-style: none;
 }
 #menu ul {
-	margin-left: 10px;
+	margin-left: 25px;
 	display: none;
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
-	content: '\f0da ';
+	content: '\f0da';
+	margin-right: 10px;
 }
-#menu li.open a.parent:before {
+#menu li.open > a.parent:before {
 	font-family: FontAwesome;
 	content: '\f0d7 ';
+	margin-right: 10px;
 }
