@@ -3,17 +3,20 @@
 	padding: 0;
 	list-style: none;
 }
+
+
 #menu ul {
-	margin-left: 25px;
+	margin-left: 20px;
 	display: none;
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
 	content: '\f0da';
 	margin-right: 10px;
+	color: #333;
+	text-decoration: none;
 }
 #menu li.open > a.parent:before {
 	font-family: FontAwesome;
-	content: '\f0d7 ';
-	margin-right: 10px;
+	content: '\f0d7';
 }
