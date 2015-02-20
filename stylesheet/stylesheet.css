@@ -10,12 +10,12 @@
 #menu a {
 	text-decoration: none;
 }
-
 #menu a.parent:before {
 	font-family: FontAwesome;
 	content: '\f0da';
 	margin-right: 10px;
 	color: #333;
+	width: 15px;
 }
 #menu li.open > a.parent:before {
 	font-family: FontAwesome;
