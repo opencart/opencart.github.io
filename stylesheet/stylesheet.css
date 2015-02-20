@@ -3,21 +3,15 @@
 	padding: 0;
 	list-style: none;
 }
-#menu ul ul {
+#menu ul {
 	margin-left: 10px;
 	display: none;
-}
-#menu ul ul.open {
-	display: block;
-}
-#menu ul ul {
-	padding-left: 25px;
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
 	content: '\f0da ';
 }
-#menu a.parent:before .open {
+#menu li.open a.parent:before {
 	font-family: FontAwesome;
 	content: '\f0d7 ';
 }
