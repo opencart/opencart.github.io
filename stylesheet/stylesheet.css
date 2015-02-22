@@ -6,8 +6,10 @@
 #menu ul {
 	margin-left: 20px;
 	overflow: hidden;
-	max-height: 0px;
   	transition: max-height 0.5s ease-in-out;
+}
+#menu li > ul {
+	max-height: 0px;
 }
 #menu li.open > ul {
 	max-height: 9999px;
