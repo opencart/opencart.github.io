@@ -7,8 +7,8 @@
 	margin-left: 20px;
 	display: none;
 }
-#menu a {
-	text-decoration: none;
+#menu .open ul {
+	display: block;
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
