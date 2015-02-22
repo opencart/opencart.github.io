@@ -7,11 +7,10 @@
 	margin-left: 20px;
 	overflow: hidden;
 	max-height: 0;
-	 transition: max-height 0.15s ease-out;
+	 transition: max-height 0.15s ease 0s linear;
 }
 #menu li.open > ul {
 	max-height: 1000000px;
-	transition: max-height 0.25s ease-in;
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
