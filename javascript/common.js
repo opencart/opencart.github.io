@@ -4,9 +4,11 @@ $(document).ready(function() {
 		
 		$(this).parents('li').siblings().removeClass('open');
 		
-		//$('#menu .parent').not($(this).parents('li').siblings()).removeClass('open');
-		
-		$(this).parent().addClass('open');
+		if (!$(this).parent().hasClass('open')) {
+			$(this).parent().addClass('open');
+		} else {
+			$(this).parent().removeClass('open');
+		}
 	});
 	
 	$('#menu a[href="' + String(document.location).substr($('base').attr('href').length) + '"]').parents('li').addClass('open');
