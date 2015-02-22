@@ -5,11 +5,13 @@
 }
 #menu ul {
 	margin-left: 20px;
-	display: none;
+	height: 0;
+	overflow: hidden;
 	transition: ease 400;
 }
 #menu li.open > ul {
 	display: block;
+	height: auto;
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
