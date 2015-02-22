@@ -7,15 +7,10 @@
 	margin-left: 20px;
 	overflow: hidden;
 	max-height: 0px;
-  	transition-property: all;
-    transition-duration: 2s;
-    transition-delay: 2s;
+  	transition: max-height 0.5s ease-in-out;
 }
 #menu li.open > ul {
 	max-height: 9999px;
-  	transition-property: all;
-    transition-duration: 2s;
-    transition-delay: 2s;	
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
