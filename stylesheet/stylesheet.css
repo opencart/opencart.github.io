@@ -10,7 +10,6 @@
 	transition: ease 400;
 }
 #menu li.open > ul {
-	display: block;
 	height: auto;
 }
 #menu a.parent:before {
