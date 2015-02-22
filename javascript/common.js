@@ -9,9 +9,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	console.log(String(document.location).substr($('base').attr('href').length));
+	//alert(String(document.location).substr($('base').attr('href').length));
 	
-	$('#menu a[href="' + String(document.location).substr($('base').attr('href').length) + '"].parent').parentsUntil('#menu', function(element) {
-		$(element).addClass('open');
-	});
+	$('#menu a[href="' + String(document.location).substr($('base').attr('href').length) + '"]').parents('li').addClass('open');
 });
