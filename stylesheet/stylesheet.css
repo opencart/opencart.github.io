@@ -6,6 +6,7 @@
 #menu ul {
 	margin-left: 20px;
 	display: none;
+	transition: ease 400;
 }
 #menu .open ul {
 	display: block;
