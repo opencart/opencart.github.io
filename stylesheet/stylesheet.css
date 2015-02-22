@@ -7,7 +7,7 @@
 	margin-left: 20px;
 	overflow: hidden;
 	max-height: 0px;
-	transition: all .1s ease;
+	transition: all .3s ease;
 }
 #menu li.open > ul {
 	max-height: 9999px;
