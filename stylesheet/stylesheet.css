@@ -7,13 +7,13 @@
 	margin-left: 20px;
 	overflow: hidden;
 	max-height: 0px;
-  	transition-property: ease;
+  	transition-property: all;
     transition-duration: 5s;
     transition-delay: 2s;
 }
 #menu li.open > ul {
 	max-height: 9999px;
-  	transition-property: ease;
+  	transition-property: all;
     transition-duration: 5s;
     transition-delay: 2s;	
 }
