@@ -8,11 +8,11 @@
 	overflow: hidden;
 	max-height: 0px;
 	transition: max-height .8s cubic-bezier(0, 1, 0, 1) -.1s;
-	
 }
 #menu li.open > ul {
 	max-height: 9999px;
-
+	transition-timing-function: cubic-bezier(0.5, 0, 1, 0); 
+    transition-delay: 0s;
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
