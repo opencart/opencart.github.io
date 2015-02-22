@@ -13,12 +13,12 @@ $(document).ready(function() {
 	
 	var url = String(document.location);
 	
-	if (query[1]) {
+
 		alert(url.substr(0, $('base').attr('href').length));
 		
 		
 		//$('#menu a[href="' + query[1] + '"].parent').parentsUntil('#menu', function(element) {
 		//	$(element).addClass('open');
 		//});
-	}
+
 });
