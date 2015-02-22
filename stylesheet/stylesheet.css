@@ -11,7 +11,7 @@
 	transition-duration: 2s;
 }
 #menu li.open > ul {
-	height: auto;
+	height: 100%;
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
