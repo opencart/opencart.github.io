@@ -38,6 +38,7 @@ $(document).ready(function() {
 	var query = String(document.location).split('?');
 	
 	if (query[1]) {
+		alert(query[1]);
 		$('#menu a[href="' + query[1] + '"].parent').parentsUntil('#menu', function(element) {
 			$(element).addClass('open');
 		});
