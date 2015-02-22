@@ -6,12 +6,12 @@
 #menu ul {
 	margin-left: 20px;
 	overflow: hidden;
-	height: 0;
+	max-height: 0;
 	transition-property: height;
 	transition-duration: 2s;
 }
 #menu li.open > ul {
-	height: 100%;
+	max-height: 1000000px;
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
