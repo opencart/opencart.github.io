@@ -8,7 +8,7 @@
 	display: none;
 	transition: ease 400;
 }
-#menu .open ul {
+#menu li.open > ul {
 	display: block;
 }
 #menu a.parent:before {
