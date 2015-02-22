@@ -11,7 +11,7 @@
 }
 #menu li.open > ul {
 	max-height: 9999px;
-	transition: all .3s ease;
+	transition: all .4s ease;
 }
 #menu a.parent:before {
 	font-family: FontAwesome;
