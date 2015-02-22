@@ -2,7 +2,9 @@ $(document).ready(function() {
 	$('#menu .parent').on('click', function(e) {
 		e.preventDefault();
 		
-		$('#menu .parent').not($(this).parents('li')).removeClass('open');
+		$(this).parents('li').siblings().removeClass('open');
+		
+		//$('#menu .parent').not($(this).parents('li').siblings()).removeClass('open');
 		
 		$(this).parent().addClass('open');
 	});
