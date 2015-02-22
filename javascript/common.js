@@ -14,7 +14,7 @@ $(document).ready(function() {
 	var url = String(document.location);
 	
 
-		alert(url.substr(0, $('base').attr('href').length));
+		alert(url.substr($('base').attr('href').length + 1));
 		
 		
 		//$('#menu a[href="' + query[1] + '"].parent').parentsUntil('#menu', function(element) {
