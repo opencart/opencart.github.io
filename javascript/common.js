@@ -11,5 +11,7 @@ $(document).ready(function() {
 		$(this).parents('li').siblings().removeClass('open');
 	});
 	
-	$('#menu a[href="' + String(document.location).substr($('base').attr('href').length) + '"]').parents('li').addClass('open');
+	if (String(document.location).substr($('base').attr('href').length)) {
+		$('#menu a[href="' + String(document.location).substr($('base').attr('href').length) + '"]').parents('li').addClass('open');
+	}
 });
