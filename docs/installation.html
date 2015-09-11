@@ -7,7 +7,7 @@ permalink: /installation/
 <h2>Installing OpenCart</h2>
 <p>This guide will walk you through how to successfully install and uninstall OpenCart.</p>
 <h2>Downloading and unzipping OpenCart archive</h2>
-<p>The latest version of OpenCart (v.1.5.5.1) can be downloaded from the <a href="http://www.opencart.com/index.php?route=download/download/">OpenCart website</a> (recommended) or directly from <a href="https://github.com/opencart">github</a>. The download page also offers access to previous versions of OpenCart. Under the Downloads column, locate v1.5.5.1 and press the &ldquo;Download&rdquo; link directly across from it under the Action column. This will download the compressed archive of that version of OpenCart in a zip file. For OpenCart version 1.5.5.1, a file named &ldquo;opencart_v1.5.5.1.zip&quot; will be downloaded.</p>
+<p>The latest version of OpenCart (v.2.0.3.1) can be downloaded from the <a href="http://www.opencart.com/index.php?route=download/download/">OpenCart website</a> (recommended) or directly from <a href="https://github.com/opencart">github</a>. The download page also offers access to previous versions of OpenCart. Under the Downloads column, locate v2.0.3.1 and press the &ldquo;Download&rdquo; link directly across from it under the Action column. This will download the compressed archive of that version of OpenCart in a zip file. For OpenCart version 2.0.3.1, a file named &ldquo;opencart_v2.0.3.1.zip&quot; will be downloaded.</p>
 <div class="alert alert-success" role="alert"><i class="fa  fa-check-circle"></i> If you don&#39;t have a program on your computer that can extract files from a zip file, <a href="http://www.win-rar.com/download.html?&amp;L=0">WinRar</a> can be downloaded for free. Unzipping the zip file will uncompress the OpenCart archive so the files can be accessed by a web server.</div>
 <p>When opening the zip file, the following files will be visible:</p>
 <ul>
@@ -44,14 +44,14 @@ permalink: /installation/
 <p>The next step is to create a database on the MySQL server for OpenCart to store a shop&#39;s data on. You should log into the site&rsquo;s control panel and locate MySQL Databases. Using MySQL Databases, you can create a new database by entering a database name and a username/password to access this database. The user that was just created needs to be added to the database, along with enabling all of the necessary permissions. We will use this database information later when we are configuring OpenCart using the auto-installer.</p>
 <h2>Launch the auto-installer</h2>
 <p>With a new database freshly created, we are now ready to install OpenCart directly onto a website. You should open up a web browser and enter in the web address of where they uploaded OpenCart. If the &quot;install&quot; folder in &quot;upload&quot; was uploaded correctly, you should be automatically greeted by the following page:</p>
-<p class="text-center"><img src="image/opencart%20step%201.png" alt="opencart step1" class="img-thumbnail" /></p>
+<p class="text-center"><img src="image/opencart-step1.png" alt="opencart step1" class="img-thumbnail" /></p>
 <p>This page is the installation page. The following steps will help you complete the installation process for OpenCart.</p>
 <h3>Step 1. License</h3>
 <p>You may read through the license, check &quot;I agree to the license&quot;, and press &ldquo;Continue&rdquo;.</p>
 <h3>Step 2. Pre-Installation</h3>
 <p>This step checks to see if the web server has the technical requirements and correct permissions to setup OpenCart properly. If red marks are visible on #1 or #2, you need to make sure that these components are properly installed onto the web server. You should contact your hosting service if there are any issues with this. If there are red marks on #3 or #4, there might have been an issue with uploading the files using the FTP client. If everything is configured correctly and green marks are visible (as seen below), you may press &quot;Continue&quot;.</p>
-<p class="text-center"><img src="image/opencart-step-2.png" alt="opencart step2" class="img-thumbnail" /></p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> As of version 1.5.5, the following files need to be renamed to continue to Step 3:
+<p class="text-center"><img src="image/opencart-step2.png" alt="opencart step2" class="img-thumbnail" /></p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> As of version 2.0.3.1, the following files need to be renamed to continue to Step 3:
   <ul>
     <li>&nbsp;&nbsp;&nbsp; config-dist.php to config.php</li>
     <li>&nbsp;&nbsp;&nbsp; admin/config-dist.php to config.php</li>
@@ -59,12 +59,12 @@ permalink: /installation/
 </div>
 <h3>Step 3. Configuration</h3>
 <p>You need to fill in the spaces below #1 by adding the database connection details (username/password, database name) established when you created the store&#39;s database using MySQL Databases. Under #2, you should create a new username and password for administration access to the OpenCart shop. When finished, you may press &quot;Continue&quot;.</p>
-<p class="text-center"><img src="image/opencart%20step%203.png" alt="opencart step3" class="img-thumbnail" /></p>
+<p class="text-center"><img src="image/opencart-step3.png" alt="opencart step3" class="img-thumbnail" /></p>
 <h2>Completing the installation</h2>
 <h3>&nbsp;</h3>
 <h3>Step 4. Finished</h3>
 <p>Now that installation is complete, the &quot;install&quot; folder is no longer required. You should delete the &ldquo;install&rdquo; folder in the Remote Site section of Filezilla for security reasons. You now have the option to browse the frontend of your shop or choose to log into the administration side.</p>
-<p class="text-center"><img src="image/opencart%20step%204.png" alt="opencart step4" class="img-thumbnail" /></p>
+<p class="text-center"><img src="image/opencart-step4.png" alt="opencart step4" class="img-thumbnail" /></p>
 <p>After the install, you should make the necessary steps towards improving the security of your server and OpenCart store directory. These steps are detailed in <a href="administration/security/">Basic security practices</a>.</p>
 <h2>Installing vQmod</h2>
 <p>vQmod for OpenCart lets you add modules to your store without modifying the core OpenCart code. See vQmod for more information on how to download and install <a href="administration/vqmod/">vQmod </a>for your store.</p>
