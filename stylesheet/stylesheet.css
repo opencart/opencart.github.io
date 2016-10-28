@@ -1,3 +1,163 @@
+
+body {
+  padding-top: 80px; }
+
+header .navbar .navbar-brand {
+  margin: 0 45px 0 0; }
+  header .navbar .navbar-brand img {
+    margin-top: 21px;
+    height: 36px;
+    width: auto; }
+  header .navbar .navbar-nav > li {
+    margin-top: 21px; }
+  header .navbar .navbar-nav > li a {
+    font-size: 15px;
+    line-height: 1.3666;
+    text-transform: uppercase;
+    padding-top: 8px;
+    padding-bottom: 8px; }
+  header .navbar .navbar-nav > li .btn {
+    padding: 7px 16px;
+    font-size: 15px;
+    line-height: 1.3666; }
+    header .navbar .navbar-nav > li .btn:focus, header .navbar .navbar-nav > li .btn:hover {
+      color: #fff;
+      background-color: #000;
+      border-color: #000; }
+
+footer {
+  background-color: #242d37;
+  padding: 60px 30px;
+  margin: 70px 0 0 0;
+  font-size: 14px;
+  color: #fff; }
+  @media screen and (min-width: 768px) {
+  footer {
+    padding: 60px 0; } }
+  footer a {
+    font-size: 14px;
+    color: #fff; }
+  footer a:focus, footer a:hover {
+    color: #06b7f0;
+    text-decoration: none; }
+  footer section {
+    ul-margin: 0; }
+  footer section h5 {
+    margin: 0 0 20px 0;
+    font-weight: 400;
+    color: #969fa8;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+  footer section li a {
+    padding: 3px 0;
+    display: inline-block; }
+  footer #newsletter {
+    margin-top: 20px; }
+  footer #newsletter .input-group {
+    display: block; }
+  footer #newsletter .form-control {
+    height: 42px;
+    border: none;
+    padding-right: 55px;
+    border-radius: 3px;
+    display: block;
+    float: none; }
+  footer #newsletter .input-group-btn {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    bottom: 5px;
+    padding: 0 5px;
+    border-left: 1px solid #e2e4e8;
+    display: block;
+    width: 49px;
+    height: 32px;
+    z-index: 99; }
+  footer #newsletter .input-group-btn .btn {
+    width: 38px;
+    height: 32px;
+    line-height: 30px;
+    padding: 0;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    border-radius: 3px; }
+  footer #copyright {
+    padding-top: 20px;
+    color: #969fa8; }
+  footer #copyright ul {
+    margin: 0; }
+  footer #copyright li {
+    display: inline-block;
+    vertical-align: middle; }
+  footer #copyright img {
+    max-height: 26px;
+    width: auto;
+    margin-right: 30px; }
+  footer #social {
+    padding-top: 20px;
+    text-align: right; }
+  @media screen and (max-width: 767px) {
+    footer #social {
+      text-align: center; } }
+  footer #social li {
+    display: inline-block;
+    padding: 0 15px; }
+  footer #social li:first-child {
+    padding-left: 0; }
+  footer #social li:last-child {
+    padding-right: 0; }
+
+a:hover, a:focus, a:active {
+  text-decoration: none; }
+
+.gray {
+  background-color: #f4f5f7; }
+
+.page-header {
+  height: 250px;
+  margin: 0 0 60px 0;
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .page-header div {
+    position: relative;
+    top: 33%; }
+  .page-header div h1 {
+    font-size: 40px;
+    margin: 0;
+    color: #fff; }
+  .page-header div p {
+    font-size: 24px;
+    margin: 5px 0 0 0;
+    font-weight: 300; }
+
+
+  #documentation > .container {
+    margin-top: 50px; }
+    #documentation > .container h1 {
+      margin-top: 0; }
+    #documentation > .container #docs-category .list-unstyled > li {
+      line-height: 35px;
+      font-size: 18px; }
+      #documentation > .container #docs-category .list-unstyled > li:hover, #documentation > .container #docs-category .list-unstyled > li:focus, #documentation > .container #docs-category .list-unstyled > li:active {
+        border-left: 2px solid #01afe8; }
+        #documentation > .container #docs-category .list-unstyled > li:hover > a, #documentation > .container #docs-category .list-unstyled > li:focus > a, #documentation > .container #docs-category .list-unstyled > li:active > a {
+          background-color: #f4f5f7;
+          padding-left: 18px;
+          font-weight: bold; }
+      #documentation > .container #docs-category .list-unstyled > li.active {
+        border-left: 2px solid #01afe8;
+        background-color: #f4f5f7; }
+        #documentation > .container #docs-category .list-unstyled > li.active > a {
+          padding-left: 18px;
+          font-weight: bold; }
+      #documentation > .container #docs-category .list-unstyled > li > a {
+        padding-left: 20px;
+        color: #333;
+        display: block; }
+
 #menu, #menu ul {
 	margin: 0;
 	padding: 0;
