@@ -27,32 +27,140 @@
 
 </script>
 </head>
-<body>
-<nav class="navbar navbar-inverse navbar-static-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="http://opencart.github.io/">OpenCart Documentation</a></div>
-    <div class="collapse navbar-collapse navbar-right">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<body id="documentation">
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-header" class="navbar-toggle collapsed"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+        <a href="{{ home }}" class="navbar-brand"><img src="image/opencart-logo.png" title="{{ title }}" alt="{{ logo }}" /></a></div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-header">
+        <ul class="nav navbar-nav">
+          <li><a href="{{ feature }}">Features</a></li>
+          <li><a href="{{ demo }}">Demo</a></li>
+          <li><a href="{{ marketplace }}">Marketplace</a></li>
+          <li><a href="{{ blog }}">Blog</a></li>
+          <li><a href="{{ showcase }}">Showcase</a></li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown">Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://docs.opencart.com">OpenCart Documentation</a></li>
+              <li><a href="http://docs.opencart.com/">OpenCart Books</a></li>
+              <li><a href="../resource/api.php">OpenCart API</a></li>
+              <li><a href="https://github.com/opencart/opencart/issues">Github Bug Tracker</a></li>
+              <li><a href="http://docs.opencart.com/developer/module/">Developer</a></li>
+            </ul>
+          </li>
+          {% if not logged %}
+          <li class="visible-xs"><a href="{{ login }}">Login</a></li>
+          <li class="visible-xs"><a href="{{ register }}">Register</a></li>
+          {% else %}
+          <li class="visible-xs"><a href="{{ account }}">Account</a></li>
+          <li class="visible-xs"><a href="{{ logout }}">Logout</a></li>
+          {% endif %}
+        </ul>
+        <div class="navbar-right hidden-xs">{% if not logged %}<a href="{{ login }}" class="btn btn-link navbar-btn">Login</a> <a href="{{ register }}" class="btn btn-black navbar-btn">Register</a>{% else %}<a href="{{ account }}" class="btn btn-link navbar-btn">Account</a> <a href="{{ logout }}" class="btn btn-black navbar-btn">Logout</a>{% endif %}</div>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
+
 <div class="container">
   <div class="row">
     <div class="col-md-3">{% include menu.html %}</div>
     <div class="col-md-9">{{ content }}</div>
   </div>
 </div>
-<footer class="text-center">
-  <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <section>
+          <h5>OpenCart</h5>
+          <ul class="list-unstyled">
+            <li><a href="{{ feature }}">Features</a></li>
+            <li><a href="{{ showcase }}">Showcase</a></li>
+            <li><a href="{{ demo }}">Demo</a></li>
+            <li><a href="{{ download }}">Download</a></li>
+            <li><a href="{{ marketplace }}">Marketplace</a></li>
+            <li><a href="{{ cloud }}">Cloud</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-sm-2">
+        <section>
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="{{ contact }}">Contact Us</a></li>
+            {% for information in informations %}
+            <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </section>
+      </div>
+      <div class="col-sm-2">
+        <section>
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://forum.opencart.com">Community Forum</a></li>
+            <li><a href="{{ support }}">Dedicated Support</a></li>
+            <li><a href="{{ partner }}">OpenCart Partners</a></li>
+            <li><a href="{{ support }}">Marketplace Support</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-sm-2">
+        <section>
+          <h5>Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="{{ blog }}">OpenCart Blog</a></li>
+            <li><a href="https://doc.opencart.com">OpenCart Documentation</a></li>
+            <li><a href="#">OpenCart Books</a></li>
+            <li><a href="#">OpenCart API</a></li>
+            <li><a href="https://github.com/opencart/opencart/issues">Github Bug Tracker</a></li>
+            <li><a href="#">Developer</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-sm-2 col-md-4">
+        <section>
+          <h5>Newsletter</h5>
+          <p>Subscribe to our newsletters and stay informed of new releases and other OpenCart events.</p>
+          <form action="{{ newsletter }}" id="newsletter">
+            <div class="input-group">
+              <input type="text" placeholder="Enter your email address" class="form-control">
+              <div class="input-group-btn">
+                <button class="btn btn-primary" type="button"><i class="fa fa-angle-right"></i></button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-6">
+        <div id="copyright">
+          <ul class="list-unstyled">
+            <li class="company-logo"><img src="image/opencart-logo-white.png" alt-"OpenCart" title="OpenCart" /></li>
+            <li class="copyright-text">&copy; Copyright  {{ 'now'|date('Y') }} OpenCart</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <div id="social">
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/OpenCart-477182382328323/?ref=aymt_homepage_panel" target="_blank">Facebook</a></li>
+            <li><a href="https://plus.google.com/communities/100813108320137387687" target="_blank">Google Plus</a></li>
+            <li><a href="https://twitter.com/opencart" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="javascript/common.js"></script>
 </body>
 </html>
