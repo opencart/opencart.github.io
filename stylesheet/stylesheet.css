@@ -1,6 +1,6 @@
-
 body {
-  padding-top: 80px; }
+  padding-top: 80px;
+  color: #000; }
 
 header .navbar .navbar-brand {
   margin: 0 45px 0 0; }
@@ -11,7 +11,7 @@ header .navbar .navbar-brand {
   header .navbar .navbar-nav > li {
     margin-top: 21px; }
   header .navbar .navbar-nav > li a {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.3666;
     text-transform: uppercase;
     padding-top: 8px;
@@ -24,6 +24,10 @@ header .navbar .navbar-brand {
       color: #fff;
       background-color: #000;
       border-color: #000; }
+  header .navbar .navbar-right {
+    margin-top: 3px; }
+  header .navbar .navbar-right .btn {
+    padding: 6px 16px; }
 
 footer {
   background-color: #242d37;
@@ -40,19 +44,22 @@ footer {
   footer a:focus, footer a:hover {
     color: #06b7f0;
     text-decoration: none; }
-  footer section {
-    ul-margin: 0; }
   footer section h5 {
     margin: 0 0 20px 0;
     font-weight: 400;
     color: #969fa8;
     letter-spacing: 2px;
     text-transform: uppercase; }
+  footer section ul {
+    margin: 0; }
   footer section li a {
     padding: 3px 0;
     display: inline-block; }
   footer #newsletter {
     margin-top: 20px; }
+  @media screen and (min-width: 768px) {
+    footer #newsletter {
+      margin-top: 0px; } }
   footer #newsletter .input-group {
     display: block; }
   footer #newsletter .form-control {
@@ -111,7 +118,7 @@ footer {
 a:hover, a:focus, a:active {
   text-decoration: none; }
 
-.gray {
+.gray, .container-fluid {
   background-color: #f4f5f7; }
 
 .page-header {
