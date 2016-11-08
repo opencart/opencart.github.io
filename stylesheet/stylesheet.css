@@ -149,6 +149,8 @@ a:hover, a:focus, a:active {
         border-bottom: 1px solid #e9e9e9;
         margin: 0 0 15px 0;
         padding-bottom: 15px; }
+      #documentation > .container #docs-category .parent::after {
+        content: '\f0d7'; }
       #documentation > .container #docs-category .list-unstyled > li {
         line-height: 35px;
         font-size: 18px; }
