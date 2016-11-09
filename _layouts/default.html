@@ -60,9 +60,19 @@
 	</nav>
 </header>
 
+<div class="container-fluid visible-xs visible-sm">
+	<div class="container">
+		<buttom data-toggle="collapse" data-target="#collapse-menu" class="btn btn-block"><i class="fa fa-indent"></i> Catrgories</button>
+	</div>
+</div>
+<div class="container visible-xs visible-sm">
+	<div id="collapse-menu" class="collapse">
+		{% include menu.html %}
+	</div>
+</div>
 <div class="container">
   <div class="row">
-    <div class="col-md-3">{% include menu.html %}</div>
+    <div class="col-md-3 hidden-xs hidden-sm">{% include menu.html %}</div>
     <div class="col-md-9">{{ content }}</div>
   </div>
 </div>
