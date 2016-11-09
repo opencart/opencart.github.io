@@ -171,7 +171,6 @@ a:hover, a:focus, a:active {
 }
 */
 
-
 #documentation > .container {
   margin-top: 50px; }
   #documentation > .container h1 {
@@ -221,3 +220,7 @@ a:hover, a:focus, a:active {
       width: 15px; }
     #documentation > .container #menu ul li.open > a.parent::before {
       font-family: FontAwesome; }
+      #documentation > .container #menu ul li.open > ul {
+        max-height: 9999px; }
+    #documentation > .container #menu ul li > ul {
+      max-height: 0px; }
