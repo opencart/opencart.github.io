@@ -180,47 +180,55 @@ a:hover, a:focus, a:active {
     margin: 0 0 15px 0;
     padding-bottom: 15px; }
   #documentation > .container #menu ul {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out; }
-    #documentation > .container #menu ul > li {
-      line-height: 35px;
-      font-size: 18px; }
-    #documentation > .container #menu ul > li:hover, #documentation > .container #menu ul > li:focus, #documentation > .container #menu ul > li:active {
-      border-left: 2px solid #01afe8; }
-      #documentation > .container #menu ul > li:hover > a, #documentation > .container #menu ul > li:focus > a, #documentation > .container #menu ul > li:active > a {
-        background-color: #f4f5f7;
-        padding-left: 18px;
-        font-weight: bold; }
-    #documentation > .container #menu ul > li.active {
-      border-left: 2px solid #01afe8;
-      background-color: #f4f5f7; }
-      #documentation > .container #menu ul > li.active > a {
-        padding-left: 18px;
-        font-weight: bold; }
-    #documentation > .container #menu ul > li > a {
-      padding-left: 20px;
-      color: #333;
-      display: block; }
-  #documentation > .container #menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out; }
     #documentation > .container #menu ul li {
+      font-size: 16px; }
+    #documentation > .container #menu ul li > a {
       line-height: 35px;
-      font-size: 18px; }
-    #documentation > .container #menu ul li a .parent::after {
-      font-family: FontAwesome;
-      content: '\f0d7';
-      margin-right: 10px;
-      color: #333;
-      width: 15px; }
-    #documentation > .container #menu ul li.open > a.parent::before {
-      font-family: FontAwesome; }
+      display: block;
+      padding-left: 20px;
+      color: #000; }
+      #documentation > .container #menu ul li > a.parent::after {
+        font-family: FontAwesome;
+        content: '\f0d7';
+        position: absolute;
+        right: 20px;
+        color: #4b525d;
+        width: 15px; }
+    #documentation > .container #menu ul li:hover > a, #documentation > .container #menu ul li:focus > a, #documentation > .container #menu ul li:active > a {
+      border-left: 2px solid #01afe8;
+      background-color: #f4f5f7;
+      padding-left: 18px;
+      font-weight: 600; }
+    #documentation > .container #menu ul li.open > a {
+      border-left: 2px solid #01afe8;
+      background-color: #f4f5f7;
+      padding-left: 18px;
+      font-weight: 600; }
+      #documentation > .container #menu ul li.open > a.parent::after {
+        content: '\f0de'; }
       #documentation > .container #menu ul li.open > ul {
-        max-height: 9999px; }
+        max-height: 9999px;
+        opacity: 1;
+        margin-top: 5px;
+        margin-bottom: 5px; }
     #documentation > .container #menu ul li > ul {
-      max-height: 0px; }
+      max-height: 0px;
+      opacity: 0;
+      border-left: 1px solid #ededed;
+      transition: all 0.5s; }
+      #documentation > .container #menu ul li > ul li {
+        font-size: 14px; }
+      #documentation > .container #menu ul li > ul li > ul {
+        border-left: 0px;
+        margin-left: 10px; }
+        #documentation > .container #menu ul li > ul li > ul li a {
+          color: #4b525d; }
+          #documentation > .container #menu ul li > ul li > ul li:hover a, #documentation > .container #menu ul li > ul li > ul li:focus a, #documentation > .container #menu ul li > ul li > ul li:active a {
+            border-left: 0;
+            background-color: transparent;
+            padding-left: 20px; }
