@@ -175,7 +175,7 @@ a:hover, a:focus, a:active {
   margin-top: 50px; }
   #documentation > .container h1 {
     margin-top: 0; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 991px) {
     #documentation > .container {
       margin-top: 25px; } }
   #documentation #menu h4 {
