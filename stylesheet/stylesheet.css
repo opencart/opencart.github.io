@@ -232,3 +232,7 @@ a:hover, a:focus, a:active {
             border-left: 0;
             background-color: transparent;
             padding-left: 20px; }
+          #documentation > .container #menu ul li > ul li > ul li.open > a {
+            border-left: 0;
+            background-color: transparent;
+            padding-left: 20px; }
