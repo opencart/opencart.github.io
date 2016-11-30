@@ -126,15 +126,15 @@
 			</div>
 			<div class="col-sm-2 col-md-4">
 				<section id="newsletter">
-					<h5>Newsletter</h5>
-					<p>Subscribe to our newsletters and stay informed of new releases and other OpenCart events.</p>
-					<div class="input-group newsletter">
+	        <h5>Newsletter</h5>
+	        <p>Subscribe to our newsletters and stay informed of new releases and other OpenCart events.</p>
+	        <div class="input-group newsletter">
 	          <input type="text" name="newsletter" value="" placeholder="Enter your email address" class="form-control">
 	          <div class="input-group-btn">
 	            <button type="button" id="quick-email" class="btn btn-primary" data-toggle="modal" data-target="#modal-newsletter"><i class="fa fa-angle-right"></i> </button>
 	          </div>
 	        </div>
-				</section>
+        </section>
 			</div>
 		</div>
 		<div class="row">
@@ -158,6 +158,9 @@
     </div>
   </div>
 </footer>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="javascript/common.js"></script>
 
 <div id="modal-newsletter" class="modal">
   <div class="modal-dialog">
@@ -473,9 +476,6 @@
   </div>
 </div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="javascript/common.js"></script>
 <script type="text/javascript"><!--
 $('button#quick-email').on('click',function(){
   if ($('input[name="newsletter"').val()!='') {
