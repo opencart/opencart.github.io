@@ -242,3 +242,7 @@ a:hover, a:focus, a:active {
             border-left: 0;
             background-color: transparent;
             padding-left: 20px; }
+            
+.modal-backdrop {
+  z-index: 0;
+}
