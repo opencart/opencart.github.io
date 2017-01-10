@@ -2,32 +2,42 @@ body {
   padding-top: 80px;
   color: #000; }
 
-header .navbar .navbar-brand {
-  margin: 0 45px 0 0; }
-  header .navbar .navbar-brand img {
-    margin-top: 21px;
-    height: 36px;
-    width: auto; }
-  header .navbar .navbar-nav > li {
-    margin-top: 21px; }
-  header .navbar .navbar-nav > li a {
-    font-size: 14px;
-    line-height: 1.3666;
-    text-transform: uppercase;
-    padding-top: 8px;
-    padding-bottom: 8px; }
-  header .navbar .navbar-nav > li .btn {
-    padding: 7px 16px;
-    font-size: 15px;
-    line-height: 1.3666; }
-    header .navbar .navbar-nav > li .btn:focus, header .navbar .navbar-nav > li .btn:hover {
-      color: #fff;
-      background-color: #000;
-      border-color: #000; }
-  header .navbar .navbar-right {
-    margin-top: 3px; }
-  header .navbar .navbar-right .btn {
-    padding: 6px 16px; }
+  header .navbar .navbar-brand {
+    margin: 0 45px 0 0; }
+    header .navbar .navbar-brand img {
+      margin-top: 21px;
+      height: 36px;
+      width: auto; }
+    header .navbar .navbar-nav > li {
+      margin-top: 21px; }
+    header .navbar .navbar-nav > li a {
+      font-size: 14px;
+      line-height: 1.3666;
+      text-transform: uppercase;
+      padding-top: 8px;
+      padding-bottom: 8px; }
+    header .navbar .navbar-nav > li .btn {
+      padding: 7px 16px;
+      font-size: 15px;
+      line-height: 1.3666; }
+      header .navbar .navbar-nav > li .btn:focus, header .navbar .navbar-nav > li .btn:hover {
+        color: #fff;
+        background-color: #000;
+        border-color: #000; }
+    @media screen and (max-width: 991px) {
+        header .navbar .navbar-nav > li {
+          margin-top: 10px; }
+          header .navbar .navbar-nav > li:last-child {
+            margin-bottom: 10px; } }
+    header .navbar .navbar-right {
+      margin-top: 3px; }
+    header .navbar .navbar-right .btn {
+      padding: 6px 16px; }
+    header .navbar-fixed-top .navbar-collapse {
+      max-height: none; }
+    @media screen and (max-width: 767px) {
+        header .navbar-fixed-top .navbar-collapse .navbar-nav {
+          height: 100vh; } }
 
 footer {
   background-color: #242d37;
@@ -242,7 +252,7 @@ a:hover, a:focus, a:active {
             border-left: 0;
             background-color: transparent;
             padding-left: 20px; }
-            
+
 .modal-backdrop {
   z-index: 0;
 }
