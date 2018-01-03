@@ -12,8 +12,8 @@ $(document).ready(function(){
 	    href = 'zh-hk' + '/' + pathname.slice(2);
 	    //window.location.href = href;
 	  });
+		alert('en-gb' + '/' + pathname.slice(2));
 
-		alert($('base').href);
 
 
 		$('#menu .parent').on('click', function(e) {
