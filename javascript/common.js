@@ -22,6 +22,7 @@ $(document).ready(function(){
 	  });
 
 		//var language = pathname.slice(1,-2);
+		var language = 'en-gb';
 
 		if(language == '' || language == null){
 			language = 'en-gb';
