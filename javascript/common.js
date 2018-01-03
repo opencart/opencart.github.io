@@ -21,7 +21,7 @@ $(document).ready(function(){
 	    window.location.href = href;
 	  });
 
-		var language = pathname.slice(1,-2);
+		//var language = pathname.slice(1,-2);
 
 		if(language == '' || language == null){
 			language = 'en-gb';
