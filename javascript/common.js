@@ -4,15 +4,15 @@ $(document).ready(function(){
 		var href = '';
 
 	  $('#button-en-gb').on('click', function(){
-	    href = 'en-gb' + '/' + pathname.slice(2);
+	    href = 'en-gb' + '/' + pathname.slice(2,-1);
 	    //window.location.href = href;
 	  });
 
 	  $('#button-zh-hk').on('click', function(){
-	    href = 'zh-hk' + '/' + pathname.slice(2);
+	    href = 'zh-hk' + '/' + pathname.slice(2,-1);
 	    //window.location.href = href;
 	  });
-		alert('en-gb' + '/' + pathname.slice(2));
+		alert('en-gb' + '/' + pathname.slice(2,-1));
 
 
 
