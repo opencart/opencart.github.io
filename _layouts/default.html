@@ -76,7 +76,20 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm">{% include menu.html %}</div>
-    <div class="col-md-9">{{ content }}</div>
+    <div class="col-md-9">
+
+      <div class="pull-right dropdown">
+        <button type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Language<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a role="button" id="button-en-gb">English</a></li>
+          <li><a role="button" id="button-zh-hk">繁體中文</a></li>
+        </ul>
+      </div>
+
+      {{ content }}
+    </div>
   </div>
 </div>
 
