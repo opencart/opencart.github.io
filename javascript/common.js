@@ -26,7 +26,7 @@ $(document).ready(function(){
 		if(language == '' || language == null){
 			language = 'en-gb';
 		}
-		
+
     $('#menu a').each(function() {
       var url = $(this).attr('href');
       $(this).attr('href', '/' + language + '/' + url);
