@@ -3,12 +3,21 @@ $(document).ready(function(){
 		var pathname = window.location.pathname.split('/');
 		var href = '';
 	  $('#button-en-gb').on('click', function(){
-	    href = 'en-gb' + '/' + pathname.slice(2,-1) + '/';
+
+			if(pathname.slice(2,-1) != ''){
+				href = 'en-gb' + '/' + pathname.slice(2,-1) + '/';
+			} else {
+				href = 'en-gb' + '/';
+			}
 	    window.location.href = href;
 	  });
 
 	  $('#button-zh-hk').on('click', function(){
-	    href = 'zh-hk' + '/' + pathname.slice(2,-1) + '/';
+			if(pathname.slice(2,-1) != ''){
+				href = 'zh-hk' + '/' + pathname.slice(2,-1) + '/';
+			} else {
+				href = 'zh-hk' + '/';
+			}
 	    window.location.href = href;
 	  });
 
