@@ -21,9 +21,9 @@ $(document).ready(function(){
 
 			$(this).parents('li').siblings().removeClass('open');
 		});
+		alert($(String(document.location).substr($('base').attr('href').length)));
 
 		if (String(document.location).substr($('base').attr('href').length)) {
-			alert($('#menu a[href="' + String(document.location).substr($('base').attr('href').length) + '"]'));
 			$('#menu a[href="' + String(document.location).substr($('base').attr('href').length) + '"]').parents('li').addClass('open');
 		}
 
