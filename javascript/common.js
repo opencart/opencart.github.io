@@ -6,13 +6,13 @@ $(document).ready(function(){
 		var href = pathname.slice(6);
 
 	  $('#button-en-gb').on('click', function(){
-			var new_href = changeLanguage('en-gb', href);
-	    window.location.href = new_href;
+			if(href != '') ? href = 'en-gb' + href : href = 'en-gb/introduction/';
+	    window.location.href = href;
 	  });
 
 	  $('#button-zh-hk').on('click', function(){
-			var new_href = changeLanguage('zh-hk', href);
-	    window.location.href = new_href;
+			if(href != '') ? href = 'zh-hk' + href : href = 'zh-hk/introduction/';
+	    window.location.href = href;
 	  });
 
 		// Get exists language and auto fill the language path before each link
@@ -45,14 +45,3 @@ $(document).ready(function(){
 
 
 });
-
-
-function changeLanguage(language, href){
-	if(href != ''){
-		href = language + href;
-	} else {
-		href = language + '/introduction/';
-	}
-
-	return url;
-}
