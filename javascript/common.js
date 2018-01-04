@@ -5,9 +5,9 @@ $(document).ready(function(){
 		var href = pathname.slice(6);
 
 	  $('#button-en-gb').on('click', function(){
- 
+
 			if(href != ''){
-				href = 'en-gb' + '/' + href + '/';
+				href = 'en-gb' + href;
 			} else {
 				href = 'en-gb' + '/';
 			}
@@ -16,15 +16,16 @@ $(document).ready(function(){
 
 	  $('#button-zh-hk').on('click', function(){
 			if(href != ''){
-				href = 'zh-hk' + '/' + href + '/';
+				href = 'zh-hk' + href;
 			} else {
 				href = 'zh-hk' + '/';
 			}
 	    window.location.href = href;
 	  });
 
-		//var language = pathname.slice(1,-2);
-		var language = 'en-gb';
+		var language = pathname.slice(1,6);
+		alert(language);
+		//var language = 'en-gb';
 
 		if(language == '' || language == null){
 			language = 'en-gb';
