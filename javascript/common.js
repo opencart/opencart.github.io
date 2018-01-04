@@ -1,31 +1,22 @@
 
 $(document).ready(function(){
 
+		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
 		var href = pathname.slice(6);
 
 	  $('#button-en-gb').on('click', function(){
-
-			if(href != ''){
-				href = 'en-gb' + href;
-			} else {
-				href = 'en-gb' + '/';
-			}
+			href = 'en-gb' + href;
 	    window.location.href = href;
 	  });
 
 	  $('#button-zh-hk').on('click', function(){
-			if(href != ''){
-				href = 'zh-hk' + href;
-			} else {
-				href = 'zh-hk' + '/';
-			}
+			href = 'zh-hk' + href;
 	    window.location.href = href;
 	  });
 
+		// Get exists language and auto fill the language path before each link
 		var language = pathname.slice(1,6);
-		alert(language);
-		//var language = 'en-gb';
 
 		if(language == '' || language == null){
 			language = 'en-gb';
