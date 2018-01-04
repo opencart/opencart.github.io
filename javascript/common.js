@@ -1,15 +1,13 @@
 
 $(document).ready(function(){
 
-		var test = window.location.pathname;
-		alert(test.slice(5));
-		
-		var pathname = window.location.pathname.split('/');
-		var href = '';
+		var pathname = window.location.pathname;
+		var href = pathname.slice(6);
+
 	  $('#button-en-gb').on('click', function(){
 
-			if(pathname.slice(2,-1) != ''){
-				href = 'en-gb' + '/' + pathname.slice(2,-1) + '/';
+			if(href != ''){
+				href = 'en-gb' + '/' + href + '/';
 			} else {
 				href = 'en-gb' + '/';
 			}
@@ -17,8 +15,8 @@ $(document).ready(function(){
 	  });
 
 	  $('#button-zh-hk').on('click', function(){
-			if(pathname.slice(2,-1) != ''){
-				href = 'zh-hk' + '/' + pathname.slice(2,-1) + '/';
+			if(href != ''){
+				href = 'zh-hk' + '/' + href + '/';
 			} else {
 				href = 'zh-hk' + '/';
 			}
