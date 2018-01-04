@@ -40,14 +40,15 @@ $(document).ready(function(){
       $(this).attr('href', '/' + language + '/' + url);
     });
 
-
+		alert(language);
+		
 		// Menu Language
 		switch(language){
 			case 'en-gb': $('#en-gb').show(); break;
 			case 'zh-hk': $('#zh-hk').show(); break;
 		}
 
-		
+
 		$('#menu .parent').on('click', function(e) {
 			e.preventDefault();
 
