@@ -3,15 +3,27 @@ $(document).ready(function(){
 
 		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
-		var href = pathname.slice(6);
+		if(pathname != '' || pathname != null){
+			var href = pathname.slice(6);
+		} else {
+			var href = '';
+		}
 
 	  $('#button-en-gb').on('click', function(){
-			if(href != '') ? href = 'en-gb' + href : href = 'en-gb/introduction/';
+			if(href != ''){
+				href = 'en-gb' + href;
+			} else {
+				href = 'en-gb/introduction/';
+			}
 	    window.location.href = href;
 	  });
 
 	  $('#button-zh-hk').on('click', function(){
-			if(href != '') ? href = 'zh-hk' + href : href = 'zh-hk/introduction/';
+			if(href != ''){
+				href = 'zh-hk' + href;
+			} else {
+				href = 'zh-hk/introduction/';
+			}
 	    window.location.href = href;
 	  });
 
@@ -26,6 +38,8 @@ $(document).ready(function(){
       var url = $(this).attr('href');
       $(this).attr('href', '/' + language + '/' + url);
     });
+
+
 
 		$('#menu .parent').on('click', function(e) {
 			e.preventDefault();
