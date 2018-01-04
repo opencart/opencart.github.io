@@ -27,6 +27,7 @@ $(document).ready(function(){
 	    window.location.href = href;
 	  });
 
+
 		// Get exists language and auto fill the language path before each link
 		var language = pathname.slice(1,6);
 
@@ -40,7 +41,13 @@ $(document).ready(function(){
     });
 
 
+		// Menu Language
+		switch(language){
+			case 'en-gb': $('#en-gb').show(); break;
+			case 'zh-hk': $('#zh-hk').show(); break;
+		}
 
+		
 		$('#menu .parent').on('click', function(e) {
 			e.preventDefault();
 
