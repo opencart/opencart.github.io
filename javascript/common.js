@@ -39,8 +39,8 @@ $(document).ready(function(){
 
 		// Menu Language
 		switch(language){
-			case 'en-gb': $('#menu').load('en-gb/menu.html'); break;
-			case 'zh-hk': $('#menu').load('zh-hk/menu.html'); break;
+			case 'en-gb': $('#menu').load('en-gb/menu/'); break;
+			case 'zh-hk': $('#menu').load('zh-hk/menu/'); break;
 		}
 
     $('#menu a').each(function() {
