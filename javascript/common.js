@@ -1,8 +1,6 @@
 
 $(document).ready(function(){
 
-		$('#menu > div').hide();
-
 		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
 		if(pathname != '' || pathname != null){
@@ -37,17 +35,14 @@ $(document).ready(function(){
 			language = 'en-gb';
 		}
 
+		// Menu language
+		$('#menu').load('/docs/' + language + '/menu.html');
+
     $('#menu a').each(function() {
       var url = $(this).attr('href');
       $(this).attr('href', '/' + language + '/' + url);
     });
 
-
-		// Menu Language
-		switch(language){
-			case 'en-gb': $('#menu #en-gb').show(); break;
-			case 'zh-hk': $('#menu #zh-hk').show(); break;
-		}
 
 
 		$('#menu .parent').on('click', function(e) {
