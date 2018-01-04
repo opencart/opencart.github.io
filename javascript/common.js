@@ -1,8 +1,6 @@
 
 $(document).ready(function(){
 
-		$('#menu > div').hide();
-
 		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
 		if(pathname != '' || pathname != null){
@@ -39,8 +37,8 @@ $(document).ready(function(){
 
 		// Menu Language
 		switch(language){
-			case 'en-gb': $('#menu').load('en-gb/menu/'); break;
-			case 'zh-hk': $('#menu').load('zh-hk/menu/'); break;
+			case 'en-gb': $('#menu').load('http://docs.opencart.com/en-gb/menu/'); break;
+			case 'zh-hk': $('#menu').load('http://docs.opencart.com/zh-hk/menu/'); break;
 		}
 
     $('#menu a').each(function() {
