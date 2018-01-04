@@ -5,7 +5,7 @@ $(document).ready(function(){
 		var href = pathname.slice(6);
 
 	  $('#button-en-gb').on('click', function(){
-
+ 
 			if(href != ''){
 				href = 'en-gb' + '/' + href + '/';
 			} else {
