@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
 
+		$('#menu > div').hide();
+
 		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
 		if(pathname != '' || pathname != null){
@@ -35,17 +37,18 @@ $(document).ready(function(){
 			language = 'en-gb';
 		}
 
-		// Menu Language
-		switch(language){
-			case 'en-gb': $('#menu').load('http://docs.opencart.com/en-gb/menu/'); break;
-			case 'zh-hk': $('#menu').load('http://docs.opencart.com/zh-hk/menu/'); break;
-		}
 
     $('#menu a').each(function() {
       var url = $(this).attr('href');
       $(this).attr('href', '/' + language + '/' + url);
     });
 
+
+		// Menu Language
+		switch(language){
+			case 'en-gb': $('#menu #en-gb').show(); break;
+			case 'zh-hk': $('#menu #zh-hk').show(); break;
+		}
 
 
 		$('#menu .parent').on('click', function(e) {
