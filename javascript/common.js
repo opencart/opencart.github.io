@@ -1,7 +1,9 @@
 
 $(document).ready(function(){
 
-	alert(window.location.pathname);
+		var test = window.location.pathname;
+		alert(test.slice(5));
+		
 		var pathname = window.location.pathname.split('/');
 		var href = '';
 	  $('#button-en-gb').on('click', function(){
