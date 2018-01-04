@@ -1,8 +1,6 @@
 
 $(document).ready(function(){
 
-		$('#menu > div').hide();
-
 		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
 		if(pathname != '' || pathname != null){
