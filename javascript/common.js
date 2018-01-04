@@ -41,11 +41,13 @@ $(document).ready(function(){
     });
 
 		alert(language);
-		
+
 		// Menu Language
+		$('#menu > div').hide();
+		
 		switch(language){
-			case 'en-gb': $('#en-gb').show(); break;
-			case 'zh-hk': $('#zh-hk').show(); break;
+			case 'en-gb': $('#menu #en-gb').show(); break;
+			case 'zh-hk': $('#menu #zh-hk').show(); break;
 		}
 
 

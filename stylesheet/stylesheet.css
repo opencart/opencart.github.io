@@ -150,11 +150,6 @@ a:hover, a:focus, a:active {
     margin: 5px 0 0 0;
     font-weight: 300; }
 
-#en-gb,
-#zh-hk {
-  display: none;
-}
-
 /* Original Backup file
 #menu, #menu ul {
 	margin: 0;
