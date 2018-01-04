@@ -36,7 +36,7 @@ $(document).ready(function(){
 		}
 
 		// Menu language
-		$('#menu').load('/docs/' + language + '/menu.html');
+		$('#menu').load(language + '/menu.html');
 
     $('#menu a').each(function() {
       var url = $(this).attr('href');
