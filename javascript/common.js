@@ -7,7 +7,7 @@ $(document).ready(function(){
 	  $('#button-en-gb').on('click', function(){
 
 			if(href != ''){
-				href = 'en-gb' + href + '/';
+				href = 'en-gb' + href;
 			} else {
 				href = 'en-gb' + '/';
 			}
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 	  $('#button-zh-hk').on('click', function(){
 			if(href != ''){
-				href = 'zh-hk' + href + '/';
+				href = 'zh-hk' + href;
 			} else {
 				href = 'zh-hk' + '/';
 			}
