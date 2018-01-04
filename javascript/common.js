@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
 
+		$('#menu > div').hide();
+
 		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
 		if(pathname != '' || pathname != null){
@@ -35,8 +37,11 @@ $(document).ready(function(){
 			language = 'en-gb';
 		}
 
-		// Menu language
-		$('#menu').load(language + '/menu.html');
+		// Menu Language
+		switch(language){
+			case 'en-gb': $('#menu').load('/en-gb/menu.html'); break;
+			case 'zh-hk': $('#menu').load('/zh-hk/menu.html'); break;
+		}
 
     $('#menu a').each(function() {
       var url = $(this).attr('href');
