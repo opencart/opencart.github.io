@@ -29,14 +29,9 @@ $(document).ready(function(){
 	    window.location.href = href;
 	  });
 
-
 		// Add .active on current page
-		$('#menu a').each(function() {
-			var url = $(this).attr('href');
-			if(pathname.slice(7) == url){
-				$(this).parent().addClass('active');
-			}
-		}
+		alert(pathname.slice(7));
+
 
 		// Get exists language and auto fill the language path before each link
 		var language = pathname.slice(1,6);
