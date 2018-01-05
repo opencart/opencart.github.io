@@ -40,8 +40,8 @@ permalink: zh-hk/installation/
 <p>假設您已經擁有網站伺服器，現在便開啟FTP(文件傳輸協議)程式並將與伺服器連接，將OpenCart <i class="far fa-folder fa-fw"></i> upload 中的所有檔案上傳至伺服器內的指定位置。</p>
 <table class="table table-bordered">
   <tr>
-    <td><i class="far fa-folder fa-fw"></i> admin</td>
-    <td><i class="far fa-folder fa-fw"></i> catalog</td>
+    <td width="50%"><i class="far fa-folder fa-fw"></i> admin</td>
+    <td width="50%"><i class="far fa-folder fa-fw"></i> catalog</td>
   </tr>
   <tr>
     <td><i class="far fa-folder fa-fw"></i> image</td>
@@ -49,47 +49,60 @@ permalink: zh-hk/installation/
   </tr>
   <tr>
     <td><i class="far fa-folder fa-fw"></i> system</td>
-    <td>-</td>
-  </tr>
-  <tr>
     <td><i class="far fa-file fa-fw"></i> .htaccess.txt</td>
-    <td><i class="far fa-file fa-fw"></i> config-dist.php</td>
   </tr>
   <tr>
+    <td><i class="far fa-file fa-fw"></i> config-dist.php</td>
     <td><i class="far fa-file fa-fw"></i> index.php</td>
+  </tr>
+  <tr>
     <td><i class="far fa-file fa-fw"></i> php.ini</td>
+    <td>-</td>
   </tr>
 
 </table>
 
 <h3>安裝與設定FTP客戶端</h3>
-<p>若果您尚未安裝任何FTP客戶端，這裡會建議使用FileZilla，這是一個免費的FTP客戶端程式。成功連接後可以將OpenCart檔案傳輸到指定網頁伺服器內。FileZilla客戶端（不是伺服器）可以從 <a href="http://filezilla-project.org/" target="_blank">http://filezilla-project.org/</a> 下載並安裝到您的電腦上。
+<p>如您尚未安裝任何FTP客戶端，這裡會建議使用FileZilla，這是一個免費的FTP客戶端程式。成功連接後可以將OpenCart檔案傳輸到指定網頁伺服器內。FileZilla客戶端（不是伺服器）可以從 <a href="http://filezilla-project.org/" target="_blank">http://filezilla-project.org/</a> 下載並安裝到您的電腦上。
 </p>
 
 <p>當啓動FileZilla後，左側視窗是電腦中的文件目錄，第一步於此視窗開啟已解壓縮的OpenCart存檔位置，然後點擊 <i class="far fa-folder fa-fw"></i> upload；目前右側視窗仍然是空白，因為尚未連接網頁伺服器，第二步則是接上伺服器端口，成功連接後將顯示網頁伺服器的文件目錄。</p>
-
 <p class="text-center"><img src="image/filezilla-disconnect.png" alt="filezilla disconnect" class="img-thumbnail" /></p>
-<p>Before we continue, we need to make sure that you have the following information about your website:</p>
+<p>連接網頁伺服器前，先從服務供應商確認及獲得以下資料：</p>
 <ul>
-  <li>the host name</li>
-  <li>username</li>
-  <li>password</li>
+  <li>主機名 (Host name)</li>
+  <li>用戶名 (Username)</li>
+  <li>密碼 (Password)</li>
 </ul>
-<p>This information can be obtained by contacting your hosting provider.</p>
-<h3>Connecting to the Site Manager</h3>
-<p>Under the &ldquo;File&rdquo; menu, &ldquo;Site Manager&rdquo; should be opened in Filezilla. A window will pop up with the General tab open. You should fill in the information gathered above regarding hosting information, and press &ldquo;Connect&rdquo;. The right &ldquo;Remote Site&rdquo; side will now display the file directory of your website.</p>
+
+<h3>新增「網站管理」</h3>
+<p>在<strong>檔案 (File)</strong>選項下，點擊<strong>網站管理 (Site Manager)</strong>後會開啟一個新視窗。點擊<strong>新網站 (New Site)</strong>並於<strong>一般(General)</strong>中填寫FTP主機名、用戶名及登入密碼，接著按下<strong>連接 (Connect)</strong>完成新增步驟。程式會按照填寫的資料自動與伺服器進行連線，成功連線後右側視窗將會顯示伺服器中網站的文件目錄。</p>
 <p class="text-center"><img src="image/filezilla%20site%20manager.png" alt="filezilla site manager" class="img-thumbnail" /></p>
-<h3>Uploading OpenCart&#39;s files</h3>
-<p>If you haven&#39;t already located the OpenCart upload folder on the left side, you need to do so now and keep it open. In the Remote Site directory (right side), you need to open the folder that the OpenCart shop will be located in. The location of shop varies based on whether the you want the shop to be seen on the main page, a sub-folder, a subdomain, etc. If you want to make OpenCart the main page, you would need to upload files to the root folder of their website.</p>
-<div class="alert alert-info" role="alert"> <i class="fa fa-info-circle"></i> Be aware that some hosting services require public files to be upload to a public directory, such as public_html, if they are to be visible on the website. You should check with your hosting provider to see where you can upload public files. </div>
-<p>Once the location of the OpenCart shop has been determined, all the content within the &ldquo;upload&rdquo; folder on the computer&#39;s (left) side of Filezilla must be selected, right-clicked, and uploaded. Uploading all the files might take a few minutes on the FTP client.</p>
-<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> If you want the shop to be on the main page, for example www.shopnow.com, you must upload the contents of the &ldquo;upload&rdquo; folder, but not the &ldquo;upload&rdquo; folder itself. Including the &ldquo;upload&rdquo; folder will create a sub-folder, making the shop available only on www.shopnow.com/upload.</div>
+
+
+<h3>上傳OpenCart文件</h3>
+<p>商店的上傳位置取決於您是否希望在主頁上看到商店，或是上傳於子文件夾，一個子域名等。如果你想讓 OpenCart 成為主頁面，你需要將文件上傳到網站的根目錄。</p>
+
+<div class="alert alert-info" role="alert">
+  <i class="far fa-info-circle"></i> 請注意，某些託管服務需要將公共文件上載到公共目錄(如public_html)，才能在網站上顯示。您應該檢查您的託管服務提供商，看看您可以上傳公共文件。
+</div>
+
+<p>一旦確定 OpenCart 商店的上傳位置，便可於FileZilla左側視窗 <i class="far fa-folder fa-fw"></i> upload 中的全部內容選取並拖曳到右側視窗中，或右擊選擇上傳。上傳文件可能需要花費幾分鐘到FTP客戶端上，取決於網絡及供應商的速度。</p>
+
+<div class="alert alert-danger" role="alert">
+  <i class="far fa-exclamation-circle"></i> 如果您希望商店位於主頁上，例如www.shopnow.com，則必須上傳 <i class="far fa-folder fa-fw"></i> upload 的內容，而不是將資件夾上傳至伺服器中。
+  <ul>
+    <li><i class="far fa-times fa-fw"></i> www.shopnow.com/upload</li>
+    <li><i class="far fa-check fa-fw"></i> www.shopnow.com</li>
+  </ul>
+</div>
+
 <p>After Filezilla finishes uploading the files to the location specified, you should see the same files on both the left side(computer) and on the right side (the website); as seen in the screenshot below:</p>
 <p class="text-center"><img src="image/filezilla-file-transfer.png" alt="filezilla file transfer-png" class="img-thumbnail" /></p>
 <p>The Filezilla window should look similar to the above image (minus some directory details). This means that the OpenCart files were successfully transferred the target site. The site now contains the files necessary to setup an OpenCart shop.</p>
 
 <h2>cPanel</h2>
-<p>如您的網頁供應商是使用 cPanel 便可以不用 FileZilla 上傳 OpenCart 到您的網頁空間內。您只需要將 “Upload” 內的所有文件重新壓縮一次，登入 cPanel 後再點擊文件管理(File Manager) 便可以看見新一頁可以作上傳下載的網頁版的文件傳輸協議 (FTP)，然後上載新壓縮檔到您所須的位置 (必須於public_html內)，成功上載後，點擊右鍵選解壓 (Extract) 即可完成。</p>
+<p>如您的服務供應商是使用 cPanel 便可以不使用 FileZilla 上傳 OpenCart 到您的網頁空間內。您只需要將 <i class="far fa-folder fa-fw"></i> upload 內的所有文件重新壓縮一次，登入 cPanel 後再點擊<strong>檔案管理(File Manager)</strong> 便可以看見新一頁可以作上傳下載的網頁版的 FTP(文件傳輸協議)，然後上載新壓縮檔到您所需的位置 (必須於public_html內)，成功上載後，點擊右鍵選解壓 (Extract) 即可完成。</p>
 <p class="text-center"><img src="image/cpanel-file-manager.png" alt="cPanel File Manager" class="img-thumbnail" /></p>
 
 <h2>Creating a database for the shop</h2>
