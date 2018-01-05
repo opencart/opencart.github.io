@@ -21,20 +21,8 @@ permalink: zh-hk/installation/
 <p>完成解壓縮後便可以獲得OpenCart的系統檔案，內容包含：</p>
 <table class="table table-bordered">
   <tr>
-    <td><i class="far fa-folder fa-fw"></i> tests</td>
-    <td></td>
-  </tr>
-  <tr>
     <td><i class="far fa-folder fa-fw"></i> upload</td>
     <td>包含整個OpenCart系統須上傳到網頁伺服器的所有文件</td>
-  </tr>
-  <tr>
-    <td><i class="far fa-file-alt fa-fw"></i> build.xml</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><i class="far fa-file-alt fa-fw"></i> install.txt</td>
-    <td></td>
   </tr>
   <tr>
     <td><i class="far fa-file-alt fa-fw"></i> license.txt</td>
@@ -44,16 +32,35 @@ permalink: zh-hk/installation/
     <td><i class="far fa-file-alt fa-fw"></i> readme.txt</td>
     <td>檔提供了OpenCart網站上當前安裝和升級說明的連結</td>
   </tr>
-  <tr>
-    <td><i class="far fa-file-alt fa-fw"></i> upgrade.txt</td>
-    <td></td>
-  </tr>
 </table>
 
 <p>準備就緒後，您可以將壓縮檔中的檔案儲存到電腦上所選的位置。</p>
 
 <h2>上傳 OpenCart</h2>
 <p>假設您已經擁有網站伺服器，現在便開啟FTP(文件傳輸協議)程式並將與伺服器連接，將OpenCart <i class="far fa-folder fa-fw"></i> upload 中的所有檔案上傳至伺服器內的指定位置。</p>
+<table class="table table-bordered">
+  <tr>
+    <td><i class="far fa-folder fa-fw"></i> admin</td>
+    <td><i class="far fa-folder fa-fw"></i> catalog</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-folder fa-fw"></i> image</td>
+    <td><i class="far fa-folder fa-fw"></i> install</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-folder fa-fw"></i> system</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file fa-fw"></i> .htaccess.txt</td>
+    <td><i class="far fa-file fa-fw"></i> config-dist.php</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file fa-fw"></i> index.php</td>
+    <td><i class="far fa-file fa-fw"></i> php.ini</td>
+  </tr>
+
+</table>
 
 <h3>安裝與設定FTP客戶端</h3>
 <p>若果您尚未安裝任何FTP客戶端，這裡會建議使用FileZilla，這是一個免費的FTP客戶端程式。成功連接後可以將OpenCart檔案傳輸到指定網頁伺服器內。FileZilla客戶端（不是伺服器）可以從 <a href="http://filezilla-project.org/" target="_blank">http://filezilla-project.org/</a> 下載並安裝到您的電腦上。
