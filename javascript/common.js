@@ -43,7 +43,7 @@ $(document).ready(function(){
 
 			// Add .active on menu if it is current page
 			if(url == current_url){
-				$('#menu a[href="' + current_url +'"]').parents('li').addClass('active');
+				$('#menu a[href="' + current_url +'"]').parents('li').addClass('active').addClass('open');
 			}
 
       $(this).attr('href', '/' + language + '/' + url);
