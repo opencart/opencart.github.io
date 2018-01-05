@@ -59,7 +59,6 @@ permalink: zh-hk/installation/
     <td><i class="far fa-file fa-fw"></i> php.ini</td>
     <td>-</td>
   </tr>
-
 </table>
 
 <h3>安裝與設定FTP客戶端</h3>
@@ -114,40 +113,97 @@ permalink: zh-hk/installation/
 </ul>
 
 <h2>安裝程序</h2>
-<p>如以上準備功夫都完成後，開啟一個新視窗並輸入與OpenCart商店上傳位置相對的網址 (例如: www.shopnow.com)，系統便會自動跳進安裝頁面。如果自動跳頁後顯示找不到網頁等訊息，請於FTP客戶端中確認 <i class="far fa-folder fa-fw"></i> install 是否存在。</p>
-
+<p>如以上準備功夫都完成後，開啟一個新視窗並輸入與OpenCart商店上傳位置相對的網址 (例如: www.shopnow.com)，系統便會自動跳進安裝頁面，如下圖。如果自動跳頁後顯示找不到網頁等訊息，請於FTP客戶端中確認 <i class="far fa-folder fa-fw"></i> install 是否存在。</p>
 <p class="text-center"><img src="image/opencart-step1.png" alt="opencart step1" class="img-thumbnail" /></p>
-<p>This page is the installation page. The following steps will help you complete the installation process for OpenCart.</p>
-<h3>Step 1. License</h3>
-<p>You may read through the license, check &quot;I agree to the license&quot;, and press &ldquo;Continue&rdquo;.</p>
-<h3>Step 2. Pre-Installation</h3>
-<p>This step checks to see if the web server has the technical requirements and correct permissions to setup OpenCart properly. If red marks are visible on #1 or #2, you need to make sure that these components are properly installed onto the web server. You should contact your hosting service if there are any issues with this. If there are red marks on #3 or #4, there might have been an issue with uploading the files using the FTP client. If everything is configured correctly and green marks are visible (as seen below), you may press &quot;Continue&quot;.</p>
+
+<p>請跟隨以下步驟並完成安裝程序。</p>
+<h3>第一步　許可協議</h3>
+<p>閱讀許可協議後點擊 <strong>Continue</strong> 繼續</p>
+
+<h3>第二步　準備安裝</h3>
+<p>此頁將會檢查網站伺服器是否乎合安裝 OpenCart 的系統需求及權限。如果於清單一及二中出現了紅色提示，這表示系統需求不乎，請與服務供應商聯絡；若清單四及五顯示了紅色題示，則表示伺服器內於在指定位置缺少了任何檔案或資料夾權限不乎。</p>
+<p>清單上所有項目都是 <i class="far fa-check fa-fw" style="color:#468847;"></i> 或 <span style="color: #468847">Writable</span> 的時候 (如下圖)，便可以點擊 <strong>Continue</strong> 進行下一步的安裝程序。</p>
 <p class="text-center"><img src="image/opencart-step2.png" alt="opencart step2" class="img-thumbnail" /></p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> As of version 2.3.0.2, the following files need to be renamed to continue to Step 3:
-  <ul>
-    <li>&nbsp;&nbsp;&nbsp; config-dist.php to config.php</li>
-    <li>&nbsp;&nbsp;&nbsp; admin/config-dist.php to config.php</li>
+
+<div class="alert alert-info" role="alert">
+  <i class="fas fa-info-circle"></i> 由 OpenCart 2 開始，以下檔案必須更重新命名才能繼續安裝：
+  <ul class="list-unstyled">
+    <li>config-dist.php <i class="fas fa-long-arrow-right"></i> config.php</li>
+    <li>admin/config-dist.php <i class="fas fa-long-arrow-right"></i> config.php</li>
   </ul>
 </div>
-<h3>Step 3. Configuration</h3>
-<p>You need to fill in the spaces below #1 by adding the database connection details (username/password, database name) established when you created the store&#39;s database using MySQL Databases. Under #2, you should create a new username and password for administration access to the OpenCart shop. When finished, you may press &quot;Continue&quot;.</p>
+
+<h3>第三步　填寫初步資料</h3>
+<p>填寫下列資料並使系統連接資料庫及建立管理者帳號。</p>
 <p class="text-center"><img src="image/opencart-step3.png" alt="opencart step3" class="img-thumbnail" /></p>
-<h2>Completing the installation</h2>
-<h3>&nbsp;</h3>
-<h3>Step 4. Finished</h3>
-<p>Now that installation is complete, the &quot;install&quot; folder is no longer required. You should delete the &ldquo;install&rdquo; folder in the Remote Site section of Filezilla for security reasons. You now have the option to browse the frontend of your shop or choose to log into the administration side.</p>
+
+<table class="table table-bordered">
+  <tr>
+    <td colspan="2">填寫資料庫訊息</td>
+  </tr>
+  <tr>
+    <td width="40%">Hostname</td>
+    <td width="60%">大部份服務供應商都會使用 <strong>localhost</strong>，如有疑問請向服務供應商查詢。</td>
+  </tr>
+  <tr>
+    <td>Username</td>
+    <td>登入用戶 (Database User)</td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td>登入密碼 (Database Password)</td>
+  </tr>
+  <tr>
+    <td>Database</td>
+    <td>資料庫名稱 (Database Name)</td>
+  </tr>
+  <tr>
+    <td>Prefix</td>
+    <td>資料庫中表格的統一名稱，預設：<strong>oc_</strong></td>
+  </tr>
+</table>
+
+<table class="table table-bordered">
+  <tr>
+    <td colspan="2">建立管理者帳戶及密碼</td>
+  </tr>
+  <tr>
+    <td width="40%">Username</td>
+    <td width="60%">管理者登入帳號</td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td>管理者登入密碼</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>管理者登記電郵</td>
+  </tr>
+</table>
+
+<p>填寫所有資料後便可以點擊 <strong>Continue</strong> 完成最後的安裝程序。</p>
+
+<h3>第四步　安裝完成</h3>
+<p>成功安裝 OpenCart 後會看見下圖的頁面。這時候需要到FTP客戶端中將 <i class="far fa-folder fa-fw"></i> install 移除才能將紅色提示框除去。此版頁有兩個選項可選擇，左方是前往OpenCart商店，右方則是進入管理者登入版面。</p>
+
 <p class="text-center"><img src="image/opencart-step4.png" alt="opencart step4" class="img-thumbnail" /></p>
-<p>After the install, you should make the necessary steps towards improving the security of your server and OpenCart store directory. These steps are detailed in <a href="administration/security/">Basic security practices</a>.</p>
-<h2>Installing vQmod</h2>
-<p>vQmod for OpenCart lets you add modules to your store without modifying the core OpenCart code. See vQmod for more information on how to download and install <a href="administration/vqmod/">vQmod </a>for your store.</p>
-<h2>Updating OpenCart</h2>
-<p>OpenCart releases new versions from time to time with updated features and bug fixes. To learn how to update a store from an earlier version of OpenCart, visit <a href="upgrading/">Updating OpenCart</a>.</p>
-<h2>Uninstalling OpenCart</h2>
+<p>完成安裝後，為了提高網頁伺服器及 OpenCart 商店的安全性，我們強力建議移除 <i class="far fa-folder fa-fw"></i> install，有關內容可於<a class="docs" href="administration/security/">基本安全措施</a>參閱。</p>
+
+<h2>安裝 vQmod</h2>
+<p>vQmod for OpenCart lets you add modules to your store without modifying the core OpenCart code. See vQmod for more information on how to download and install <a　class="docs" href="administration/vqmod/">vQmod </a>for your store.</p>
+
+<h2>升級 OpenCart</h2>
+<p>OpenCart releases new versions from time to time with updated features and bug fixes. To learn how to update a store from an earlier version of OpenCart, visit <a　class="docs" href="upgrading/">Updating OpenCart</a>.</p>
+
+
+<h2>卸載 OpenCart</h2>
 <p>Uninstalling OpenCart is a quick and simple process.</p>
 <ol>
   <li>Delete the files/folders in the location you uploaded them to in Filezilla. &nbsp;</li>
   <li>Delete the OpenCart database from MySQL Databases or phpMyAdmin.</li>
 </ol>
+
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> Once OpenCart is uninstalled, all product and customer information will be lost. You can save a backup database file in case you want to reinstall OpenCart at a later time. See <a href="system/backup/">Backup/Restore</a> for more information.</div>
+
 <h2>Support</h2>
 <p>If there are any issues regarding your store&#39;s installation or update, please visit the&nbsp; <a href="http://forum.opencart.com/">Installation, Upgrade, &amp; Config Support</a> section of the OpenCart community forum.</p>
