@@ -37,9 +37,10 @@ $(document).ready(function(){
 			language = 'en-gb';
 		}
 
-		$('a.docs').each(function() {
-			var url = $(this).attr('href');
-			$(this).attr('href', '/' + language + '/' + url);
+		$('a.docs').on('click', function() {
+			alert('hello');
+			//var url = $(this).attr('href');
+			//$(this).attr('href', '/' + language + '/' + url);
 		}
 
     $('#menu a').each(function() {
