@@ -29,11 +29,6 @@ $(document).ready(function(){
 	    window.location.href = href;
 	  });
 
-		// Add .active on current page
-		if($('#menu a').attr('href') == pathname.slice(7)){
-			$('#menu a[href="' + pathname.slice(7) +'"]').parents('li').addClass('active');
-		}
-
 
 		// Get exists language and auto fill the language path before each link
 		var language = pathname.slice(1,6);
@@ -43,7 +38,14 @@ $(document).ready(function(){
 		}
 
     $('#menu a').each(function() {
+			var current_url = pathname.slice(7);
       var url = $(this).attr('href');
+
+			// Add .active on menu if it is current page
+			if(url == current_url){
+				$('#menu a[href="' + current_url +'"]').parents('li').addClass('active');
+			}
+
       $(this).attr('href', '/' + language + '/' + url);
     });
 
