@@ -4,8 +4,7 @@ title: "安裝 - OpenCart 使用指引"
 permalink: zh-hk/installation/
 ---
 <h1>安裝 OpenCart</h1>
-<p>本指引將說明如何成功安裝與卸載OpenCart系統。</p>
-
+<p>本指引將說明如何成功安裝與卸載OpenCart系統，假如您是初次接觸這類型的網站應用程式，本篇文章亦提供相關上載網頁伺服器之簡單教學。</p>
 
 <h2>下載並解壓縮OpenCart檔案</h2>
 <p>OpenCart（v.3.0.2.0）的最新版本可以從<a href="https://www.opencart.com/index.php?route=cms/download" target="_blank">OpenCart網站</a>下載（推薦一般用家）或直接從<a href="https://github.com/opencart/opencart" target="_blank">Github 平台</a>下載（推薦網頁開發人員）。下載頁面更提供較舊版本的OpenCart方便網頁開發人員使用。 按下<strong>DOWNLOAD NOW</strong>按建，3.0.2.0版本的zip壓縮檔會直接下載到您的電腦。3.0.2.0版本的檔案對應名稱為<strong>3.0.2.0-OpenCart.zip</strong>。</p>
@@ -20,14 +19,40 @@ permalink: zh-hk/installation/
   </ul>
 </div>
 <p>完成解壓縮後便可以獲得OpenCart的系統檔案，內容包含：</p>
-<ul>
-  <li><i class="far fa-folder fa-fw"></i> "upload" 文件夾</li>
-  <li><i class="far fa-file-alt fa-fw"></i> "license.txt" 文字檔</li>
-  <li><i class="far fa-file-alt fa-fw"></i> "readme.txt" 文字檔</li>
-</ul>
-<p>"upload" 包含將OpenCart上傳到網頁伺服器所需的所有文件。"license.txt" 裡包含有關在您的網站上使用OpenCart系統的許可協議。"readme.txt" 檔提供了OpenCart網站上當前安裝和升級說明的連結。準備就緒後，您可以將壓縮檔中的檔案儲存到電腦上您所選的位置。</p>
+<table class="table table-bordered">
+  <tr>
+    <td><i class="far fa-folder fa-fw"></i> tests</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><i class="far fa-folder fa-fw"></i> upload</td>
+    <td>包含整個OpenCart系統須上傳到網頁伺服器的所有文件</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file-alt fa-fw"></i> build.xml</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file-alt fa-fw"></i> install.txt</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file-alt fa-fw"></i> license.txt</td>
+    <td>包含有關在您的網站上使用OpenCart系統的許可協議</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file-alt fa-fw"></i> readme.txt</td>
+    <td>檔提供了OpenCart網站上當前安裝和升級說明的連結</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file-alt fa-fw"></i> upgrade.txt</td>
+    <td></td>
+  </tr>
+</table>
 
-<h2>上傳OpenCart</h2>
+<p>準備就緒後，您可以將壓縮檔中的檔案儲存到電腦上您所選的位置。</p>
+
+<h2>上傳 OpenCart</h2>
 <p>現在，您要先準備網頁寄存空間以及文件傳輸協議(FTP) 程式並將 "upload" 內的所有檔案上傳至網頁伺服器內。</p>
 
 <h3>Installing and configuring the FTP client</h3>
