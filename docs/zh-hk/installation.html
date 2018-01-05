@@ -84,31 +84,38 @@ permalink: zh-hk/installation/
 <p>商店的上傳位置取決於您是否希望在主頁上看到商店，或是上傳於子文件夾，一個子域名等。如果你想讓 OpenCart 成為主頁面，你需要將文件上傳到網站的根目錄。</p>
 
 <div class="alert alert-info" role="alert">
-  <i class="far fa-info-circle"></i> 請注意，某些託管服務需要將公共文件上載到公共目錄(如public_html)，才能在網站上顯示。您應該檢查您的託管服務提供商，看看您可以上傳公共文件。
+  <i class="fas fa-info-circle"></i> 請注意，某些託管服務需要將公共文件上載到公共目錄(如public_html)，才能在網站上顯示。您應該檢查您的託管服務提供商，看看您可以上傳公共文件。
 </div>
 
 <p>一旦確定 OpenCart 商店的上傳位置，便可於FileZilla左側視窗 <i class="far fa-folder fa-fw"></i> upload 中的全部內容選取並拖曳到右側視窗中，或右擊選擇上傳。上傳文件可能需要花費幾分鐘到FTP客戶端上，取決於網絡及供應商的速度。</p>
 
 <div class="alert alert-danger" role="alert">
-  <i class="far fa-exclamation-circle"></i> 如果您希望商店位於主頁上，例如www.shopnow.com，則必須上傳 <i class="far fa-folder fa-fw"></i> upload 的內容，而不是將資件夾上傳至伺服器中。
-  <ul>
-    <li><i class="far fa-times fa-fw"></i> www.shopnow.com/upload</li>
-    <li><i class="far fa-check fa-fw"></i> www.shopnow.com</li>
+  <i class="fas fa-exclamation-circle"></i> 如果您希望商店位於主頁上，例如www.shopnow.com，則必須上傳 <i class="far fa-folder fa-fw"></i> upload 的內容，而不是將資件夾上傳至伺服器中。
+  <ul class="list-unstyled">
+    <li><i class="fas fa-times fa-fw"></i> www.shopnow.com/upload</li>
+    <li><i class="fas fa-check fa-fw"></i> www.shopnow.com</li>
   </ul>
 </div>
 
-<p>After Filezilla finishes uploading the files to the location specified, you should see the same files on both the left side(computer) and on the right side (the website); as seen in the screenshot below:</p>
+<p>完成上傳後，兩方視窗上看到相等的文件數量，如下圖所示：</p>
 <p class="text-center"><img src="image/filezilla-file-transfer.png" alt="filezilla file transfer-png" class="img-thumbnail" /></p>
-<p>The Filezilla window should look similar to the above image (minus some directory details). This means that the OpenCart files were successfully transferred the target site. The site now contains the files necessary to setup an OpenCart shop.</p>
+<p>伺服器現在已包含安裝 OpenCart 商店所需的文件。</p>
 
 <h2>cPanel</h2>
-<p>如您的服務供應商是使用 cPanel 便可以不使用 FileZilla 上傳 OpenCart 到您的網頁空間內。您只需要將 <i class="far fa-folder fa-fw"></i> upload 內的所有文件重新壓縮一次，登入 cPanel 後再點擊<strong>檔案管理(File Manager)</strong> 便可以看見新一頁可以作上傳下載的網頁版的 FTP(文件傳輸協議)，然後上載新壓縮檔到您所需的位置 (必須於public_html內)，成功上載後，點擊右鍵選解壓 (Extract) 即可完成。</p>
+<p>如您的服務供應商是使用 cPanel 便可以不使用 FileZilla 上傳 OpenCart 到您的網頁空間內。您只需要將 <i class="far fa-folder fa-fw"></i> upload 內的所有文件重新壓縮一次，登入 cPanel 後再點擊 <strong>檔案管理(File Manager)</strong> 便會開啟新一頁可以作上傳或下載的網頁版FTP(文件傳輸協議)，然後上載新壓縮檔到您所需的位置 (必須於public_html內)，成功上載後，點擊右鍵選解壓 (Extract) 即可完成。</p>
 <p class="text-center"><img src="image/cpanel-file-manager.png" alt="cPanel File Manager" class="img-thumbnail" /></p>
 
-<h2>Creating a database for the shop</h2>
-<p>The next step is to create a database on the MySQL server for OpenCart to store a shop&#39;s data on. You should log into the site&rsquo;s control panel and locate MySQL Databases. Using MySQL Databases, you can create a new database by entering a database name and a username/password to access this database. The user that was just created needs to be added to the database, along with enabling all of the necessary permissions. We will use this database information later when we are configuring OpenCart using the auto-installer.</p>
-<h2>Launch the auto-installer</h2>
-<p>With a new database freshly created, we are now ready to install OpenCart directly onto a website. You should open up a web browser and enter in the web address of where they uploaded OpenCart. If the &quot;install&quot; folder in &quot;upload&quot; was uploaded correctly, you should be automatically greeted by the following page:</p>
+<h2>建立資料庫</h2>
+<p>接下來便要為 OpenCart 商店建立一個新的MySQL資料庫。登入伺服器管理平台並尋找 MySQL 管理 / 資料庫管理 / phpMyAdmin (不同服務供應商有不同的用字)，建立一個資料庫，同時可以制定資料庫專屬登入帳號及密碼。某些服務供應商可能需要用戶於創建資料庫時，需設有指定權限才能使用，如創建時遇上任何疑問，可向服務供應商查詢及支援。成功建立資料庫後，稍後會於安裝時使用以下資料：</p>
+<ul>
+  <li>資料庫名稱 (Database Name)</li>
+  <li>登入用戶 (Database User)</li>
+  <li>登入密碼 (Database Password)</li>
+</ul>
+
+<h2>安裝程序</h2>
+<p>如以上準備功夫都完成後，開啟一個新視窗並輸入與OpenCart商店上傳位置相對的網址 (例如: www.shopnow.com)，系統便會自動跳進安裝頁面。如果自動跳頁後顯示找不到網頁等訊息，請於FTP客戶端中確認 <i class="far fa-folder fa-fw"></i> install 是否存在。</p>
+
 <p class="text-center"><img src="image/opencart-step1.png" alt="opencart step1" class="img-thumbnail" /></p>
 <p>This page is the installation page. The following steps will help you complete the installation process for OpenCart.</p>
 <h3>Step 1. License</h3>
