@@ -12,7 +12,7 @@ permalink: zh-hk/installation/
 <p class="text-center"><img src="image/opencart-site-download.png" alt="OpenCart Official Site - Download" class="img-thumbnail" /></p>
 
 <div class="alert alert-success" role="alert">
-  <i class="far fa-check-circle"></i> 若果您的電腦並非使用MAC OS、WINDOW 7或以上的版本，而並沒有任何解壓ZIP檔的程式，可以點解以下網址安裝免費解壓縮程式。
+  <i class="far fa-check-circle"></i> 若果您的電腦並非使用MAC OS、WINDOW 7或以上的版本，而並沒有任何解壓ZIP檔的程式，可以點擊以下網址安裝免費解壓縮程式。
   <ul>
     <li><a href="https://www.win-rar.com/download.html?&L=0" target="_blank">WinRar</a></li>
     <li><a href="http://www.7-zip.org/download.html" target="_blank">7-Zip</a></li>
@@ -49,15 +49,18 @@ permalink: zh-hk/installation/
     <td></td>
   </tr>
 </table>
- 
-<p>準備就緒後，您可以將壓縮檔中的檔案儲存到電腦上您所選的位置。</p>
+
+<p>準備就緒後，您可以將壓縮檔中的檔案儲存到電腦上所選的位置。</p>
 
 <h2>上傳 OpenCart</h2>
-<p>現在，您要先準備網頁寄存空間以及文件傳輸協議(FTP) 程式並將 "upload" 內的所有檔案上傳至網頁伺服器內。</p>
+<p>假設您已經擁有網站伺服器，現在便開啟FTP(文件傳輸協議)程式並將與伺服器連接，將OpenCart <i class="far fa-folder fa-fw"></i> upload 中的所有檔案上傳至伺服器內的指定位置。</p>
 
-<h3>Installing and configuring the FTP client</h3>
-<p>We recommend using Filezilla as your FTP client. Filezilla is a free FTP client that will transfer the OpenCart files to any web server specified. The FileZilla client (not the server) can be downloaded from <a href="http://filezilla-project.org/">http://filezilla-project.org/</a> and installed onto a computer.</p>
-<p>When you open Filezilla you should see your computer&#39;s file directory on the left side. The next step is to locate where you saved the uncompressed OpenCart archive and click on the &quot;upload&quot; folder, and the files should appear below it. The directory needs to be left open as we continue. The right hand side is blank at the moment because the target website hasn&#39;t been connected to. When connected it will display the file directory of the web server.</p>
+<h3>安裝與設定FTP客戶端</h3>
+<p>若果您尚未安裝任何FTP客戶端，這裡會建議使用FileZilla，這是一個免費的FTP客戶端程式。成功連接後可以將OpenCart檔案傳輸到指定網頁伺服器內。FileZilla客戶端（不是伺服器）可以從 <a href="http://filezilla-project.org/" target="_blank">http://filezilla-project.org/</a> 下載並安裝到您的電腦上。
+</p>
+
+<p>當啓動FileZilla後，左側視窗是電腦中的文件目錄，第一步於此視窗開啟已解壓縮的OpenCart存檔位置，然後點擊 <i class="far fa-folder fa-fw"></i> upload；目前右側視窗仍然是空白，因為尚未連接網頁伺服器，第二步則是接上伺服器端口，成功連接後將顯示網頁伺服器的文件目錄。</p>
+
 <p class="text-center"><img src="image/filezilla-disconnect.png" alt="filezilla disconnect" class="img-thumbnail" /></p>
 <p>Before we continue, we need to make sure that you have the following information about your website:</p>
 <ul>
@@ -79,8 +82,7 @@ permalink: zh-hk/installation/
 <p>The Filezilla window should look similar to the above image (minus some directory details). This means that the OpenCart files were successfully transferred the target site. The site now contains the files necessary to setup an OpenCart shop.</p>
 
 <h2>cPanel</h2>
-<p>If your Web Server provider is using cPanel, you can try with this method without FileZilla.</p>
-<p>Go to the “Upload” folder and select all the files inside and zip it to a new zip file. Login your cPanel and click the “File Manager” to open a new tag in the browser. Upload the new zip file in your target path, it should be inside the public_html folder. After that you can right click the zip file and select “Extract" button and done.</p>
+<p>如您的網頁供應商是使用 cPanel 便可以不用 FileZilla 上傳 OpenCart 到您的網頁空間內。您只需要將 “Upload” 內的所有文件重新壓縮一次，登入 cPanel 後再點擊文件管理(File Manager) 便可以看見新一頁可以作上傳下載的網頁版的文件傳輸協議 (FTP)，然後上載新壓縮檔到您所須的位置 (必須於public_html內)，成功上載後，點擊右鍵選解壓 (Extract) 即可完成。</p>
 <p class="text-center"><img src="image/cpanel-file-manager.png" alt="cPanel File Manager" class="img-thumbnail" /></p>
 
 <h2>Creating a database for the shop</h2>
