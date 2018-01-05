@@ -37,12 +37,6 @@ $(document).ready(function(){
 			language = 'en-gb';
 		}
 
-		$('a.docs').on('click', function() {
-			alert('hello');
-			//var url = $(this).attr('href');
-			//$(this).attr('href', '/' + language + '/' + url);
-		}
-
     $('#menu a').each(function() {
 			var current_url = pathname.slice(7);
       var url = $(this).attr('href');
