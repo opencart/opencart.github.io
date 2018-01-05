@@ -30,13 +30,20 @@ $(document).ready(function(){
 	  });
 
 
+		// Add .active on current page
+		$('#menu a').each(function() {
+			var url = $(this).attr('href');
+			if(pathname.slice(7) == url){
+				$(this).parent().addClass('active');
+			}
+		}
+
 		// Get exists language and auto fill the language path before each link
 		var language = pathname.slice(1,6);
 
 		if(language == '' || language == null){
 			language = 'en-gb';
 		}
-
 
     $('#menu a').each(function() {
       var url = $(this).attr('href');
