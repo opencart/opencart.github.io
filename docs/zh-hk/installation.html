@@ -128,8 +128,8 @@ permalink: zh-hk/installation/
 <div class="alert alert-info" role="alert">
   <i class="fas fa-info-circle"></i> 由 OpenCart 2 開始，以下檔案必須更重新命名才能繼續安裝：
   <ul class="list-unstyled">
-    <li>config-dist.php <i class="fas fa-long-arrow-right"></i> config.php</li>
-    <li>admin/config-dist.php <i class="fas fa-long-arrow-right"></i> config.php</li>
+    <li>config-dist.php <i class="fas fa-long-arrow-alt-right"></i> config.php</li>
+    <li>admin/config-dist.php <i class="fas fa-long-arrow-alt-right"></i> config.php</li>
   </ul>
 </div>
 
@@ -189,21 +189,20 @@ permalink: zh-hk/installation/
 <p class="text-center"><img src="image/opencart-step4.png" alt="opencart step4" class="img-thumbnail" /></p>
 <p>完成安裝後，為了提高網頁伺服器及 OpenCart 商店的安全性，我們強力建議移除 <i class="far fa-folder fa-fw"></i> install，有關內容可於<a href="zh-hk/administration/security/">基本安全措施</a>參閱。</p>
 
-<h2>安裝 vQmod</h2>
-<p>vQmod for OpenCart lets you add modules to your store without modifying the core OpenCart code. See vQmod for more information on how to download and install <a　class="docs" href="zh-hk/administration/vqmod/">vQmod </a>for your store.</p>
-
-<h2>升級 OpenCart</h2>
-<p>OpenCart releases new versions from time to time with updated features and bug fixes. To learn how to update a store from an earlier version of OpenCart, visit <a　class="docs" href="zh-hk/upgrading/">Updating OpenCart</a>.</p>
-
+<h2>安裝 vQmod / OCmod</h2>
+<p>vQmod 及 OCmod 是一種附助程式讓您新增 OpenCart 模組而毋須改動 OpenCart 系統內的編碼，詳情請參閱 <a href="zh-hk/administration/vqmod/">vQmod / OCmod </a>。</p>
 
 <h2>卸載 OpenCart</h2>
-<p>Uninstalling OpenCart is a quick and simple process.</p>
+<p>卸載 OpenCart 只須以下步驟：</p>
 <ol>
-  <li>Delete the files/folders in the location you uploaded them to in Filezilla. &nbsp;</li>
-  <li>Delete the OpenCart database from MySQL Databases or phpMyAdmin.</li>
+  <li>透過FTP客戶端刪除網頁伺服器內所有有關 OpenCart 的檔案及資料夾</li>
+  <li>刪除載有OpenCart系統的資料庫</li>
 </ol>
 
-<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> Once OpenCart is uninstalled, all product and customer information will be lost. You can save a backup database file in case you want to reinstall OpenCart at a later time. See <a href="zh-hk/tools/backup/">Backup/Restore</a> for more information.</div>
+<div class="alert alert-danger" role="alert">
+  <i class="fas fa-exclamation-circle"></i>
+  當成功卸載 OpenCart 後，所有貨品及客戶資料都會被刪去。在卸載前可以備份資料庫及已上存的圖片資訊，以便日後重裝 OpenCart 時快速載入所有資料。詳情可參閱<a href="zh-hk/tools/backup/">備份 / 重置</a>。
+</div>
 
-<h2>Support</h2>
-<p>If there are any issues regarding your store&#39;s installation or update, please visit the&nbsp; <a href="http://forum.opencart.com/">Installation, Upgrade, &amp; Config Support</a> section of the OpenCart community forum.</p>
+<h2>技術支援</h2>
+<p>如果遇上任何疑問關於安裝 OpenCart系統，請瀏覽官方論壇<a href="http://forum.opencart.com/" target="_blank">一般支援</a></p>
