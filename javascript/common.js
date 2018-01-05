@@ -30,7 +30,9 @@ $(document).ready(function(){
 	  });
 
 		// Add .active on current page
-		alert(pathname.slice(7));
+		if($('#menu a').attr('href') == pathname.slice(7)){
+			$('#menu a[href="' + pathname.slice(7) +'"]').parents('li').addClass('active');
+		}
 
 
 		// Get exists language and auto fill the language path before each link
