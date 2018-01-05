@@ -255,3 +255,10 @@ a:hover, a:focus, a:active {
 .modal-backdrop {
   z-index: 0;
 }
+
+#menu li.active > a {
+  border-left: 2px solid #01afe8;
+  background-color: #f4f5f7;
+  padding-left: 18px;
+  font-weight: 600;
+}
