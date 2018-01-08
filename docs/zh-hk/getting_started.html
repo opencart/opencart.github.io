@@ -4,31 +4,44 @@ title: "入門須知 - OpenCart 使用指引"
 permalink: zh-hk/getting-started/
 ---
 <h1>入門須知</h1>
-<p>There are a number of steps required after installing OpenCart to get started selling from your online store. This page is a helpful guide to getting started. An OpenCart store is comprised of a <a href="store-front/">Frontend </a>and <a href="administration/">Admin interface</a>. This guide will primarily focus on Admin interface functions and settings. These settings should be tested on the frontend before your site is launched. Following the steps in this guide will get your store to a ready to use state from installation. This guide assumes that you have admin login credentials and are able to login to your store&#39;s Admin interface via
-  <yourdomain.com>/admin, for example: <a href="https://demo.opencart.com/admin/">http://demo.opencart.com/admin/</a>.</yourdomain.com>
-</p>
-<h2>System Settings</h2>
-<p>Most <a href="system/setting/general/">General Settings</a> are required. Under General Settings you will need to set your store&#39;s name, owner, address, email and phone number. These will be used for your store&#39;s contact page and order invoices.</p>
-<p class="text-center"><img src="image/admin-setting-general.png" alt="Setting General Tab" class="img-thumbnail" /></p>
-<h2>Store Settings</h2>
-<p><a href="system/setting/store/">Store Settings</a> need to be changed from the default settings of &quot;Your Store&quot;, etc., to your actual Store Name and a description of your store for search engines.</p>
-<p class="text-center"><img src="image/admin-setting-store.png" alt="Setting Store Tab" class="img-thumbnail" /></p>
-<h2>Local Settings</h2>
-<p><a href="system/setting/local/">Local Settings</a> allow you to choose the Country that your store is operating from. You can also choose the default currency for your store. If your store accepts multiple currencies, you will need to select whether OpenCart should automatically update based on current exchange rates.</p>
-<p class="text-center"><img src="image/admin-setting-local.png" alt="Setting Local Tab" class="img-thumbnail" /></p>
-<h2>Image Settings</h2>
-<p>Next, you will need to select a logo for your store and upload it via the <a href="system/setting/image/">Image Settings</a> tab. The logo must be a suitable size and shape for your theme, and should ideally be a jpg or png file. You can also choose a favicon at this point. This is the small image that displays in a browser when you visit a site. Typically, favicons are 16px by 16px, and OpenCart requires a png file for favicons.</p>
+<p>上一篇解說安裝OpenCart的流程，當完成安裝程序後，本篇將會有數個重要步驟來說明如何開始建立網上商店。OpenCart商店是由<a href="zh-hk/store-front/">網店店面(前台)</a>及<a href="zh-hk/administration/">管理者介面</a>構成，此文章會指導如何使用管理者介面內的功能及設定；我們亦建議使用者先進行測試後才正式公開推出網上商店到互聯網上。</p>
+
+<p>首先登入使用者介面 (例 <strong>http://yourdomain.com/admin</strong>)，並仔細閱覽以下的步驟並跟隨本指引去建立首個商品。如尚未安裝OpenCart系統，可以瀏覽<a href="https://demo.opencart.com/admin/" target="_blank">官方示範使用者介面</a>。</p>
+
+<div class="alert alert-info">本篇以OpenCart 3作為基礎介紹</div>
+
+<h2>系統設定</h2>
+<p>於系統設定的一般資訊內，此部份主要是將網站資訊讓不同搜尋器可以偵查網站，詳情請參閱<a href="zh-hk/system/setting/general/">一般設定</a>。</p>
+<p class="text-center"><img src="image/getting-started/admin-setting-general.png" alt="Setting General Tab" class="img-thumbnail" /></p>
+
+
+<h2>商店設定</h2>
+<p>一般商店所須需的資訊：商店名、店主、地址、電郵、聯絡電話都必須填寫，這些資訊會於<strong>聯絡</strong>及<strong>訂單發票</strong>中顯示，詳情請參閱<a href="zh-hk/system/setting/store/">商店設定</a>。</p>
+<p class="text-center"><img src="image/getting-started/admin-setting-store.png" alt="Setting Store Tab" class="img-thumbnail" /></p>
+
+<h2>地區設定</h2>
+<p>地區設定可以將商店迎合使用者所在的地區作出變化，如貨幣位單。詳情請參閱<a href="zh-hk/system/setting/store/">地區設定</a>。若商店需要使用多種貨幣位單供客人查看時，使用者需要啟用系統已設置的自動更新貨幣匯率。</p>
+<p class="text-center"><img src="image/getting-started/admin-setting-local.png" alt="Setting Local Tab" class="img-thumbnail" /></p>
+
+
+<h2>圖片設定</h2>
+<p>透過圖片設定中可以上載及選擇商店商標及網頁的小圖示 (favicon)，而小圖示像素不能超過16x16。詳情請參閱<a href="zh-hk/system/setting/image/">圖片設定</a>。</p>
 <p class="text-center"><img src="image/admin-setting-image.png" alt="Setting Image Tab" class="img-thumbnail" /></p>
-<h2>Server Settings</h2>
-<p>There are two important settings under the Server tab of your OpenCart store&#39;s System Settings.</p>
-<ol>
-  <li>SEO URLs. If you wish to have search engine optimized URLs in your store then you will need to set this to yes. You will also need to follow the instructions on setting up SEO URLs to make sure these work correctly, but it is an important step for getting the best possible result for your store from search engines.</li>
-  <li>The Display Errors option should always be set to No for a live store. This will prevent your customers seeing any errors in your store&#39;s code while using your site. Your developer will still be able to diagnose and repair these issues using the error logs.</li>
-</ol>
-<h2>Accepting Payments and Adding Taxes</h2>
-<p>Once your settings are correct, you will need to select the payment gateway you wish to use. If your store needs to charge taxes on purchases, these should also be setup via your admin interface as described below.</p>
-<h3>Payment Gateways</h3>
-<p>OpenCart supports many <a href="extension/payment/">Payment Gateways</a> out of the box. If your payment gateway is not supported, you can find and install additional gateways from the OpenCart extension store. In order to choose the payment gateway your store will use, go to the <a href="extension/">Extensions</a> menu, and the <a href="extension/payment/">Payments </a>submenu. This page will show you a list of all the available payment gateways. Your store can use more than one payment gateway.</p>
+<p>而原先的網站圖片設定，就可以前往插件部份的<a href="zh-hk/extension/module/theme/">主題</a>進行編輯</p>
+
+
+<h2>伺服器設定</h2>
+<p>這部份分了四個負責維持OpenCart商店的重要設定，管理商店維修模式、SEO功能、SSL啟用征測、管理者上載設定、錯誤回報等功能。詳情請參閱<a href="zh-hk/system/setting/server/">圖片設定</a></p>
+
+
+<h2>接受付款 及 稅項計算</h2>
+<p>當所有設定都完成後便需要設定付款平台，如果商店所在的地區有消費稅或其他稅項就可以前往稅項設定進行修改。</p>
+
+
+<h3>付款平台</h3>
+<p>OpenCart 免費提供了多種<a href="zh-hk/extension/payment/">付款平台</a>。假如沒有所需的付款平台可以前往OpenCart官方市場 (Marketplace)搜找及購買所需的付款平台。一旦決定了所使用的平台，可以進入付款平台啟用相關功能。詳情請參閱<a href="zh-hk/extension/payment/">付款平台</a></p>
+
+
 <p>In order to enable payment gateways first click the Install link corresponding to the gateway you wish to enable, then click the Edit link to set it up for your payment account. The Order field on each payment gateway&#39;s settings allows you to select the order in which payment options are displayed on your checkout page. Lower numbered payment options will always be shown above higher numbered options.</p>
 <p class="text-center"><img src="image/admin-setting-payment.png" alt="Extensions Payment Page" class="img-thumbnail" /></p>
 <h3>Taxes</h3>
