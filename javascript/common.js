@@ -34,9 +34,6 @@ $(document).ready(function(){
 		// Get exists language and auto fill the language path before each link
 		var language = pathname.slice(1,6);
 
-		if(language == '' || language == null){
-			language = 'en-gb';
-		}
 
     $('#menu a').each(function() {
 			var current_url = pathname.slice(7);
@@ -45,6 +42,10 @@ $(document).ready(function(){
 			// Add .active on menu if it is current page
 			if(url == current_url){
 				$('#menu a[href="' + current_url +'"]').parents('li').addClass('active').addClass('open');
+			}
+			
+			if(language == '' || language == null){
+				language = 'en-gb';
 			}
 
       $(this).attr('href', '/' + language + '/' + url);
