@@ -7,7 +7,7 @@ $(document).ready(function(){
 		var pathname = window.location.pathname;
 
 		if(pathname = '' || pathname = null){
-			window.location.href = 'en-gb/introduction/';
+			alert('hello');
 		}
 
 		if(pathname != '' || pathname != null){
