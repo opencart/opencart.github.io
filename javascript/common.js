@@ -30,7 +30,7 @@ $(document).ready(function(){
 	    window.location.href = href;
 	  });
 
-
+ 
 		// Get exists language and auto fill the language path before each link
 		var language = pathname.slice(1,6);
 
@@ -43,7 +43,7 @@ $(document).ready(function(){
 			if(url == current_url){
 				$('#menu a[href="' + current_url +'"]').parents('li').addClass('active').addClass('open');
 			}
-			
+
 			if(language == '' || language == null){
 				language = 'en-gb';
 			}
