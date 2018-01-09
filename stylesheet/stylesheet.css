@@ -271,3 +271,13 @@ a:hover, a:focus, a:active {
   padding-left: 18px;
   font-weight: 600;
 }
+
+.list-payment {
+  border: 1px solid #f4f5f7;
+} .list-payment li {
+  display: inline;
+  width: 33.3333%;
+  text-align: center;
+} .list-payment li + li {
+  border-left: 1px solid #f4f5f7;
+}
