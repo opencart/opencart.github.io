@@ -282,3 +282,9 @@ a:hover, a:focus, a:active {
 } .list-payment-gateway ul li:nth-child(even) {
   border-left: 1px solid #eee;
 }
+@media screen and (max-width: 767px){
+  .list-payment-gateway ul li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+}
