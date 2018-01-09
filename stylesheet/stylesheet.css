@@ -272,12 +272,11 @@ a:hover, a:focus, a:active {
   font-weight: 600;
 }
 
-.list-payment ul {
+.list-payment-gateway ul {
   border: 1px solid #f4f5f7;
-} .list-payment ul li {
-  display: inline;
-  width: 33.3333%;
-  text-align: center;
-} .list-payment ul li + li {
+} .list-payment-gateway ul li {
+  width: 49%;
+  line-height: 2.5;
+} .list-payment-gateway ul li:nth-child(odd) {
   border-left: 1px solid #f4f5f7;
 }
