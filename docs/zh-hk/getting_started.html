@@ -1,0 +1,68 @@
+---
+layout: default
+title: "入門須知 - OpenCart 使用指引"
+permalink: zh-hk/getting-started/
+---
+<h1>入門須知</h1>
+<p>上一篇解說安裝OpenCart的流程，當完成安裝程序後，本篇將會有數個重要步驟來說明如何開始建立網上商店。OpenCart商店是由<a href="zh-hk/store-front/">網店店面(前台)</a>及<a href="zh-hk/administration/">管理者介面</a>構成，此文章會指導如何使用管理者介面內的功能及設定；我們亦建議使用者先進行測試後才正式公開推出網上商店到互聯網上。</p>
+
+<p>首先登入使用者介面 (例 <strong>http://yourdomain.com/admin</strong>)，並仔細閱覽以下的步驟並跟隨本指引去建立首個商品。如尚未安裝OpenCart系統，可以瀏覽<a href="https://demo.opencart.com/admin/" target="_blank">官方示範使用者介面</a>。</p>
+
+<div class="alert alert-info">本篇以OpenCart 3作為基礎介紹</div>
+
+<h2>系統設定</h2>
+<p>於系統設定的一般資訊內，此部份主要是將網站資訊讓不同搜尋器可以偵查網站，詳情請參閱<a href="zh-hk/system/setting/general/">一般設定</a>。</p>
+<p class="text-center"><img src="image/getting-started/admin-setting-general.png" alt="Setting General Tab" class="img-thumbnail" /></p>
+<hr/>
+
+<h2>商店設定</h2>
+<p>一般商店所須需的資訊：商店名、店主、地址、電郵、聯絡電話都必須填寫，這些資訊會於<strong>聯絡</strong>及<strong>訂單發票</strong>中顯示，詳情請參閱<a href="zh-hk/system/setting/store/">商店設定</a>。</p>
+<p class="text-center"><img src="image/getting-started/admin-setting-store.png" alt="Setting Store Tab" class="img-thumbnail" /></p>
+<hr/>
+
+<h2>地區設定</h2>
+<p>地區設定可以將商店迎合使用者所在的地區作出變化，如貨幣位單。詳情請參閱<a href="zh-hk/system/setting/store/">地區設定</a>。若商店需要使用多種貨幣位單供客人查看時，使用者需要啟用系統已設置的自動更新貨幣匯率。</p>
+<p class="text-center"><img src="image/getting-started/admin-setting-local.png" alt="Setting Local Tab" class="img-thumbnail" /></p>
+<hr/>
+
+<h2>圖片設定</h2>
+<p>透過圖片設定中可以上載及選擇商店商標及網頁的小圖示 (favicon)，而小圖示像素不能超過16x16。詳情請參閱<a href="zh-hk/system/setting/image/">圖片設定</a>。</p>
+<p class="text-center"><img src="image/getting-started/admin-setting-image.png" alt="Setting Image Tab" class="img-thumbnail" /></p>
+<p>而舊版本中的網站圖片設定，就可以前往插件部份的<a href="zh-hk/extension/theme/">主題</a>進行編輯。</p>
+<hr/>
+
+<h2>伺服器設定</h2>
+<p>這部份分了四個負責維持OpenCart商店的重要設定，管理商店維修模式、SEO功能、SSL啟用征測、管理者上載設定、錯誤回報等功能，詳情請參閱<a href="zh-hk/system/setting/server/">伺服器設定</a>。</p>
+<hr/>
+
+<h2>接受付款 及 稅項計算</h2>
+<p>當所有設定都完成後便需要設定支付平台，如果商店所在的地區有消費稅或其他稅項就可以前往稅項設定進行修改。</p>
+
+<h3>支付平台</h3>
+<p>OpenCart 預設已免費提供了多種支付平台，假如沒有所需的支付平台可以前往OpenCart官方市場 (Marketplace)搜找及購買所需的支付平台。一旦決定了所使用的平台，可以進入支付平台啟用相關功能。</p>
+<p>首次啟用相關支付平台時，先按下綠色按鈕進行安裝，接著當支付平台出現藍色按鈕後便可進行編輯。在編輯頁面中，使用者可以填寫支付平台的相關資訊使系統與支付平台進行連繫；OpenCart系統在結帳時更可以同時支援多個支付平台供客戶選擇，如果有多過一個支付平台時，可於編輯頁面中決定支付平台的出現優先次序以及達到指定金額才顯示該支付平台選項。詳情請參閱<a href="zh-hk/extension/payment/">支付平台</a>。</p>
+<p class="text-center"><img src="image/getting-started/admin-setting-payment.png" alt="Extensions Payment Page" class="img-thumbnail" /></p>
+
+<h3>稅項計算</h3>
+<p>OpenCart offers a number of different <a href="system/localisation/tax/">Tax </a>options by default. Taxes are location dependent, so you can charge different tax rates to customers in different geographical locations, according to local tax rules. Tax rates are set up under System &gt; Localisation &gt; Taxes &gt; Tax Rates. If your required tax rate is not already present, you will need to create a new tax rate and add it. For example, the Tax Rate applicable to New Zealand is GST which is currently at 15%. New Zealand stores should therefore create a new Tax Rate called GST, set to 15%, and applicable to customers in the Geo Zone of New Zealand.</p>
+<p>If you have product specific tax rates, you need to define each of these tax rates under the Tax Rates page. You will later choose which tax rate applies to each product, so you will be able to manage your product specific taxes at the product level.</p>
+<hr/>
+
+
+<h2>運輸平台</h2>
+<p>Stores selling tangible goods will need to edit their shipping options. Shipping methods are selected under the Extensions &gt; Shipping menu item. Just as with the Tax Rates above, you will need to Install and Edit the settings for the Shipping Methods your store will support. The documentation contains full instructions on setting your <a href="extension/shipping/">Shipping Method</a>.</p>
+<p class="text-center"><img src="image/getting-started/admin-setting-shipping.png" alt="Extensions Shipping Page" class="img-thumbnail" /></p>
+<hr/>
+
+<h2>庫存管理</h2>
+<p>OpenCart&#39;s installation includes demonstration data to help you see how to setup your OpenCart store&#39;s inventory. This includes <a href="catalog/category/">Categories</a>, <a href="catalog/manufacturer/">Manufacturers</a>, <a href="catalog/option/">Options</a>, <a href="catalog/attribute/">Attributes</a> and <a href="catalog/product/">Products </a>and some home page Banners. These are the Apple iPods that you see when you first visit your store&#39;s frontend after installation. In order to get started with your store, you will need to replace these demo items with the actual categories, manufacturers and products your store will sell. There are two recommended ways to do this:</p>
+<ol>
+  <li>You can manually edit these under the Catalog menu in your OpenCart store&#39;s admin.</li>
+  <li>You can use an import tool to simplify the upload of your products in bulk. This is more practical for larger inventories or dropshippers, and will allow you to remove all existing items and replace them at the same time.</li>
+</ol>
+<hr/>
+
+<h2>插件、模組及主題</h2>
+<p>OpenCart的主要特色之一，功能及外觀主要由模組及主題兩部份所管理。要使自己的OpenCart商店變得更個性化就取決於插件及模組的使用。例如於首頁中的大型橫額是由設計(Design) <i class="fas fa-long-arrow-alt-right"></i> 横額(Banners)建立了<strong>Home Page Slideshow</strong>的項目，再從插件(Extensions) <i class="fas fa-long-arrow-alt-right"></i> 模組(Modules)中的<strong>Slideshow</strong>組合而成，最後再於設計(Design) <i class="fas fa-long-arrow-alt-right"></i> 外觀(Layout)裡的<strong>Home</strong>選擇對應位置顯示出來。如果移除任何一方的設定就使此功能無法成立並不會顯示於網頁上。</p>
+<p>OpenCart 系統在安裝時已預設小部份功能在內作示範用途，如果商店毋需使用這些功能只要移除該功能就可以；初次接觸OpenCart的使用者亦可以藉由預設的項目快速改動內容以便修改為自己的產品及完整商店。</p>
+<p>若預設的模組並沒有合適的功能，使用者可安裝非官方插件，詳情請參閱<a href="zh-hk/extension/module/3rd-party/">非官方模組</a>。</p>

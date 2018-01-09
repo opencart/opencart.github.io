@@ -7,7 +7,10 @@ permalink: /installation/
 <h2>Installing OpenCart</h2>
 <p>This guide will walk you through how to successfully install and uninstall OpenCart.</p>
 <h2>Downloading and unzipping OpenCart archive</h2>
-<p>The latest version of OpenCart (v.2.0.3.1) can be downloaded from the <a href="http://www.opencart.com/index.php?route=download/download/">OpenCart website</a> (recommended) or directly from <a href="https://github.com/opencart">github</a>. The download page also offers access to previous versions of OpenCart. Under the Downloads column, locate v2.0.3.1 and press the &ldquo;Download&rdquo; link directly across from it under the Action column. This will download the compressed archive of that version of OpenCart in a zip file. For OpenCart version 2.0.3.1, a file named &ldquo;opencart_v2.0.3.1.zip&quot; will be downloaded.</p>
+
+<p>The latest version of OpenCart (v.3.0.2.0) can be downloaded from the <a href="https://www.opencart.com/index.php?route=cms/download">OpenCart website</a> (recommended for end user) or directly from github (recommended for web developer). The download page also offers access to previous versions of OpenCart. Under the Downloads column, locate 3.0.2.0 and press the "Download Now" link directly across from it under the Action column. This will download the compressed archive of that version of OpenCart in a zip file. For OpenCart version 3.0.2.0, a file named "3.0.2.0-compiled.zip" will be downloaded.</p>
+<p class="text-center"><img src="image/opencart-site-download.png" alt="OpenCart Official Site - Download" class="img-thumbnail" /></p>
+
 <div class="alert alert-success" role="alert"><i class="fa  fa-check-circle"></i> If you don&#39;t have a program on your computer that can extract files from a zip file, <a href="http://www.win-rar.com/download.html?&amp;L=0">WinRar</a> can be downloaded for free. Unzipping the zip file will uncompress the OpenCart archive so the files can be accessed by a web server.</div>
 <p>When opening the zip file, the following files will be visible:</p>
 <ul>
@@ -40,6 +43,12 @@ permalink: /installation/
 <p>After Filezilla finishes uploading the files to the location specified, you should see the same files on both the left side(computer) and on the right side (the website); as seen in the screenshot below:</p>
 <p class="text-center"><img src="image/filezilla-file-transfer.png" alt="filezilla file transfer-png" class="img-thumbnail" /></p>
 <p>The Filezilla window should look similar to the above image (minus some directory details). This means that the OpenCart files were successfully transferred the target site. The site now contains the files necessary to setup an OpenCart shop.</p>
+
+<h2>cPanel</h2>
+<p>If your Web Server provider is using cPanel, you can try with this method without FileZilla.</p>
+<p>Go to the “Upload” folder and select all the files inside and zip it to a new zip file. Login your cPanel and click the “File Manager” to open a new tag in the browser. Upload the new zip file in your target path, it should be inside the public_html folder. After that you can right click the zip file and select “Extract" button and done.</p>
+<p class="text-center"><img src="image/cpanel-file-manager.png" alt="cPanel File Manager" class="img-thumbnail" /></p>
+
 <h2>Creating a database for the shop</h2>
 <p>The next step is to create a database on the MySQL server for OpenCart to store a shop&#39;s data on. You should log into the site&rsquo;s control panel and locate MySQL Databases. Using MySQL Databases, you can create a new database by entering a database name and a username/password to access this database. The user that was just created needs to be added to the database, along with enabling all of the necessary permissions. We will use this database information later when we are configuring OpenCart using the auto-installer.</p>
 <h2>Launch the auto-installer</h2>
@@ -51,7 +60,7 @@ permalink: /installation/
 <h3>Step 2. Pre-Installation</h3>
 <p>This step checks to see if the web server has the technical requirements and correct permissions to setup OpenCart properly. If red marks are visible on #1 or #2, you need to make sure that these components are properly installed onto the web server. You should contact your hosting service if there are any issues with this. If there are red marks on #3 or #4, there might have been an issue with uploading the files using the FTP client. If everything is configured correctly and green marks are visible (as seen below), you may press &quot;Continue&quot;.</p>
 <p class="text-center"><img src="image/opencart-step2.png" alt="opencart step2" class="img-thumbnail" /></p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> As of version 2.0.3.1, the following files need to be renamed to continue to Step 3:
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> As of version 2.3.0.2, the following files need to be renamed to continue to Step 3:
   <ul>
     <li>&nbsp;&nbsp;&nbsp; config-dist.php to config.php</li>
     <li>&nbsp;&nbsp;&nbsp; admin/config-dist.php to config.php</li>

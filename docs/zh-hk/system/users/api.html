@@ -1,0 +1,524 @@
+---
+layout: default
+title: "API - OpenCart 使用指引"
+permalink: zh-hk/system/users/api/
+---
+<h1>API</h1>
+
+<h2>API</h2>
+<p>For using OpenCart API you should enable it previously, via admin part of you're site.<br />
+Go to System->Users->API and you'll see a predefined user named "Default".<br />
+Edit it - and the are no API-key so generate it, by pressing the button and set "Status" to enable.<br />
+Next, add you'r IP to list of permitted for API access on another tab.</p>
+
+<p>API is avaliable via URL like</p>
+<pre><code>http://myopencart.example.com/index.php?route=api/cart/add</pre></code>
+<p>where route is using choose appropriate controller.</p>
+
+<h3>NOTES:</h3>
+<ul>
+  <li>API users always have customer_id as '0'. And have the own api_id.</li>
+  <li>I'll us python-requests library for this examples, but the main idea is describing parameters so console curl will be fine enough.</li>
+  <li>And in descriptions I'll assume what we have "oc_" prefix on DB tables.</li>
+</ul>
+
+<p>Firstly, you can and definitly should get token for you session - you'll get cookie file and OpenCart server will identify activity by this way.</p>
+
+<pre><code>import requests
+
+s = requests.Session()
+
+username = 'Default'
+key='L3MYyzlYMRL8gBcpCm6CdrVarFUXtPORZkJKP7vgaY8M8EIZWOr3EJxq'
+# Actually, key is 256 character-long
+
+s.post(
+    'http://myopencart.example.com/index.php?route=api/login',
+    data={'username':username, 'key':key}
+).text
+</code></pre>
+
+<p>If everything was done right, you'll get json-response with api_token for you'r session.
+Check site admin API page, edit API user and open "Sessions" tab - you can see established session.</p>
+
+<p>Now, what you can do with OpenCart API?</p>
+
+<h3>Login</h3>
+<h4>api/login</h4>
+
+<p>Establishing session for API user by key
+PARAMS:<br />
+DATA:<br />
+username:username from oc_api<br />
+key:key from oc_api<br />
+EXAMPLE:</p>
+
+<pre><code>
+session.post(
+    'http://myopencart.example.com/index.php?route=api/shipping/address',
+    params={'api_token':'768ef1810185cd6562478f61d2'},
+    data={
+        'username':username,
+        'key':key
+    }
+)
+</code></pre>
+
+<h3>Currency</h3>
+<h4>api/currency</h4>
+
+<p>DESCRIPTION:change session currency<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+currency:code from table oc_currency<br />
+EXAMPLE:</p>
+
+<pre><code>
+session.post(
+    'http://myopencart.example.com/index.php?route=api/currency',
+    params={'api_token':'768ef1810185cd6562478f61d2'},
+    data={'currency':'USD'}
+)
+</code></pre>
+
+<h3>Cart</h3>
+<h4>api/cart/add</h4>
+
+<p>DESCRIPTION:adding product to cart<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+product_id:product_id from table oc_cart<br />
+quantity:quantity from table oc_cart<br />
+option:option array from table oc_cart<br />
+EXAMPLE:</p>
+
+<pre><code>
+session.post(
+    'http://myopencart.example.com/index.php?route=api/cart/add',
+    params={'api_token':'768ef1810185cd6562478f61d2'},
+    data={
+        'product_id':'100'
+        'quantuty':'1'
+    }
+)
+</code></pre>
+
+<h4>api/cart/edit</h4>
+
+<p>DESCRIPTION:edit product quantity in cart<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+key:cart_id from table oc_cart  <br />
+quantity:quantity from table oc_cart<br />
+EXAMPLE:</p>
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/cart/edit',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+        'key':'10'
+        'quantuty':'2'
+    }
+)
+</code></pre>
+
+<h4>api/cart/remove</h4>
+
+<p>DESCRIPTION:removing product from cart<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+key:cart_id from table oc_cart<br />
+EXAMPLE:</p>
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/cart/remove',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+        'key':'10'
+    }
+)
+</code></pre>
+
+<h4>api/cart/products</h4>
+
+<p>DESCRIPTION:cart content<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/cart/products',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={}
+)
+</code></pre>
+
+<h3>Coupon</h3>
+
+<h4>api/coupon</h4>
+
+<p>DESCRIPTION:apply existing coupon<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+coupon:code from oc_coupon;<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/coupon',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+        'coupon':'2222'
+    }
+)
+</code></pre>
+
+<h3>Customer</h3>
+
+<h4>api/customer</h4>
+
+<p>DESCRIPTION:set customer for current session<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+firstname:<br />
+lastname:<br />
+email:<br />
+telephone:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/customer',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    'firstname':'Dear',
+    'lastname':'Customer',
+    'email':'customer@example.com',
+    'telephone':'+1 879 2548022'}
+    }
+)
+</code></pre>
+
+<h3>Voucher</h3>
+<h4>api/voucher</h4>
+
+<p>DESCRIPTION:apply existing voucher<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+voucher:code from oc_voucher;<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/voucher',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+        'voucher':'VOU-7271'
+    }
+)
+</code></pre>
+
+<h4>api/voucher/add</h4>
+
+<p>DESCRIPTION:add new voucher for current session<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+from_name:from_name from oc_voucher  <br />
+from_email:from_email from oc_voucher  <br />
+to_name:to_name from oc_voucher  <br />
+to_email:to_email from oc_voucher  <br />
+amount :amount from oc_voucher in selected currency  <br />
+code :code from oc_voucher<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/voucher/add',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+        'from_name':'MyOpenCart Admin'
+        'from_email':'admin@example.com'
+        'to_name':'Dear Customer'
+        'to_email':'customer@example.com'
+        'amount':'100'
+        'code':'VOU-7177'
+    }
+)
+</code></pre>
+
+<h3>Shipping</h3>
+
+<h4>api/shipping/address -</h4>
+
+<p>DESCRIPTIONIPTION:set shipping address for current session<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+firstname  <br />
+lastname  <br />
+address_1  <br />
+city  <br />
+country_id  <br />
+zone_id<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/shipping/address',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    'firstname':'Customer',
+    'lastname':'Dear',
+    'address_1':'Somewhere',
+    'city':'KLD',
+    'country_id':'RUS',
+    'zone_id':'KGD'
+    }
+)
+</code></pre>
+
+<h4>api/shipping/methods</h4>
+
+<p>DESCRIPTION:returning avaliable shipping methods<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/shipping/methods',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+)
+</code></pre>
+
+<h4>api/shipping/method</h4>
+
+<p>DESCRIPTION:set shipping method for current session<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+shipping_method<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/shipping/method',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    'shipping_method':'pickup.pickup'
+    }
+)
+</code></pre>
+
+<h3>Reward</h3>
+
+<h4>api/reward</h4>
+
+<p>DESCRIPTION:<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/reward',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    }
+)
+</code></pre>
+
+<h4>api/reward/maximum</h4>
+
+<p>DESCRIPTION:<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/reward/maximum',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    }
+)
+</code></pre>
+
+<h4>api/reward/available</h4>
+
+<p>DESCRIPTION:<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/reward/avaliable',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    }
+)
+</code></pre>
+
+<h3>Order</h3>
+
+<h4>api/order/add</h4>
+
+<p>DESCRIPTION:new order by cart content and payment/delivery information has beeen set by current session<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/order/add',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+)
+</code></pre>
+
+<h4>api/order/edit</h4>
+
+<p>DESCRIPTION:<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/order/edit',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    }
+)
+</code></pre>
+
+<h4>api/order/delete</h4>
+
+<p>DESCRIPTION:<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/order/delete',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    }
+)
+</code></pre>
+
+<h4>api/order/info</h4>
+
+<p>DESCRIPTION:<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/order/info',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    }
+)
+</code></pre>
+
+<h4>api/order/history</h4>
+
+<p>DESCRIPTION:<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/order/history',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    }
+)
+</code></pre>
+
+<h3>Payment</h3>
+
+<h4>api/payment/address</h4>
+
+<p>DESCRIPTION:set payment address for this session<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+firstname  <br />
+lastname  <br />
+address_1  <br />
+city  <br />
+country_id  <br />
+zone_id<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/payment/address',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    'firstname':'Customer',
+    'lastname':'Dear',
+    'address_1':'Somewhere',
+    'city':'KLD',
+    'country_id':'RUS',
+    'zone_id':'KGD'
+    }
+)
+</code></pre>
+
+<h4>api/payment/methods</h4>
+
+<p>DESCRIPTION:returning avaliable payment methods<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/payment/methods',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+)
+</code></pre>
+
+<h4>api/payment/method</h4>
+
+<p>DESCRIPTION:setting payment method of avaliable in api/payment/methods<br />
+PARAMS:<br />
+api_token<br />
+DATA:<br />
+payment_method<br />
+EXAMPLE:</p>
+
+
+<pre><code>session.post(
+    'http://myopencart.example.com/index.php?route=api/payment/method',
+  params={'api_token':'768ef1810185cd6562478f61d2'},
+  data={
+    'payment_method':'bank_transfer'
+    }
+)
+</code></pre>

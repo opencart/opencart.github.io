@@ -1,0 +1,208 @@
+---
+layout: default
+title: "安裝 - OpenCart 使用指引"
+permalink: zh-hk/installation/
+---
+<h1>安裝 OpenCart</h1>
+<p>本指引將說明如何成功安裝與卸載OpenCart系統，假如您是初次接觸這類型的網站應用程式，本篇文章亦提供相關上載網頁伺服器之簡單教學。</p>
+
+<h2>下載並解壓縮OpenCart檔案</h2>
+<p>OpenCart（v.3.0.2.0）的最新版本可以從<a href="https://www.opencart.com/index.php?route=cms/download" target="_blank">OpenCart網站</a>下載（推薦一般用家）或直接從<a href="https://github.com/opencart/opencart" target="_blank">Github 平台</a>下載（推薦網頁開發人員）。下載頁面更提供較舊版本的OpenCart方便網頁開發人員使用。 按下<strong>DOWNLOAD NOW</strong>按建，3.0.2.0版本的zip壓縮檔會直接下載到您的電腦。3.0.2.0版本的檔案對應名稱為<strong>3.0.2.0-OpenCart.zip</strong>。</p>
+<p>如欲下載其他版本，請按<strong>Release notes</strong> 或 <strong>previous releases</strong>，查找您所需要的版本並下載。</p>
+<p class="text-center"><img src="image/opencart-site-download.png" alt="OpenCart Official Site - Download" class="img-thumbnail" /></p>
+
+<div class="alert alert-success" role="alert">
+  <i class="far fa-check-circle"></i> 若果您的電腦並非使用MAC OS、WINDOW 7或以上的版本，而並沒有任何解壓ZIP檔的程式，可以點擊以下網址安裝免費解壓縮程式。
+  <ul>
+    <li><a href="https://www.win-rar.com/download.html?&L=0" target="_blank">WinRar</a></li>
+    <li><a href="http://www.7-zip.org/download.html" target="_blank">7-Zip</a></li>
+  </ul>
+</div>
+<p>完成解壓縮後便可以獲得OpenCart的系統檔案，內容包含：</p>
+<table class="table table-bordered">
+  <tr>
+    <td><i class="far fa-folder fa-fw"></i> upload</td>
+    <td>包含整個OpenCart系統須上傳到網頁伺服器的所有文件</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file-alt fa-fw"></i> license.txt</td>
+    <td>包含有關在您的網站上使用OpenCart系統的許可協議</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file-alt fa-fw"></i> readme.txt</td>
+    <td>檔提供了OpenCart網站上當前安裝和升級說明的連結</td>
+  </tr>
+</table>
+
+<p>準備就緒後，您可以將壓縮檔中的檔案儲存到電腦上所選的位置。</p>
+
+<h2>上傳 OpenCart</h2>
+<p>假設您已經擁有網站伺服器，現在便開啟FTP(文件傳輸協議)程式並將與伺服器連接，將OpenCart <i class="far fa-folder fa-fw"></i> upload 中的所有檔案上傳至伺服器內的指定位置。</p>
+<table class="table table-bordered">
+  <tr>
+    <td width="50%"><i class="far fa-folder fa-fw"></i> admin</td>
+    <td width="50%"><i class="far fa-folder fa-fw"></i> catalog</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-folder fa-fw"></i> image</td>
+    <td><i class="far fa-folder fa-fw"></i> install</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-folder fa-fw"></i> system</td>
+    <td><i class="far fa-file fa-fw"></i> .htaccess.txt</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file fa-fw"></i> config-dist.php</td>
+    <td><i class="far fa-file fa-fw"></i> index.php</td>
+  </tr>
+  <tr>
+    <td><i class="far fa-file fa-fw"></i> php.ini</td>
+    <td>-</td>
+  </tr>
+</table>
+
+<h3>安裝與設定FTP客戶端</h3>
+<p>如您尚未安裝任何FTP客戶端，這裡會建議使用FileZilla，這是一個免費的FTP客戶端程式。成功連接後可以將OpenCart檔案傳輸到指定網頁伺服器內。FileZilla客戶端（不是伺服器）可以從 <a href="http://filezilla-project.org/" target="_blank">http://filezilla-project.org/</a> 下載並安裝到您的電腦上。
+</p>
+
+<p>當啓動FileZilla後，左側視窗是電腦中的文件目錄，第一步於此視窗開啟已解壓縮的OpenCart存檔位置，然後點擊 <i class="far fa-folder fa-fw"></i> upload；目前右側視窗仍然是空白，因為尚未連接網頁伺服器，第二步則是接上伺服器端口，成功連接後將顯示網頁伺服器的文件目錄。</p>
+<p class="text-center"><img src="image/filezilla-disconnect.png" alt="filezilla disconnect" class="img-thumbnail" /></p>
+<p>連接網頁伺服器前，先從服務供應商確認及獲得以下資料：</p>
+<ul>
+  <li>主機名 (Host name)</li>
+  <li>用戶名 (Username)</li>
+  <li>密碼 (Password)</li>
+</ul>
+
+<h3>新增「網站管理」</h3>
+<p>在<strong>檔案 (File)</strong>選項下，點擊<strong>網站管理 (Site Manager)</strong>後會開啟一個新視窗。點擊<strong>新網站 (New Site)</strong>並於<strong>一般(General)</strong>中填寫FTP主機名、用戶名及登入密碼，接著按下<strong>連接 (Connect)</strong>完成新增步驟。程式會按照填寫的資料自動與伺服器進行連線，成功連線後右側視窗將會顯示伺服器中網站的文件目錄。</p>
+<p class="text-center"><img src="image/filezilla%20site%20manager.png" alt="filezilla site manager" class="img-thumbnail" /></p>
+
+
+<h3>上傳OpenCart文件</h3>
+<p>商店的上傳位置取決於您是否希望在主頁上看到商店，或是上傳於子文件夾，一個子域名等。如果你想讓 OpenCart 成為主頁面，你需要將文件上傳到網站的根目錄。</p>
+
+<div class="alert alert-info" role="alert">
+  <i class="fas fa-info-circle"></i> 請注意，某些託管服務需要將公共文件上載到公共目錄(如public_html)，才能在網站上顯示。您應該檢查您的託管服務提供商，看看您可以上傳公共文件。
+</div>
+
+<p>一旦確定 OpenCart 商店的上傳位置，便可於FileZilla左側視窗 <i class="far fa-folder fa-fw"></i> upload 中的全部內容選取並拖曳到右側視窗中，或右擊選擇上傳。上傳文件可能需要花費幾分鐘到FTP客戶端上，取決於網絡及供應商的速度。</p>
+
+<div class="alert alert-danger" role="alert">
+  <i class="fas fa-exclamation-circle"></i> 如果您希望商店位於主頁上，例如www.shopnow.com，則必須上傳 <i class="far fa-folder fa-fw"></i> upload 的內容，而不是將資件夾上傳至伺服器中。
+  <ul class="list-unstyled">
+    <li><i class="fas fa-times fa-fw"></i> www.shopnow.com/upload</li>
+    <li><i class="fas fa-check fa-fw"></i> www.shopnow.com</li>
+  </ul>
+</div>
+
+<p>完成上傳後，兩方視窗上看到相等的文件數量，如下圖所示：</p>
+<p class="text-center"><img src="image/filezilla-file-transfer.png" alt="filezilla file transfer-png" class="img-thumbnail" /></p>
+<p>伺服器現在已包含安裝 OpenCart 商店所需的文件。</p>
+
+<h2>cPanel</h2>
+<p>如您的服務供應商是使用 cPanel 便可以不使用 FileZilla 上傳 OpenCart 到您的網頁空間內。您只需要將 <i class="far fa-folder fa-fw"></i> upload 內的所有文件重新壓縮一次，登入 cPanel 後再點擊 <strong>檔案管理(File Manager)</strong> 便會開啟新一頁可以作上傳或下載的網頁版FTP(文件傳輸協議)，然後上載新壓縮檔到您所需的位置 (必須於public_html內)，成功上載後，點擊右鍵選解壓 (Extract) 即可完成。</p>
+<p class="text-center"><img src="image/cpanel-file-manager.png" alt="cPanel File Manager" class="img-thumbnail" /></p>
+
+<h2>建立資料庫</h2>
+<p>接下來便要為 OpenCart 商店建立一個新的MySQL資料庫。登入伺服器管理平台並尋找 MySQL 管理 / 資料庫管理 / phpMyAdmin (不同服務供應商有不同的用字)，建立一個資料庫，同時可以制定資料庫專屬登入帳號及密碼。某些服務供應商可能需要用戶於創建資料庫時，需設有指定權限才能使用，如創建時遇上任何疑問，可向服務供應商查詢及支援。成功建立資料庫後，稍後會於安裝時使用以下資料：</p>
+<ul>
+  <li>資料庫名稱 (Database Name)</li>
+  <li>登入用戶 (Database User)</li>
+  <li>登入密碼 (Database Password)</li>
+</ul>
+
+<h2>安裝程序</h2>
+<p>如以上準備功夫都完成後，開啟一個新視窗並輸入與OpenCart商店上傳位置相對的網址 (例如: www.shopnow.com)，系統便會自動跳進安裝頁面，如下圖。如果自動跳頁後顯示找不到網頁等訊息，請於FTP客戶端中確認 <i class="far fa-folder fa-fw"></i> install 是否存在。</p>
+<p class="text-center"><img src="image/opencart-step1.png" alt="opencart step1" class="img-thumbnail" /></p>
+
+<p>請跟隨以下步驟並完成安裝程序。</p>
+<h3>第一步　許可協議</h3>
+<p>閱讀許可協議後點擊 <strong>Continue</strong> 繼續</p>
+
+<h3>第二步　準備安裝</h3>
+<p>此頁將會檢查網站伺服器是否乎合安裝 OpenCart 的系統需求及權限。如果於清單一及二中出現了紅色提示，這表示系統需求不乎，請與服務供應商聯絡；若清單四及五顯示了紅色題示，則表示伺服器內於在指定位置缺少了任何檔案或資料夾權限不乎。</p>
+<p>清單上所有項目都是 <i class="fas fa-check-circle fa-fw" style="color:#468847;"></i> 或 <span style="color: #468847">Writable</span> 的時候 (如下圖)，便可以點擊 <strong>Continue</strong> 進行下一步的安裝程序。</p>
+<p class="text-center"><img src="image/opencart-step2.png" alt="opencart step2" class="img-thumbnail" /></p>
+
+<div class="alert alert-info" role="alert">
+  <i class="fas fa-info-circle"></i> 由 OpenCart 2 開始，以下檔案必須更重新命名才能繼續安裝：
+  <ul class="list-unstyled">
+    <li>config-dist.php <i class="fas fa-long-arrow-alt-right"></i> config.php</li>
+    <li>admin/config-dist.php <i class="fas fa-long-arrow-alt-right"></i> config.php</li>
+  </ul>
+</div>
+
+<h3>第三步　填寫初步資料</h3>
+<p>填寫下列資料並使系統連接資料庫及建立管理者帳號。</p>
+<p class="text-center"><img src="image/opencart-step3.png" alt="opencart step3" class="img-thumbnail" /></p>
+
+<table class="table table-bordered">
+  <tr>
+    <td colspan="2">1. 填寫資料庫訊息</td>
+  </tr>
+  <tr>
+    <td width="40%">Hostname</td>
+    <td width="60%">大部份服務供應商都會使用 <strong>localhost</strong>，如有疑問請向服務供應商查詢。</td>
+  </tr>
+  <tr>
+    <td>Username</td>
+    <td>登入用戶 (Database User)</td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td>登入密碼 (Database Password)</td>
+  </tr>
+  <tr>
+    <td>Database</td>
+    <td>資料庫名稱 (Database Name)</td>
+  </tr>
+  <tr>
+    <td>Prefix</td>
+    <td>資料庫中表格的統一名稱，預設：<strong>oc_</strong></td>
+  </tr>
+</table>
+
+<table class="table table-bordered">
+  <tr>
+    <td colspan="2">2. 建立管理者帳戶及密碼</td>
+  </tr>
+  <tr>
+    <td width="40%">Username</td>
+    <td width="60%">管理者登入帳號</td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td>管理者登入密碼</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>管理者登記電郵</td>
+  </tr>
+</table>
+
+<p>填寫所有資料後便可以點擊 <strong>Continue</strong> 完成最後的安裝程序。</p>
+
+<h3>第四步　安裝完成</h3>
+<p>成功安裝 OpenCart 後會看見下圖的頁面。這時候需要到FTP客戶端中將 <i class="far fa-folder fa-fw"></i> install 移除才能將紅色提示框除去。此版頁有兩個選項可選擇，左方是前往OpenCart商店，右方則是進入管理者登入版面。</p>
+
+<p class="text-center"><img src="image/opencart-step4.png" alt="opencart step4" class="img-thumbnail" /></p>
+<p>完成安裝後，為了提高網頁伺服器及 OpenCart 商店的安全性，我們強力建議移除 <i class="far fa-folder fa-fw"></i> install，有關內容可於<a href="zh-hk/administration/security/">基本安全措施</a>參閱。</p>
+
+<h2>安裝 vQmod / OCmod</h2>
+<p>vQmod 及 OCmod 是一種附助程式讓您新增 OpenCart 模組而毋須改動 OpenCart 系統內的編碼，詳情請參閱 <a href="zh-hk/administration/vqmod/">vQmod / OCmod </a>。</p>
+
+<h2>卸載 OpenCart</h2>
+<p>卸載 OpenCart 只須以下步驟：</p>
+<ol>
+  <li>透過FTP客戶端刪除網頁伺服器內所有有關 OpenCart 的檔案及資料夾</li>
+  <li>刪除載有OpenCart系統的資料庫</li>
+</ol>
+
+<div class="alert alert-danger" role="alert">
+  <i class="fas fa-exclamation-circle"></i>
+  當成功卸載 OpenCart 後，所有貨品及客戶資料都會被刪去。在卸載前可以備份資料庫及已上存的圖片資訊，以便日後重裝 OpenCart 時快速載入所有資料。詳情可參閱<a href="zh-hk/tools/backup/">備份 / 重置</a>。
+</div>
+
+<h2>技術支援</h2>
+<p>如果遇上任何疑問關於安裝 OpenCart系統，請瀏覽官方論壇<a href="http://forum.opencart.com/" target="_blank">一般支援</a></p>

@@ -1,0 +1,35 @@
+---
+layout: default
+title: "系統 / 伺服器需求 - OpenCart 使用指引"
+permalink: zh-hk/requirements/
+---
+<h1>系統 / 伺服器需求</h1>
+<h2>系統需求</h2>
+<p>OpenCart系統需要符合一定要求才能正常運行。首先，必須擁有一個網頁伺服器(Web Server)，使OpenCart商店能夠在網上公開。此外，域名和網頁寄存服務亦是必須的，而兩者均可以於各網頁寄存公司登記及選取不同租用計劃，價錢一般也不會太昂貴。</p>
+<p>當選擇網頁寄存服務時，請檢查其服務 / 計劃是否已提供並安裝以下項目：</p>
+<ul>
+  <li>網頁伺服器 (建議使用 Apache HTTP伺服器)</li>
+  <li>PHP (超文字預處理器) 版本5.4或以上 </li>
+  <li>Database 資料庫 (建議使用 MySQLi)</li>
+</ul>
+<p><strong>以及，所需的PHP函式庫(PHP libraries) / 模組</strong></p>
+<table class="table table-bordered">
+  <tr>
+    <td width="50%">Curl</td>
+    <td width="50%">ZIP</td>
+  </tr>
+  <tr>
+    <td>Zlib</td>
+    <td>GD Library</td>
+  </tr>
+  <tr>
+    <td>Mcrypt</td>
+    <td>Mbstrings</td>
+  </tr>
+  <tr>
+    <td>Xml</td>
+    <td>-</td>
+  </tr>
+</table>
+
+<p>市場上大部份網頁寄存公司都會提供以上的PHP模組，在安裝 OpenCart 過程中，系統會檢查網頁伺服器環境是否已經啟用以上項目。如果已經申請網頁寄存服務，發現缺少以上一項，請聯繫您的網頁寄存公司查詢。</p>
