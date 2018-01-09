@@ -273,10 +273,12 @@ a:hover, a:focus, a:active {
 }
 
 .list-payment-gateway ul {
-  border: 1px solid #f4f5f7;
+  border: 1px solid #eee;
+  border-bottom: 0;
 } .list-payment-gateway ul li {
   width: 49%;
   line-height: 2.5;
-} .list-payment-gateway ul li:nth-child(odd) {
-  border-left: 1px solid #f4f5f7;
+  border-bottom: 1px solid #eee;
+} .list-payment-gateway ul li:nth-child(even) {
+  border-left: 1px solid #eee;
 }
