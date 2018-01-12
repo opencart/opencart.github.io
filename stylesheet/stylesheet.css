@@ -295,3 +295,7 @@ a:hover, a:focus, a:active {
     border-bottom: 0;
   }
 }
+
+.panel-heading h3 {
+  margin-top: 0;
+}
