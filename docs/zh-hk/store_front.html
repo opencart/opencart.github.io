@@ -12,92 +12,97 @@ permalink: zh-hk/store-front/
 <p>上圖中展示的產品是 OpenCart 系統安裝的示範產品資料，使用者可於管理者介面中修改或刪除產品資訊。</p>
 <p>本指引將使用預設商店主題瀏覽店面的基本流程。使用者可於  <a href="https://www.opencart.com/index.php?route=marketplace/extension&filter_category_id=1">OpenCart 官方市場</a>購買心儀的主題使商店更個性化。</p>
 
-<h2>導航商店</h2>
+<h2>導覽商店</h2>
 <p>OpenCart的預設主題可以讓顧客輕鬆訪問商店的產品。</p>
-<h3>剖析主頁</h3>
-<p>在一個網站中，主頁(index)可以是全個網站最重要的一頁。在大多數情況下，這將會是客戶與商店互動的第一頁（特別是如果他們從搜索引擎指向商店網站）。商店的主頁介面必須是容易使用並同時能突出商店的產品。</p>
-<p>熟悉自家的店面，第一步是了解 OpenCart 預設主題中的主頁。</p>
+<div class="panel panel-default">
+  <div class="panel-header">
+    <h3>剖析主頁</h3>
+  </div>
+  <div class="panel-body">
+    <p>在一個網站中，主頁(index)可以是全個網站最重要的一頁。在大多數情況下，這將會是客戶與商店互動的第一頁（特別是如果他們從搜索引擎指向商店網站）。商店的主頁介面必須是容易使用並同時能突出商店的產品。</p>
+    <p>熟悉自家的店面，第一步是了解 OpenCart 預設主題中的主頁。</p>
 
-<h4>1. 頁首與頁尾</h4>
-<p>商店的頂端部份，頁首將會於整個網站都顯示出來，並不只有主頁才能顯示。</p>
-<p class="text-center"><img src="image/front-header.png" alt="front office header" class="img-thumbnail" /></p>
-<p>頁首會有以下的部份：</p>
-<table class="table table-bordered">
-  <tr>
-    <td>商店商標</td>
-    <td>點擊商標時，顧客可以從其他頁面返回主頁；如沒有商標便會顯示商店名字。</td>
-  </tr>
-  <tr>
-    <td>貨幣</td>
-    <td>如商店支援兩種或以上的貨幣時，此欄會顯示選項供顧客選擇</td>
-  </tr>
-  <tr>
-    <td>購物車</td>
-    <td>顯示顧客所選取了的產品數量及價錢</td>
-  </tr>
-  <tr>
-    <td>搜索引擎</td>
-    <td>輸入關鍵字以搜尋所需產品</td>
-  </tr>
-  <tr>
-    <td>連結</td>
-    <td>預設多項連結到主頁、心願單、我的帳戶、購物車及結帳等位置</td>
-  </tr>
-  <tr>
-    <td>電話</td>
-    <td>商店/公司的聯絡電話</td>
-  </tr>
-  <tr>
-    <td>我的帳戶</td>
-    <td>顧客可以從這裡進行登記或登入商店的會員系統</td>
-  </tr>
-</table>
+    <h4>1. 頁首與頁尾</h4>
+    <p>商店的頂端部份，頁首將會於整個網站都顯示出來，並不只有主頁才能顯示。</p>
+    <p class="text-center"><img src="image/front-header.png" alt="front office header" class="img-thumbnail" /></p>
+    <p>頁首會有以下的部份：</p>
+    <table class="table table-bordered">
+      <tr>
+        <td>商店商標</td>
+        <td>點擊商標時，顧客可以從其他頁面返回主頁；如沒有商標便會顯示商店名字。</td>
+      </tr>
+      <tr>
+        <td>貨幣</td>
+        <td>如商店支援兩種或以上的貨幣時，此欄會顯示選項供顧客選擇</td>
+      </tr>
+      <tr>
+        <td>購物車</td>
+        <td>顯示顧客所選取了的產品數量及價錢</td>
+      </tr>
+      <tr>
+        <td>搜索引擎</td>
+        <td>輸入關鍵字以搜尋所需產品</td>
+      </tr>
+      <tr>
+        <td>連結</td>
+        <td>預設多項連結到主頁、心願單、我的帳戶、購物車及結帳等位置</td>
+      </tr>
+      <tr>
+        <td>電話</td>
+        <td>商店/公司的聯絡電話</td>
+      </tr>
+      <tr>
+        <td>我的帳戶</td>
+        <td>顧客可以從這裡進行登記或登入商店的會員系統</td>
+      </tr>
+    </table>
 
-<p>頁尾則是位於整個網頁的末端，也是設置於每一頁中，使其網整擁有一個完整的外觀。此部份將顯示了商品以外的頁面連結及部份重要資訊。</p>
-<p>頁尾會有以下的部份：</p>
-<table class="table table-bordered">
-  <tr>
-    <td>一般資訊</td>
-    <td>關於我們、運輸資訊、隱私政策、條款及細則</td>
-  </tr>
-  <tr>
-    <td>客戶服務</td>
-    <td>聯絡我們、退貨、網站導覽</td>
-  </tr>
-  <tr>
-    <td>額外資訊</td>
-    <td>品牌、禮物優惠券、加盟、特別優惠</td>
-  </tr>
-  <tr>
-    <td>我的帳戶</td>
-    <td>我的帳戶、訂單紀錄、心願單、電郵優惠</td>
-  </tr>
-</table>
-<p class="text-center"><img src="image/front-footer.png" alt="front office footer" class="img-thumbnail" /></p>
-
-
-<h4>2. 置頂分類選單</h4>
-<p>此選單只會顯示主要產品類別，並於產品類別中選取了置頂(Top)選項後才會出現。此部份亦會於每頁的頂部(頁首下方)顯示。</p>
-<p>若果產品類別下有其他分類，當滑鼠指著選單時，其次要分類便會以下拉表單形式顯示出來。</p>
-<p>關於如何創建及修改產品類別，詳情請參閱<a href="zh-hk/catalog/category/">產品類別</a>。</p>
-<p class="text-center"><img src="image/front-menu.png" alt="front office top menu" class="img-thumbnail" /></p>
-<p>當主要產品類別被點擊時，顧客將被引導到類別頁面，該頁面顯示該類別內的所有產品。</p>
-
-<h4>3. 幻燈片</h4>
-<p>幻燈片所展示的橫額可以配上連結到網站內的指定產品、頁面或者可以連結到外部網站。此功能可支援多張橫額圖片，每相隔一段時間便會轉移到下一個橫額。橫額在此功能下是為了突出某些產品或優惠，以便客戶訪問及作出推廣等用途。</p>
-<p class="text-center"><img src="image/front-slideshow.png" alt="front office slideshow" class="img-thumbnail" /></p>
-
-<h4>4. 精選產品</h4>
-<p>使用者可自行選取首頁中的精選產讓顧客更容易了解商店的特色及定義商店類別。</p>
-<p class="text-center"><img src="image/front-featured.png" alt="front office featured" class="img-thumbnail" /></p>
-<p>此功能可以同時列出產品相片、名字以及售價，同時亦可以從中直接新增產品到購物車或心願單中。</p>
-
-<h4>5. Carousel (旋轉木馬)</h4>
-<p>「旋轉木馬」功能可載入多個產品，效果與幻燈片相近，但可以集中展示同一個類別下的產品。</p>
-
-<div class="alert alert-info">3-5 在預設中只會於首頁展示，如果使用者需要於其他頁面增設相同功能可於管理者介面中進行修改。</div>
+    <p>頁尾則是位於整個網頁的末端，也是設置於每一頁中，使其網整擁有一個完整的外觀。此部份將顯示了商品以外的頁面連結及部份重要資訊。</p>
+    <p>頁尾會有以下的部份：</p>
+    <table class="table table-bordered">
+      <tr>
+        <td>一般資訊</td>
+        <td>關於我們、運輸資訊、隱私政策、條款及細則</td>
+      </tr>
+      <tr>
+        <td>客戶服務</td>
+        <td>聯絡我們、退貨、網站導覽</td>
+      </tr>
+      <tr>
+        <td>額外資訊</td>
+        <td>品牌、禮物優惠券、加盟、特別優惠</td>
+      </tr>
+      <tr>
+        <td>我的帳戶</td>
+        <td>我的帳戶、訂單紀錄、心願單、電郵優惠</td>
+      </tr>
+    </table>
+    <p class="text-center"><img src="image/front-footer.png" alt="front office footer" class="img-thumbnail" /></p>
 
 
+    <h4>2. 置頂分類選單</h4>
+    <p>此選單只會顯示主要產品類別，並於產品類別中選取了置頂(Top)選項後才會出現。此部份亦會於每頁的頂部(頁首下方)顯示。</p>
+    <p>若果產品類別下有其他分類，當滑鼠指著選單時，其次要分類便會以下拉表單形式顯示出來。</p>
+    <p>關於如何創建及修改產品類別，詳情請參閱<a href="zh-hk/catalog/category/">產品類別</a>。</p>
+    <p class="text-center"><img src="image/front-menu.png" alt="front office top menu" class="img-thumbnail" /></p>
+    <p>當主要產品類別被點擊時，顧客將被引導到類別頁面，該頁面顯示該類別內的所有產品。</p>
+
+    <h4>3. 幻燈片</h4>
+    <p>幻燈片所展示的橫額可以配上連結到網站內的指定產品、頁面或者可以連結到外部網站。此功能可支援多張橫額圖片，每相隔一段時間便會轉移到下一個橫額。橫額在此功能下是為了突出某些產品或優惠，以便客戶訪問及作出推廣等用途。</p>
+    <p class="text-center"><img src="image/front-slideshow.png" alt="front office slideshow" class="img-thumbnail" /></p>
+
+    <h4>4. 精選產品</h4>
+    <p>使用者可自行選取首頁中的精選產讓顧客更容易了解商店的特色及定義商店類別。</p>
+    <p class="text-center"><img src="image/front-featured.png" alt="front office featured" class="img-thumbnail" /></p>
+    <p>此功能可以同時列出產品相片、名字以及售價，同時亦可以從中直接新增產品到購物車或心願單中。</p>
+
+    <h4>5. Carousel (旋轉木馬)</h4>
+    <p>「旋轉木馬」功能可載入多個產品，效果與幻燈片相近，但可以集中展示同一個類別下的產品。</p>
+
+    <div class="alert alert-info">3-5 在預設中只會於首頁展示，如果使用者需要於其他頁面增設相同功能可於管理者介面中進行修改。</div>
+
+  </div>
+</div>
 
 
 
