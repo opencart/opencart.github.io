@@ -1,19 +1,85 @@
 ---
 layout: default
-title: "Information - OpenCart 使用指引"
+title: "資訊頁面 - OpenCart 使用指引"
 permalink: zh-hk/catalog/information/
 ---
-<h1>Information</h1>
-<h2>Information</h2>
-<p>The Information section displays specific company information in the footer of every page (as seen in the screenshot below). See Information for more information on the footer page.</p>
-<p class="text-center"><img src="image/catalog-information-footer.png" alt="information1" class="img-thumbnail" /></p>
-<p>The Information page can be found under Catalog &gt; Information. On this page the administrator will have the option to edit, delete, or insert a new Information page.</p>
-<div class="alert alert-success" role="alert"><i class="fa  fa-check-circle"></i> About Us, Delivery Information, Privacy Policy, and Terms &amp; Conditions are in the default because they are the most important Information pages used in online stores. We recommend that you edit these pages rather than delete them.</div>
-<p class="text-center"><img src="image/catalog-information-list.png" alt="look info backend" class="img-thumbnail" /></p>
-<p>When editing or inserting these pages a description may be added, pages enabled or disabled, and SEO keywords created. There is an option to remove the page from the bottom of the footer.</p>
-<h3>Information pages in the store front</h3>
-<p>In the screenshot below, the &quot;Delivery Information&quot; page is being edited in the administration under Catalog &gt; Information. The Information Title will display the text entered as the title of that information page, while the description will be placed below.</p>
-<p>The Data tab requires you to check the store that the Information page will be located in, if you have multiple stores. It also asks for a SEO keyword, a status option enabled (or disabled) to make the page public or not, and a sorting order.</p>
-<p class="text-center"><img src="image/catalog-information-insert.png" alt="delivery general" class="img-thumbnail" /></p>
-<p>The screenshot below is the result of saving the edited Delivery Information. A customer can access this page from the footer of any page in the store front by clicking &quot;Delivery Information&quot;. There is an option in the Data tab above to remove a link to this page from the footer.</p>
-<p class="text-center"><img src="image/catalog-information-content.png" alt="delivery front end" class="img-thumbnail" /></p>
+<h1>資訊頁面</h1>
+<p>資訊頁面預設在網站的頁尾位置，而在系統的設定下，範例顯示了公司信息，見下圖。</p>
+<p class="text-center"><img src="image/catalog/information/store-front-footer.png" alt="Store Front Information" class="img-thumbnail" /></p>
+<p>資訊頁面功能位於 <strong>產品目錄 (Catalog)</strong> 中的最尾一項，在這個部份，使用者可以修改、刪除者新增資訊頁面。</p>
+
+<div class="alert alert-success" role="alert"><i class="fas fa-check-circle"></i>
+  About Us, Delivery Information, Privacy Policy, and Terms &amp; Conditions 是預設的資料，因為對一家公司而言，這些資訊是必須的。
+</div>
+<p class="text-center"><img src="image/catalog/information/information-list.png" alt="Information List" class="img-thumbnail" /></p>
+
+<p>當進入編輯頁面後，可以看見以下四個標籤的內容：</p>
+
+<h4>一般 (General)</h4>
+<p class="text-center"><img src="image/catalog/information/information-info-general.png" alt="Information Info - General" class="img-thumbnail" /></p>
+<table>
+	<tbody><tr>
+		<th width="30%">Information Title *</th>
+		<td width="*">資訊頁面的標題</td>
+	</tr>
+	<tr>
+		<th>Description *</th>
+		<td>資訊頁面內容</td>
+	</tr>
+	<tr>
+		<th>Meta Tag Title *</th>
+		<td>填寫資訊頁面於搜尋器顯示的標題</td>
+	</tr>
+	<tr>
+		<th>Meta Tag Description</th>
+		<td>填寫資訊頁面於搜尋器顯示的介紹</td>
+	</tr>
+	<tr>
+		<th>Meta Tag Keywords</th>
+		<td>填寫資訊頁面於搜尋器中的關鍵字</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="hints">* 為必填項目</td>
+	</tr>
+</tbody></table>
+
+
+<h4>資料 (Data)</h4>
+<p class="text-center"><img src="image/catalog/information/information-info-data.png" alt="Information Info - Data" class="img-thumbnail" /></p>
+<table>
+	<tbody><tr>
+		<th width="30%">Stores</th>
+		<td width="*">選擇資訊頁面適用於哪個網店，只適用於多重網店功能</td>
+	</tr>
+  <tr>
+    <th>Bottom</th>
+    <td>點選後便可以從前台的頁尾Information分類中看見。</td>
+  </tr>
+	<tr>
+		<th>Status</th>
+		<td>設定資訊頁面會否顯示於網店內</td>
+	</tr>
+  <tr>
+    <th>Sort Order</th>
+    <td>設定資訊頁面在前台的出現次序</td>
+  </tr>
+</tbody></table>
+
+
+<h4>SEO</h4>
+<p class="text-center"><img src="image/catalog/information/information-info-seo.png" alt="Information Info - SEO" class="img-thumbnail" /></p>
+<p>SEO是由OpenCart 3.0開始獨立抽出來，2.X的版本是放置在DATA內。當系統內的SEO URL選項啟動後，網站內凡有設定SEO URL的貨品類別都會自動轉成所填寫的項目。</p>
+
+
+<h4>資料 (Data)</h4>
+<p class="text-center"><img src="image/catalog/information/information-info-design.png" alt="Information Info - Design" class="img-thumbnail" /></p>
+<p>這部份是可以選取這個貨品類別與指定頁面有一樣的模組會於前台顯示，如果沒有特定的選項留空白就可以。</p>
+
+
+
+<h3>店面的資訊頁面</h3>
+<p>以 <strong>Delivery Information</strong> 為例，資料標題將會顯示在資訊頁面上，而內容則會顯示到標題下方的位置。</p>
+<p class="text-center"><img src="image/catalog/information/information-info-general-delivery.png" alt="Information Info - Delivery" class="img-thumbnail" /></p>
+
+<p>以下是 <strong>Delivery Information</strong> 位於店面的頁面，顧客只要從頁尾的位置就能訪問此頁。</p>
+<p class="text-center"><img src="image/catalog/information/store-front-information-delivery.png" alt="Store Front - Delivery" class="img-thumbnail" /></p>
