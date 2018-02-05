@@ -11,39 +11,76 @@ permalink: zh-hk/catalog/product/
 <p>於使用者介面中，可以從 <strong>產品目錄(Catalog)</strong> 點擊第二項的 <strong>產品(Product)</strong> 進入產品清單頁面。</p>
 
 <p>於清單中會顯示了最基本的產品庫存訊息：</p>
-<ul>
-  <li><strong>Image</strong></li>
-  <li><strong>Product Name</strong></li>
-  <li><strong>Model</strong></li>
-  <li><strong>Price</strong></li>
-  <li><strong>Quantity</strong></li>
-  <li><strong>Status</strong>: Selecting &quot;Enabled&quot; lets the product be visible in the store&#39;s store front. Selecting &quot;Disabled&quot; will remove the product from view.</li>
-</ul>
-<p>Checking an individual box in the first column will select the product information within the same row. Once selected, you can choose to &quot;Copy&quot; or &quot;Delete&quot; the product. &quot;Copy&quot; will duplicate the product and it&#39;s information categories. &quot;Delete&quot; will remove the product selection (including its information) completely.</p>
-<p class="text-center"><img src="image/catalog-product.png" alt="look products" class="img-thumbnail" /></p>
-<p>If you would like to look up a product in the product list, you can use &quot;Filter&quot; as a shortcut to search for it. For more information on the Filter tool, visit Filter. Pressing &quot;Insert&quot; in the top right corner will direct the administrator to a form to add new products.</p>
-<h2>Managing and adding products in the catalog</h2>
-<p>The complete list of store products can be found under Catalog &gt; Products. If this is your first time in the Product section, you will notice the default products left over from the installation. These products can be used to experiment with and explore the OpenCart features before launching your store. You will eventually need to delete these products to make room for your store&#39;s products.</p>
-<p>To delete the default products:</p>
+
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="50%">Image (圖片)</th>
+		<th width="50%">Product Name (產品名)</th>
+	</tr>
+	<tr>
+		<th>Model (型號)</th>
+		<th>Price (售價)</th>
+	</tr>
+	<tr>
+		<th>Quantity (庫存量)</th>
+		<th>Status (狀態)</th>
+	</tr>
+</tbody></table>
+
+<p>當產品的狀態為 <strong>顯示</strong> 時，產品便會在店面中顯示出來；相反，狀態為 <strong>隱藏</strong> 時，顧客便無法查看產品資訊。</p>
+
+<p>每一項產品的前端都有一個選框，假如使用者點選選框後就可以進行 <strong>複製</strong> 或 <strong>刪除</strong> 的動作去處理產品資料。被複製的資料會預設成為 <strong>隱藏</strong>。</p>
+
+<p class="text-center"><img src="image/catalog/product/product-list.png" alt="Product List" class="img-thumbnail" /></p>
+<p>假若產品太多而導致難以查找，使用者可以利用右側的篩選功能去輔助尋找現在的產品再加以編輯或處理。</p>
+
+<h2>管理及創建產品</h2>
+<p>接下來便會示範創建新產品：</p>
+
+<p>如果想把預設資料刪除，使用者在之前必須懂得如何創建新產品，成功建立產品後才將不需要的東西刪除會比較好。</p>
+
+<h3>創建產品頁面</h3>
+<p>進入這個版面後，可以如下圖所示看見下列的標籤頁供使用者填寫，現在先初步認識每一頁，接著便會詳盡介紹每一個的用途。</p>
+<p class="text-center"><img src="image/catalog/product/product-info.png" alt="Product Info" class="img-thumbnail" /></p>
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="50%"><a href="zh-hk/catalog/product/general/">General</a></th>
+		<th width="50%"><a href="zh-hk/catalog/product/data/">Data</a></th>
+	</tr>
+	<tr>
+		<th><a href="zh-hk/catalog/product/link/">Links</a></th>
+		<th><a href="zh-hk/catalog/product/attribute/">Attribute</a></th>
+	</tr>
+	<tr>
+		<th><a href="zh-hk/catalog/product/option/">Option</a></th>
+		<th><a href="zh-hk/catalog/product/profile/">Recurring</a></th>
+	</tr>
+	<tr>
+		<th><a href="zh-hk/catalog/product/discount/">Discount</a></th>
+		<th><a href="zh-hk/catalog/product/special/">Special</a></th>
+	</tr>
+	<tr>
+		<th><a href="zh-hk/catalog/product/image/">Image</a></th>
+		<th><a href="zh-hk/catalog/product/reward/">Reward Points</a></th>
+	</tr>
+	<tr>
+		<th><a href="zh-hk/catalog/product/seo/">SEO</a></th>
+		<th><a href="zh-hk/catalog/product/design/">Design</a></th>
+	</tr>
+</tbody></table>
+
+<p>在進行下一步前，使用者必須已經有相關的產品類別才創建產品會比較好，因為可以在接下來的步驟一拼將產品分類。以免進行後補動作時，會有遺留的情況出現。有關詳情，可參閱<a href="zh-hk/catalog/category/">產品類別</a></p>
+
+<div class="alert alert-info" role="alert"><i class="fas fa-info-circle"></i>
+	OpenCart 預設系統只可以每次建立一種產品資訊，如使用者需要同時建立多個產品，可以前往 OpenCart <a href="https://www.opencart.com/index.php?route=marketplace/extension" target="_blank">官方市場</a>內選購相關的輔助插件。
+</div>
+
+<h3>儲存產品資訊</h3>
+<p>當完成所以填寫資訊後，不要忘記按下右上方的儲存鍵保存所有資料，系統會於完成後引導頁面返回產品清單。如果需要修改相關產品時，只要於清單內按下右方的 <i class="fas fa-pencil-alt"></i>修改 鍵就可以進入編輯頁面。</p>
+
+<h3>如何刪除預設產品</h3>
 <ol>
-  <li>Check the box left of the &quot;Image column&quot; in the list. This should select all the products on the page.</li>
-  <li>Click the &quot;Delete&quot; button on the top right side.</li>
-  <li>Press &quot;OK&quot; when a window pops up asking &quot;Delete/Install cannot be undone! Are you sure you want to do this?&quot;.</li>
+	<li>勾選表格上於 <strong>Image</strong> 左側的複選框可選取全部產品。</li>
+  <li>點選右上方的 <strong>刪除</strong> 鍵後系統會重新確認請求。</li>
+  <li>一旦確認請求後，所選的資料便會完全刪除。</li>
 </ol>
-<p>There should now be a blank list to add individual products to. The &quot;Insert&quot; button directs the administrator to a page requiring product information under the following tabs:</p>
-<ul>
-  <li><a href="zh-hk/catalog/product/general/">General</a></li>
-  <li><a href="zh-hk/catalog/product/data/">Data</a></li>
-  <li><a href="zh-hk/catalog/product/link/">Links</a></li>
-  <li><a href="zh-hk/catalog/product/attribute/">Attribute</a></li>
-  <li><a href="zh-hk/catalog/product/option/">Option</a></li>
-  <li><a href="zh-hk/catalog/product/discount/">Discount</a></li>
-  <li><a href="zh-hk/catalog/product/special/">Special</a></li>
-  <li><a href="zh-hk/catalog/product/image/">Image</a></li>
-  <li><a href="zh-hk/catalog/product/reward/">Reward Points</a></li>
-  <li><a href="zh-hk/catalog/product/design/">Design</a></li>
-</ul>
-<p>Before products are added to the administration, product categories must already be established by the administrator. See Categories before continuing with this section. With the product categories created, products are now ready to be added to the catalog.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> OpenCart currently only allows products to be added one at a time, not in mass quantity. Extensions can be purchased to add large amounts of product at once. See Product import for more information.</div>
-<h2>Saving the product</h2>
-<p>At this point in the guide, you will have completed all the steps and filled out all the appropriate information for the product. To complete the process of adding this product, click &quot;Save&quot;. When you return to the Products page under Catalog, you will now see this product listed. You can choose to modify any of this information included above, at any time, by clicking &quot;Edit&quot; across from the product.</p>
