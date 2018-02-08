@@ -1,25 +1,84 @@
 ---
 layout: default
-title: "Settings Server - OpenCart 使用指引"
+title: "伺服器 - OpenCart 使用指引"
 permalink: zh-hk/system/setting/server/
 ---
-<h1>Settings Server</h1>
-<h2>Server Tab</h2>
-<p>The server tab under Settings displays the following fields:</p>
-<ul>
-  <li><strong>Use SSL: </strong>Enable HTTPS on your store. This requires a valid SSL certificate installed on your webserver.</li>
-  <li><strong>Used Shared Sessions: </strong>Enables session information stored from the shopping cart to be shared between multiple domains/stores.</li>
-  <li><strong>Robots:</strong> Add or remove bot user agents from accessing shared sessions.</li>
-  <li><strong>Use SEO URL&#39;s: </strong>Enable OpenCart&#39;s SEO keyword functionality for information, category, manufacturer and product pages. This requires a correct .htaccess file.</li>
-  <li><strong>Allowed File Extensions:</strong> Add or remove the file formats that can be uploaded to your store&#39;s server.</li>
-  <li><strong>Allowed Mime Types:</strong> Add or remove allowed mime types.</li>
-  <li><strong>Allow Forgotten Password: </strong>Allows admin to request a new password if it is forgotten.</li>
-  <li><strong>Maintenance Mode: </strong>Restrict viewing your store front to logged in admin users while you make changes to your store.</li>
-  <li><strong>Encryption Key:</strong> Enter a combination of numbers and letters to encrypt private information.</li>
-  <li><strong>Outpout Compression Level: </strong>The level of HTTP compresion to be used in your HTTP headers.</li>
-  <li><strong>Display Errors: </strong>Whether to display the PHP errors, warnings and notices produced by your store. This should be set to &quot;No&quot; for a live store.</li>
-  <li><strong>Log Errors:</strong> Whether to log PHP errors, warnings and notices produced by your store.</li>
-  <li><strong>Error Log Filename: </strong>If Log Errors is set to &quot;Yes&quot;, the file where errors will be logged.</li>
-  <li><strong>Google Analytics: </strong>Enter the code provided for the store site from the store&#39;s Google Analytics account here.</li>
-</ul>
-<p class="text-center"><img src="image/system-settings-server.png" alt="setting server tab" class="img-thumbnail" /></p>
+<h1>伺服器設定</h1>
+
+<p>在這一標籤頁中，分為了四個部份：一般、安全性、更新及錯誤報告。</p>
+
+<h3>一般</h3>
+<p class="text-center"><img src="image/system/setting/setting-server-general.png" alt="System Setting - Server Tag - General" class="img-thumbnail" /></p>
+<table class="table table-bordered">
+  <tr>
+    <td width="30%">Maintenance Mode</td>
+    <td width="*">進入維護模式後，只有使用者從管理者介面登入後才能看得見店面。</td>
+  </tr>
+  <tr>
+    <td>Use SEO URLs</td>
+    <td>設定網站是否啟用SEO連結，要配套伺服器與 .htaccess 的設定</td>
+  </tr>
+  <tr>
+    <td>Robots</td>
+    <td>添加或刪除bot用戶代理訪問共享會話</td>
+  </tr>
+  <tr>
+    <td>Output Compression Level</td>
+    <td>The level of HTTP compresion to be used in your HTTP headers, 0-9.</td>
+  </tr>
+</table>
+
+<h3>安全性</h3>
+<p class="text-center"><img src="image/system/setting/setting-server-security.png" alt="System Setting - Server Tag - Security" class="img-thumbnail" /></p>
+<table class="table table-bordered">
+  <tr>
+    <td width="30%">Use SSL</td>
+    <td width="*">啟用SSL功能使網站可以使用HTTPS，此功能需要向服務供應商購買服務</td>
+  </tr>
+  <tr>
+    <td>Allow Forgotten Password</td>
+    <td>已登記的顧客再次登入時可以用忘記密碼</td>
+  </tr>
+  <tr>
+    <td>Use Shared Sessions</td>
+    <td>使用共享會話</td>
+  </tr>
+  <tr>
+    <td>Encryption Key</td>
+    <td>輸入數字和字母的組合來加密私人信息</td>
+  </tr>
+</table>
+
+<h3>上載</h3>
+<p class="text-center"><img src="image/system/setting/setting-server-upload.png" alt="System Setting - Server Tag - Upload" class="img-thumbnail" /></p>
+<table class="table table-bordered">
+  <tr>
+    <td width="30%">Max File Size</td>
+    <td width="*">可設定上載檔案的上限，建意先向服務供應商查詢最大限制</td>
+  </tr>
+  <tr>
+    <td>Allowed File Extensions</td>
+    <td>允許可以上載的檔案格式</td>
+  </tr>
+  <tr>
+    <td>Allowed File Mime Types</td>
+    <td>允許可以上載的檔案MIME類型</td>
+  </tr>
+</table>
+
+<h3>錯誤報告</h3>
+<p class="text-center"><img src="image/system/setting/setting-server-error-handling.png" alt="System Setting - Server Tag - Error" class="img-thumbnail" /></p>
+<table class="table table-bordered">
+  <tr>
+    <td width="30%">Display Errors</td>
+    <td width="*">顯示錯誤報告</td>
+  </tr>
+  <tr>
+    <td>Log Errors</td>
+    <td>啟用系統中的錯誤報告</td>
+  </tr>
+  <tr>
+    <td>Error Log Filename <span class="required">*</span></td>
+    <td>錯誤報告檔案名稱</td>
+  </tr>
+</table>

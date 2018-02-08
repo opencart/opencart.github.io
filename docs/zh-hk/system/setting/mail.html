@@ -4,17 +4,45 @@ title: "電郵 - OpenCart 使用指引"
 permalink: zh-hk/system/setting/mail/
 ---
 <h1>電郵設定</h1>
-<p>The mail tab under Settings displays the following fields:</p>
-<ul>
-  <li><strong>Mail Protocol:</strong> Lets you choose between sending mail to the host&#39;s email, or through an SMTP. You should contact your shop&#39;s hosting provider to see if configure PHP mail. If not, you need to use a SMTP, such as gmail.</li>
-  <li><strong>Mail Paramaters:</strong> Asks for the e-mail address for the store if &quot;Mail&quot; was selected under Mail Protocol.</li>
-  <li><strong>SMTP Host:</strong> The address of the smtp host.</li>
-  <li><strong>SMTP Username:</strong> The full email address for the SMTP host</li>
-  <li><strong>SMTP Password</strong></li>
-  <li><strong>SMTP Port:</strong> The port number provided by the SMTP host.</li>
-  <li><strong>SMTP Timeout:</strong> A timeout number provided by the SMTP host.</li>
-  <li><strong>New Order Alter Mail:</strong> Selecting &#39;Yes&#39; will send a notification email for every order submitted in the store front.</li>
-  <li><strong>New Account Alert Mail:</strong> Selecting &#39;Yes&#39; will send a notification email for every account created in the store front.</li>
-  <li><strong>Additional Alert E-mails:</strong> List any additional e-mails that should also receive the notification emails above.</li>
-</ul>
-<p class="text-center"><img src="image/system-settings-mail.png" alt="setting Mail tab" class="img-thumbnail" /></p>
+<p>要從網站中得到任何電郵通知，使用者必須填寫以下的欄位。一般郵件都會用MAIL及SMTP兩種制式，如果選擇SMTP就需要填寫第一部份尾五項的資訊。</p>
+
+<table class="table table-bordered">
+  <tr>
+    <td width="30%">Mail Engine</td>
+    <td width="*">可以選擇 MAIL 或 SMTP 格式，一般伺服器及電郵服務商</td>
+  </tr>
+  <tr>
+    <td>Mail Paramaters</td>
+    <td>填寫所接收用的電郵地址</td>
+  </tr>
+  <tr>
+    <td>SMTP Host</td>
+    <td>選擇SMTP時，填寫SMTP的電郵伺服器</td>
+  </tr>
+  <tr>
+    <td>SMTP Username</td>
+    <td>SMTP登入用戶</td>
+  </tr>
+  <tr>
+    <td>SMTP Password</td>
+    <td>SMTP密碼</td>
+  </tr>
+  <tr>
+    <td>SMTP Port</td>
+    <td>SMTP連接埠，因應不同的服務供應商所使用的服務器而各有不同</td>
+  </tr>
+  <tr>
+    <td>SMTP Timeout</td>
+    <td>SMTP自動終止時間，設定網站與伺服器的連接時間，如果超時便不能發送電郵</td>
+  </tr>
+  <tr>
+    <td>Alert Mail</td>
+    <td>可接收到電郵的情況</td>
+  </tr>
+  <tr>
+    <td>Additional Alert E-mails</td>
+    <td>其他同時可收取電郵的電郵地址</td>
+  </tr>
+</table>
+
+<p class="text-center"><img src="image/system/setting/setting-mail.png" alt="System Setting - Mail Tag" class="img-thumbnail" /></p>
