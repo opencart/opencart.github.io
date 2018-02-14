@@ -1,21 +1,26 @@
 ---
 layout: default
-title: "User - OpenCart 使用指引"
+title: "用戶 - OpenCart 使用指引"
 permalink: zh-hk/system/users/user/
 ---
-<h1>Users</h1>
-<h2>Users</h2>
-<p>Managing the in&#39;s and out&#39;s of the admin side of an online store can be quite the task for just one person to handle. You may find it necessary to assign administration side permissions to specific people on your team. The User section lets you customize which users can access the admin side of the store, and what sections can be accessed or modified by them.</p>
-<h2>User groups</h2>
-<p>Before you begin creating user profiles, you should visit System &gt; Users &gt; User Groups to set specific access and modification permissions.</p>
-<p>OpenCart lets you customize which admin side pages can be accessed by the specific user groups. You must check which pages can be accessed under Access Permission, and which page content can be modified under Modify Permission. The pages in the box office are displayed according to the top menu sections. For example, catalog/attribute is the Attribute section under Catalog in the top menu of the dashboard.</p>
+<h1>用戶</h1>
+<p>用戶是指登入管理者介面並可以進行修改前台後台的設定的角色。而每個用戶都擁有自己的用戶管，透過用戶群，使用者可以為不同的用戶設置不同的權限去管理網店。</p>
+
+<h2>用戶群組</h2>
+<p>用戶群組主要的目的是修改每一個此群內的成員可於管理者介面中的使用權限。如果想建立新的用戶前，或許可以先查看用戶群組的權限設定，完成後再於創建新用戶時選擇合適的群組。</p>
+<p>OpenCart 的特色之一，可以讓使用者為不同的用戶群設定可檢視或管理每一個部份的頁面，自由度甚高。</p>
+
+<p>OpenCart允許使用者自定義哪些管理端頁面可以被特定用戶組訪問。使用者必須檢查哪些頁面可以在訪問權限下訪問，哪些頁面內容可以在修改權限下修改。例如，<strong>catalog/attribute</strong> 是左側選單中產品目錄下的部分。</p>
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> Be aware that checking sections in Access Permission lets the user see the information on those pages. If a page in Access Permission is selected, but the page in Modify Permission is unselected; the user will be able to view the information on the page, but will be unable to modify this information.</div>
 <p>For the Co-worker group, we chose to allow access and permit modification to the Catalog Section only, but not the rest of the admin panel.</p>
 <p class="text-center"><img src="image/system-users-usergroup.png" alt="user group backend" class="img-thumbnail" /></p>
 <p>OpenCart provides two user groups installed into the admin side, Top Administrator and Demonstration. The Top Administrator has every box checked under Access Permission and Modify Permission. It is an intuitive step that users assigned to the Top Administrator position would need access to all of the admin pages and permission to modify these sections. You can choose to leave the group unchanged, or unselect categories for this group. The Demonstration user group doesn&#39;t have any admin pages checked in Access Permission or Modify Permission, meaning users added in this group will not be able to access the admin side or modify any features of the shop.</p>
-<h2>Users</h2>
+
+<h2>用戶</h2>
+<p>通過設置用戶群組，可以將用戶保存到系統>用戶>用戶下的商店管理端。 點擊&nbsp; <i claaa="fas fa-plus"></i> 建立 &nbsp;會前往以下的用戶表單。除了基本的用戶信息之外，還必須為用戶創建一個密碼才能登入管理者介面。從下拉式表單中選擇的用戶組群將為用戶分配特定權限。</p>
 <p>With the user groups set up, the individual users can be saved to the administration side of your store under System&gt;Users&gt;Users. Clicking &quot;Insert&quot; will bring you to the user form below. Aside from the basic user information, a password must be created for the user to login to the dashboard. The User Group selected from the drop down box will assign specific permissions to the user. The status lets you choose to enable the user to be able to login, or disable the user from logging in to the dashboard.</p>
 <p class="text-center"><img src="image/system-users-user.png" alt="user back end" class="img-thumbnail" /></p>
+
 <h3>Permission denied</h3>
 <p>The user can access the dashboard the same way the administrator would, with the exception of entering their specific username and password. See <a href="zh-hk/administration/">Admin interface</a> for more information.</p>
 <p>Our user, John Doe, was assigned to the Co-worker group; meaning he will be able to access and modify all the Catalog pages. He will not be able to access Extensions, Sales, System, or Reports. The following screenshot displays what John Doe will view when he tries to access the Extensions page.</p>
