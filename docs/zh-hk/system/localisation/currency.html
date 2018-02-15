@@ -1,21 +1,44 @@
 ---
 layout: default
-title: "Currency - OpenCart 使用指引"
+title: "貨幣 - OpenCart 使用指引"
 permalink: zh-hk/system/localisation/currency/
 ---
-<h1>Localisation Currency</h1>
-<h2>Currency</h2>
-<p>The currency sections lets you select which currencies are available for use in store front. The default currency will display all the product prices in that currency. The currency preference can be changed by the customer in the header section of any page in the front office.</p>
-<p>In the store below, we have enabled the Euro, Pound, and US Dollar.</p>
-<p class="text-center"><img src="image/system-localisation-currencylist.png" alt="currency backend page" class="img-thumbnail" /></p>
+<h1>貨幣</h1>
+
+<p>貨幣系統是網上商店的基本功能，OpenCart系統可以讓商店有著多種貨幣同時存在於網站內，這樣可以使顧客清楚了解產品的售價。在預設的貨幣中經已有美元、英磅及歐元三種設定。</p>
+<p class="text-center"><img src="image/system/localisation/currency/currency-list.png" alt="Currency - List" class="img-thumbnail" /></p>
+
 <p>The following information is needed about a currency to add it to your store:</p>
-<ul>
-  <li><strong>Currency Title</strong></li>
-  <li><strong>Code:</strong> The ISO code for the currency. Currency codes can be looked up at this <a href="http://www.oanda.com/currency/?srccont=rightnav">currency converter</a>.</li>
-  <li><strong>Symbol Left:</strong> Adds a currency symbol to the left of the code.</li>
-  <li><strong>Symbol Right: </strong>Adds a currency symbol to the right of the code.</li>
-  <li><strong>Decimal Places: </strong>The amount of decimal places displayed in the price of the store front.</li>
-  <li><strong>Value:</strong> The Default currency will be set to a value of 1. Every value of currency will be relative to this value. Since the US Dollar is 1.0 (the default), the Euro is tabulated to .81 for the value based on its worth. When OpenCart transitions between currencies in the store front, it will use the value number to calculate the prices of products in that new currency. OpenCart will update the currency values in the Local Tab under store settings if Auto Update Currency is enabled. Visit <a href="zh-hk/system/setting/local/">Settings </a>for more information.</li>
-  <li><strong>Status:</strong> Enables or disables the currency in the store front.</li>
-</ul>
-<p class="text-center"><img src="image/system-localisation-currencyedit.png" alt="adding currencey" class="img-thumbnail" /></p>
+
+<table class="table table-bordered">
+  <tr>
+    <td width="30%">Currency Title *</td>
+    <td width="*">設定語言統稱於管理者介面中顯示。</td>
+  </tr>
+  <tr>
+    <td>Code *</td>
+    <td>國際通用的貨幣編碼(ISO code for the currency)，如不清楚新增的貨幣編碼，可前往<a href="http://www.oanda.com/currency/?srccont=rightnav" target="_blank">貨幣換算</a>查詢完整清單。</td>
+  </tr>
+  <tr>
+    <td>Symbol Left</td>
+    <td>貨幣於左方的符號</td>
+  </tr>
+  <tr>
+    <td>Symbol Right</td>
+    <td>貨幣於右方的符號</td>
+  </tr>
+  <tr>
+    <td>Decimal Places</td>
+    <td>店面價格中顯示該貨幣的小數位數目</td>
+  </tr>
+  <tr>
+    <td>Value</td>
+    <td>The Default currency will be set to a value of 1. Every value of currency will be relative to this value. Since the US Dollar is 1.0 (the default), the Euro is tabulated to .81 for the value based on its worth. When OpenCart transitions between currencies in the store front, it will use the value number to calculate the prices of products in that new currency. OpenCart will update the currency values in the Local Tab under store settings if Auto Update Currency is enabled. Visit <a href="zh-hk/system/setting/local/">Settings </a>for more information.</td>
+  </tr>
+  <tr>
+    <td>Status</td>
+    <td>啟用或隱藏商店的貨幣選項</td>
+  </tr>
+</table>
+
+<p class="text-center"><img src="image/system/localisation/currency/currency-info.png" alt="Currency - Info" class="img-thumbnail" /></p>
