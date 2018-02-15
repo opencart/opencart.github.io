@@ -13,8 +13,14 @@ permalink: zh-hk/system/users/groups/
 
 <p class="text-center"><img src="image/system/users/group/group-info.png" alt="User Group - Info" class="img-thumbnail" /></p>
 
+<div class="alert alert-info" role="alert">
+  <i class="fas fa-info-circle"></i>
+  注意事項：<br/>
+  <strong>Access Permission</strong> 是設定用戶能否檢視該頁，如果該用戶群組被點選了頁面的檢視權限，那麼相關群組的用戶就可以看見頁面的選項。
+  <br/>
+  <strong>Modify Permission</strong> 是設定用戶能否修改頁面內的內容，一旦用戶群組沒有授權去修改，即使做了任何改動都不能儲存的事項。
+</div>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> Be aware that checking sections in Access Permission lets the user see the information on those pages. If a page in Access Permission is selected, but the page in Modify Permission is unselected; the user will be able to view the information on the page, but will be unable to modify this information.</div>
 <p>For the Co-worker group, we chose to allow access and permit modification to the Catalog Section only, but not the rest of the admin panel.</p>
 <p class="text-center"><img src="image/system-users-usergroup.png" alt="user group backend" class="img-thumbnail" /></p>
 <p>OpenCart provides two user groups installed into the admin side, Top Administrator and Demonstration. The Top Administrator has every box checked under Access Permission and Modify Permission. It is an intuitive step that users assigned to the Top Administrator position would need access to all of the admin pages and permission to modify these sections. You can choose to leave the group unchanged, or unselect categories for this group. The Demonstration user group doesn&#39;t have any admin pages checked in Access Permission or Modify Permission, meaning users added in this group will not be able to access the admin side or modify any features of the shop.</p>
