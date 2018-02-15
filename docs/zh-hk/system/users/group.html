@@ -7,13 +7,17 @@ permalink: zh-hk/system/users/groups/
 <p>用戶群組主要的目的是修改每一個此群內的成員可於管理者介面中的使用權限。如果想建立新的用戶前，或許可以先查看用戶群組的權限設定，完成後再於創建新用戶時選擇合適的群組。</p>
 <p>OpenCart 的特色之一，可以讓使用者為不同的用戶群設定可檢視或管理每一個部份的頁面，自由度甚高。</p>
 
+<p class="text-center"><img src="image/system/users/group/group-list.png" alt="User Group - List" class="img-thumbnail" /></p>
+
 <p>OpenCart允許使用者自定義哪些管理端頁面可以被特定用戶組訪問。使用者必須檢查哪些頁面可以在訪問權限下訪問，哪些頁面內容可以在修改權限下修改。例如，<strong>catalog/attribute</strong> 是左側選單中產品目錄下的部分。</p>
+
+<p class="text-center"><img src="image/system/users/group/group-info.png" alt="User Group - Info" class="img-thumbnail" /></p>
+
+
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> Be aware that checking sections in Access Permission lets the user see the information on those pages. If a page in Access Permission is selected, but the page in Modify Permission is unselected; the user will be able to view the information on the page, but will be unable to modify this information.</div>
 <p>For the Co-worker group, we chose to allow access and permit modification to the Catalog Section only, but not the rest of the admin panel.</p>
 <p class="text-center"><img src="image/system-users-usergroup.png" alt="user group backend" class="img-thumbnail" /></p>
 <p>OpenCart provides two user groups installed into the admin side, Top Administrator and Demonstration. The Top Administrator has every box checked under Access Permission and Modify Permission. It is an intuitive step that users assigned to the Top Administrator position would need access to all of the admin pages and permission to modify these sections. You can choose to leave the group unchanged, or unselect categories for this group. The Demonstration user group doesn&#39;t have any admin pages checked in Access Permission or Modify Permission, meaning users added in this group will not be able to access the admin side or modify any features of the shop.</p>
-
-
 
 
 <p>As an Administrator, OpenCart allows you to use the User Groups section to set the permissions and access of the user profiles. You can access it from your Dashboard by clicking on System > Users > User Groups:</p>
