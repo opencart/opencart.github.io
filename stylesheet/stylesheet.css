@@ -215,8 +215,9 @@ a:hover, a:focus, a:active {
   padding-left: 20px;
   color: #000; }
 #documentation #menu ul li > a.parent::after {
-  font-family: FontAwesome;
+  font-family: 'Font Awesome\ 5 Free';
   content: '\f0d7';
+  font-weight: 900;
   position: absolute;
   right: 20px;
   color: #4b525d;
