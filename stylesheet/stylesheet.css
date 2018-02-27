@@ -301,3 +301,26 @@ a:hover, a:focus, a:active {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+iframe {
+  width: 100%;
+  height: 475px;
+}
+
+@media screen and (max-width: 767px){
+  iframe {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px){
+  iframe {
+    height: 405px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px){
+  iframe {
+    height: 395px;
+  }
+}
