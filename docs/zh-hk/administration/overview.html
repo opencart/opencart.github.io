@@ -1,44 +1,50 @@
 ---
 layout: default
-title: "Admin Interface - OpenCart 使用指引"
+title: "管理者介面 - OpenCart 使用指引"
 permalink: zh-hk/administration/
 ---
 <h1>管理者介面</h1>
 
 <h2>連接 OpenCart</h2>
-<p>OpenCart的商店管理方面是您可以修改功能，上傳圖片，添加產品，跟踪客戶，管理付款等的地方。 管理中的自定義會影響客戶與商店互動的方式：修改店面的外觀，結構和內容。</p>
+<p>OpenCart的商店管理方面是使用者可以修改功能，上傳圖片，添加產品，跟踪客戶，管理付款等的地方。 管理中的自定義會影響客戶與商店互動的方式：修改店面的外觀，結構和內容。</p>
 
 
 <h2>登入 OpenCart 管理者介面</h2>
-<p>要訪問管理面板，請在Web瀏覽器中輸入商店的位置，然後鍵入“/ admin”。 例如，如果您的商店位於“www.chocolatechip.com”，則您的管理面板位於“www.chocolatechip.com/admin”。 即使商店位於其網站的子文件夾或子網域中，也可以添加“/ admin” 到商店路徑的盡頭將引導您進入管理方。</p>
-<p>如果在安裝過程中文件夾的名稱被您更改，則管理面板的位置將更改為新名稱。 例如，如果admin文件夾的名稱更改為admin1，則管理面板的新位置位於“www.chocolatchip.com/admin1”。</p>
+<p>要訪問管理面板，請在Web瀏覽器中輸入商店的位置，然後鍵入“/ admin”。 例如，如果使用者的商店位於“www.chocolatechip.com”，則使用者的管理面板位於“www.chocolatechip.com/admin”。 即使商店位於其網站的子文件夾或子網域中，也可以添加“/ admin” 到商店路徑的盡頭將引導使用者進入管理方。</p>
+<p>如果在安裝過程中文件夾的名稱被使用者更改，則管理面板的位置將更改為新名稱。 例如，如果admin文件夾的名稱更改為admin1，則管理面板的新位置位於“www.chocolatchip.com/admin1”。</p>
 
 <div class="alert alert-success" role="alert"><i class="fas fa-check-circle"></i>將admin文件夾的名稱更改為其他名稱對於改善在線商店的安全性非常重要。 需要編輯config.php文件以指示正確的文件路徑和位置。</div>
 <p>安裝期間在自動安裝程序的<a href="zh-hk/installation/">步驟三</a>中創建用戶名和密碼。 現在可以使用此信息填寫管理員登錄詳細信息。</p>
 
 <p class="text-center"><img src="image/administration/admin-login.png" alt="admin interface login" class="img-thumbnail" /></p>
 
-<p>在填寫正確的用戶名和密碼後，按下“登錄” 按鈕將引導使用者進入OpenCart儀表板。 當您第一次登錄您的商店時，儀表板將變為空白（如下所示），因為尚未分析任何統計數據。</p>
+<p>在填寫正確的用戶名和密碼後，按下<strong>登錄</steonf>按鈕將引導進入OpenCart儀表板。 當使用者第一次登錄商店時，如下圖所示，儀表板會有以下區域統計數據。</p>
 <p class="text-center"><img src="image/administration/admin-dashboard.png" alt="admin interface dashboard" class="img-thumbnail" /></p>
 
 
 <h2>通過儀表板(Dashboard)輸入管理</h2>
-<p>儀表板是在進入OpenCart管理員時看到的第一件事。 儀表板的主要功能是讓店主了解店鋪運作情況。 儀表板有三個部分可幫助您了解商店收集的統計數據：</p>
-<ul>
-  <li><strong>Overview:</strong>
-    <p>There are four chart showing the status of your website. They are Total Orders, Total sales, Total Customers and People Online which help you to easier to know the analytics.</p>
-  </li>
-  <li><strong>World Map:</strong>
-    <p>A world map to show where the orders from your website were coming from.</p>
-  </li>
-    <li><strong>Sales Analytics:</strong>
-    <p>A graph is provided to track the chronological progress of the store relative to the amount of orders and customers over time. The x value is time; which can be hours, days, or months depending on the range selected. The y value displays the number of total orders(yellow) and total customers(blue).</p>
-  </li>
-    <li><strong>Recent Activity:</strong>
-    <p>A section to check the recent activity from any customer from your store such as login, creating account or placing new orders.</p>
-  </li>
-  <li><strong>Latest Orders:</strong>
-    <p>A list that displays the last orders and their details (&quot;Order ID&quot;, &quot;Customer&quot;, &quot;Status&quot;, &quot;Date Added&quot;, &quot;Total&quot;, and &quot;Action&quot;)</p>
-  </li>
-</ul>
+<p>使用者登入OpenCart系統時，首先會引導至儀表板頁面。儀表板的主要功能是讓店主了解店鋪運作情況。儀表板有三個部分可幫助使用者了解商店收集的統計數據：</p>
+<table class="table table-bordered">
+  <tr>
+    <td width="30%">概覽</td>
+    <td width="*">There are four chart showing the status of your website. They are Total Orders, Total sales, Total Customers and People Online which help you to easier to know the analytics.</td>
+  </tr>
+  <tr>
+    <td>World Map</td>
+    <td>A world map to show where the orders from your website were coming from.</td>
+  </tr>
+  <tr>
+    <td>Sales Analytics</td>
+    <td>A graph is provided to track the chronological progress of the store relative to the amount of orders and customers over time. The x value is time; which can be hours, days, or months depending on the range selected. The y value displays the number of total orders(yellow) and total customers(blue).</td>
+  </tr>
+  <tr>
+    <td>Recent Activity</td>
+    <td>A section to check the recent activity from any customer from your store such as login, creating account or placing new orders.</td>
+  </tr>
+  <tr>
+    <td>Latest Orders</td>
+    <td>A list that displays the last orders and their details (&quot;Order ID&quot;, &quot;Customer&quot;, &quot;Status&quot;, &quot;Date Added&quot;, &quot;Total&quot;, and &quot;Action&quot;)</td>
+  </tr>
+</table>
+
 <p>在管理者介面中，左側菜單中是管理導航。 使用者可以在產品目錄、插件、銷售、系統、報告及幫助之間進行導航，這些部分將在本指引中其他部分中進一步詳細介紹。</p>
