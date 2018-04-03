@@ -6,6 +6,12 @@ $(document).ready(function(){
 		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
 
+		// Testing tracking the url has language tag or not
+		if(window.location.href.indexOf('en-gb') < 1 || window.location.href.indexOf('zh-hk') < 1) {
+			language = 'en-gb';
+			window.location.replace('/' + language + '/' + pathname);
+		}
+
 		if(pathname != '' || pathname != null){
 			var href = pathname.slice(6);
 		} else {
@@ -36,7 +42,6 @@ $(document).ready(function(){
 
 		if(language == '' || language == null){
 			language = 'en-gb';
-			window.location.replace('http://docs.opencart.com/' + language + '/introduction');
 		}
 
     $('#menu a').each(function() {
