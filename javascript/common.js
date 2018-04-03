@@ -7,11 +7,12 @@ $(document).ready(function(){
 		// Checking the url has language tag or not
 		if(window.location.href.indexOf('en-gb') < 1 && window.location.href.indexOf('zh-hk') < 1) {
 			language = 'en-gb';
-			if(pathname == '' || pathname == null){
+			if(pathname == '/'){
 				console.log(language + '/introduction/');
 				//window.location.replace(language + '/introduction/');
 			} else {
-				window.location.replace(language + pathname);
+				console.log(language + pathname);
+				//window.location.replace(language + pathname);
 			}
 		}
 
