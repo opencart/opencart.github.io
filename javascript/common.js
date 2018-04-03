@@ -36,7 +36,7 @@ $(document).ready(function(){
 
 		if(language == '' || language == null){
 			language = 'en-gb';
-			$(location).attr('href',base + '/' + language + '/introduction');
+			window.location.href = base + '/' + language + '/introduction');
 		}
 
     $('#menu a').each(function() {
