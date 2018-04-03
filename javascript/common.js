@@ -9,7 +9,7 @@ $(document).ready(function(){
 		// Testing tracking the url has language tag or not
 		if(window.location.href.indexOf('en-gb') < 1 || window.location.href.indexOf('zh-hk') < 1) {
 			language = 'en-gb';
-			window.location.replace('/' + language + '/' + pathname);
+			window.location.replace('/' + language + pathname);
 		}
 
 		if(pathname != '' || pathname != null){
