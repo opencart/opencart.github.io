@@ -1,60 +1,132 @@
 ---
 layout: default
-title: "Extension Order Totals - OpenCart 使用指引"
+title: "帳單金額 - OpenCart 使用指引"
 permalink: zh-hk/extension/order-total/
 ---
-<h1>Order Totals</h1>
-<h2>Order Totals Extensions</h2>
-<p>You can manage the order total extensions used for orders under Extensions &gt; Order Totals. These totals are extra fees that are added to the total sum of an order in the store&#39;s shopping cart. For more information on order totals, visit <a href="zh-hk/sale/order/">Orders</a>. The order total extensions below are included with the OpenCart package.</p>
-<p class="text-center"><img src="image/extension-orderTotal.png" alt="order totals ext" class="img-thumbnail" /></p>
-<p>In the image above we can see that Coupon, Store Credit, Reward Points, Shipping, Sub-Total, Taxes, Total, and Gift Voucher extensions are enabled. These enabled order totals will be included in the checkout section. To disable any of these order total extensions, click &quot;Edit&quot;. If you want to remove an extension, click &quot;Uninstall&quot;.</p>
-<h3>Coupon</h3>
-<p>Coupons can be added to the order totals page by selecting &quot;Enabled&quot; under &quot;Status&quot;. The sorting order affects the order that the extension is put in.</p>
-<h2>Store credit</h2>
-<p>Store credit can be added to an order with this extension. The status and sorting order can be selected for checkout.</p>
-<h2>Handling fee</h2>
-<p>To include a handling fee with orders, fill in the following information:</p>
-<ul>
-  <li>Order Total</li>
-  <li>Fee</li>
-  <li>Tax Class</li>
-  <li>Status</li>
-  <li>Sort Order</li>
-</ul>
-<p class="text-center"><img src="image/extension-orderTotal-handlingFee.png" alt="orders ext handling" class="img-thumbnail" /></p>
-<h3>Klarna fee</h3>
-<p>To add a Klarna fee include the following information:</p>
-<ul>
-  <li>Order Total</li>
-  <li>Fee</li>
-  <li>Tax Class</li>
-  <li>Status</li>
-  <li>Sort Order</li>
-</ul>
+<h1>帳單金額</h1>
+<p>使用者可於此部份設定產品以外的額外收費，此部份可於插件頁下拉式表單內找到。額外收費可以包含：運費、手續費、稅項等這類收費。有關訂單總數的更多信息，請參閱<a href="zh-hk/sale/order/">訂單</a>。OpenCart系統經已預設下列帳單金額設定項目。</p>
+
+<p class="text-center"><img src="image/extension/order-totals/order-totals-list.png" alt="Order Totals - List" class="img-responsive" /></p>
+<p>上圖顯示了部份已啟用的功能，若不需要其功能，使用者可以於 &nbsp;<i class="fas fa-pencil-alt"></i> 編輯&nbsp; 內選擇「不啟用」或點擊 &nbsp;<i class="fas fa-minus-circle"></i> 卸載&nbsp; 即可</p>
+
+<h3>優惠劵</h3>
+<p>優惠券，當狀態為「啟用」時，此功能將會添加到訂單總計頁面。排序即是順序影響擴展插入的順序。顧客亦可以於結帳前使用相關的優惠編號於店內使用。</p>
+<hr/>
+
+<h3>Store credit</h3>
+<p>商店點數，設定「啟用」後顧客便可以於購物車的頁面中看見是次消費會自動扣除的點數，有關點數的情詳可參閱<a href="zh-hk/sale/customer/">用戶概覽</a>。</p>
+<hr/>
+
+<h3>Handling fee</h3>
+<p>手續費，設定訂單於超出指定金額會收取額外費用。</p>
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="30%">Order Total</th>
+		<td width="*">訂單金額</td>
+	</tr>
+  <tr>
+		<th>Fee</th>
+		<td>超出以上之金額將會收取之費用</td>
+	</tr>
+	<tr>
+		<th>Tax Class</th>
+		<td>稅項設定</td>
+	</tr>
+	<tr>
+		<th>Status</th>
+		<td>「啟用」或「不啟用」此項目</td>
+	</tr>
+	<tr>
+		<th>Sort Order</th>
+		<td>項目顯示的次序</td>
+	</tr>
+</tbody>
+</table>
+<p class="text-center"><img src="image/extension/order-totals/order-totals-handling-fee.png" alt="Order Totals - Handling Fee" class="img-responsive" /></p>
+<hr/>
+
+<h3>Klarna Fee</h3>
+<p>添加Klarna費用包括以下信息：</p>
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="30%">Order Total</th>
+		<td width="*">訂單金額</td>
+	</tr>
+  <tr>
+		<th>Fee</th>
+		<td>超出以上之金額將會收取之費用</td>
+	</tr>
+	<tr>
+		<th>Tax Class</th>
+		<td>稅項設定</td>
+	</tr>
+	<tr>
+		<th>Status</th>
+		<td>「啟用」或「不啟用」此項目</td>
+	</tr>
+	<tr>
+		<th>Sort Order</th>
+		<td>項目顯示的次序</td>
+	</tr>
+</tbody>
+</table>
+<hr/>
+
 <h3>Low order fee</h3>
-<p>To include a fee if the order amount is too low, include the following information:</p>
-<ul>
-  <li>Order Total</li>
-  <li>Fee</li>
-  <li>Tax Class</li>
-  <li>Status</li>
-  <li>Sort Order</li>
-</ul>
+<p>設定每張訂單的最低消費金額，若不乎合定額便會收取指定的額外費用。</p>
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="30%">Order Total</th>
+		<td width="*">訂單金額</td>
+	</tr>
+  <tr>
+		<th>Fee</th>
+		<td>少於以上之金額將會收取之費用</td>
+	</tr>
+	<tr>
+		<th>Tax Class</th>
+		<td>稅項設定</td>
+	</tr>
+	<tr>
+		<th>Status</th>
+		<td>「啟用」或「不啟用」此項目</td>
+	</tr>
+	<tr>
+		<th>Sort Order</th>
+		<td>項目顯示的次序</td>
+	</tr>
+</tbody>
+</table>
+<hr/>
+
 <h3>Reward points</h3>
-<p>If you want an option to add reward points to order totals, enable under status and select a sorting orde.</p>
+<p>積分點數換領，設定「啟用」後顧客便可以於購物車的頁面中看見是次消費會自動扣除的點數，有關積分換領的情詳可參閱產品<a href="zh-hk/catalog/product/reward/">積分</a>。</p>
+<hr/>
+
 <h3>Shipping</h3>
-<p>The shipping estimator will automatically estimate how much shipping will cost and add the fee to the order total.</p>
-<p class="text-center"><img src="image/extension-orderTotal-shipping.png" alt="ordes ext shipping" class="img-thumbnail" /></p>
+<p>運輸方法，設定「啟用」後系統將自動估算運費並將費用添加到訂單總額中。</p>
+<p class="text-center"><img src="image/extension/order-totals/order-totals-shipping" alt="Order Totals - Shipping" class="img-responsive" /></p>
+<hr/>
+
 <h3>Sub-total</h3>
-<p>Select the status and sort order of the sub-totals in checkout.</p>
+<p>小計，設定「啟用」後顧客便可以於購物車的頁面中看見是次消費的所有產品的合共金額，不包括運費。Select the status and sort order of the sub-totals in checkout.</p>
+<hr/>
+
 <h3>Taxes</h3>
-<p>Select the status and sort order of the taxes in checkout.</p>
+<p>稅項，設定「啟用」後顧客便可以於購物車的頁面中看見是次消費所需支付的總稅項征費。</p>
+<hr/>
+
 <h3>Total</h3>
-<p>Select the status and sort order of the total amount of the order in checkout.</p>
+<p>消費總金額，設定「啟用」後顧客便可以於購物車的頁面中看見是次消費所需支付的總金額。</p>
+<hr/>
+
 <h3>Gift-voucher</h3>
-<p>Select the status and the sort order of the gift-voucher option in checkout.</p>
-<h2>Order totals in the shopping cart</h2>
-<p>The screenshot below displays a basic shopping cart with some specific extensions enabled. Coupon, Gift Voucher, Shipping, Sub-total, and Total are enabled (as seen below).</p>
-<p class="text-center"><img src="image/extension-orderTotal-cart.png" alt="shopping cart payment" class="img-thumbnail" /></p>
-<h3>Support</h3>
-<p>To receive support for Order Totals extensions, please visit the <a href="http://forum.opencart.com/viewforum.php?f=115">Order Totals</a> section of the support forum.</p>
+<p>禮品券，設定「啟用」後顧客便可以於購物車的頁面中使用相關的禮品券。</p>
+<hr/>
+
+<h2>購物車頁面的訂單總額</h2>
+<p>下圖顯示啟用了一些特定擴展程序的基本購物車：優惠券、積分點數換領、禮券、送貨、小計和總計項目。</p>
+<p class="text-center"><img src="image/extension/order-totals/order-total-store-front-cart.png" alt="Store Front - Cart" class="img-responsive" /></p>
+
+<h3>技術支援</h3>
+<p>如需獲得對部份訂單總額(插件)的技術支援，請瀏覽<a href="http://forum.opencart.com/viewforum.php?f=115" target="_blank">官方論壇</a>的訂單總額擴展部分。</p>
