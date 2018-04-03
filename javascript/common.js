@@ -10,7 +10,8 @@ $(document).ready(function(){
 			if(pathname != '' || pathname != null){
 				window.location.replace(language + pathname);
 			} else {
-				window.location.replace(language + '/introduction/');
+				console.log(language + '/introduction/');
+				//window.location.replace(language + '/introduction/');
 			}
 		}
 
