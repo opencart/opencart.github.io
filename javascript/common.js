@@ -8,9 +8,9 @@ $(document).ready(function(){
 
 		console.log(window.location.href.indexOf('en-gb'));
 		// Testing tracking the url has language tag or not
-		if(window.location.href.indexOf('en-gb') < 1 || window.location.href.indexOf('zh-hk') < 1) {
+		if(window.location.href.indexOf('en-gb') < 1 && window.location.href.indexOf('zh-hk') < 1) {
 			language = 'en-gb';
-			//console.log(language + pathname);
+			console.log(language + pathname);
 			//window.location.replace(language + pathname);
 		}
 
