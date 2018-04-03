@@ -36,9 +36,7 @@ $(document).ready(function(){
 
 		if(language == '' || language == null){
 			language = 'en-gb';
-
-			alert(base);
-			//window.location.href = base + '/' + language + '/introduction');
+			window.location.replace('http://docs.opencart.com/' + language + '/introduction');
 		}
 
     $('#menu a').each(function() {
