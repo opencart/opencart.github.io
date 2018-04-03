@@ -3,15 +3,15 @@ $(document).ready(function(){
 
 		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
-
+		console.log(pathname);
 		// Checking the url has language tag or not
 		if(window.location.href.indexOf('en-gb') < 1 && window.location.href.indexOf('zh-hk') < 1) {
 			language = 'en-gb';
-			if(pathname != '' || pathname != null){
-				window.location.replace(language + pathname);
-			} else {
+			if(pathname == '' || pathname == null){
 				console.log(language + '/introduction/');
 				//window.location.replace(language + '/introduction/');
+			} else {
+				window.location.replace(language + pathname);
 			}
 		}
 
