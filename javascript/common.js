@@ -1,18 +1,16 @@
 
 $(document).ready(function(){
 
-		$('#menu > div').hide();
-
 		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
 
-		console.log(window.location.href.indexOf('en-gb'));
-		// Testing tracking the url has language tag or not
+		// Checking the url has language tag or not
 		if(window.location.href.indexOf('en-gb') < 1 && window.location.href.indexOf('zh-hk') < 1) {
 			language = 'en-gb';
-			console.log(language + pathname);
-			//window.location.replace(language + pathname);
+			window.location.replace(language + pathname);
 		}
+
+		$('#menu > div').hide();
 
 		if(pathname != '' || pathname != null){
 			var href = pathname.slice(6);
