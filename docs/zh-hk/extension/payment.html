@@ -64,23 +64,42 @@ permalink: zh-hk/extension/payment/
 	</ul>
 </div>
 
-
-
 <p>若以上清單沒有合適的支付平台，使用者可前往 OpenCart 官方市場的<a href="https://www.opencart.com/index.php?route=marketplace/extension&filter_category_id=3" target="_blank">支付平台</a>分類中尋找額外的支付平台插件。</p>
 
-<h2>Editing a payment method</h2>
-<p>Editing payment methods in the administration for different transaction processors, like Paypal, will require a previously created account. The account and payment information should be obtained from these companies prior to editing the payment method in the administration. You will need to create an account with these companies to use their transaction processing for OpenCart. The information required for each payment method will be displayed in the Edit section. Across payment methods, there are a few details that are consistently asked for:</p>
-<ul>
-  <li><strong>Order Status</strong>: a default status of an order once the payment module has completed. Pending is considered one of the best default statuses because it gives the administrator some leeway to process the order.</li>
-  <li><strong>Status</strong>: Disables or enables the payment method.</li>
-  <li><strong>Sort Order</strong>: the position of the payment method in the store front when listed among all the available payment methods.</li>
-</ul>
-<h2>Payment method in the checkout</h2>
-<p>Enabling a payment method in the administration will make it available in the Checkout. In Step 5 of the checkout, the customer will be given a radio type selection to select their preferred payment method.</p>
-<h2>Payment method in order history</h2>
-<p>After the customer has confirmed the order, they can visit their Order History in their Account page to view its status. Immediately after checkout, the status will display the default order status you selected when editing the payment method details. In the screenshot below, you may chose &quot;Pending&quot; as the order status.</p>
-<p class="text-center"><img src="image/extension-payment-checkout.png" alt="payment method" class="img-thumbnail" /></p>
-<p>The screenshot below shows &quot;Pending&quot; as the order status in the customer&#39;s Order History page under &quot;My Account&quot; in the store front.</p>
-<p class="text-center"><img src="image/extension-payment-orderHistory.png" alt="payment method order history" class="img-thumbnail" /></p>
-<h3>Support</h3>
-<p>To receive support for payment extensions, please visit the <a href="http://forum.opencart.com/viewforum.php?f=113">Payment Extension section</a> of the support forum.</p>
+<h2>編輯付款方式</h2>
+<p>在管理者介面內，啟用各個支付平台（如Paypal）都必須要先創建相關帳戶。在編輯的頁面上有著不同的資料欄供使用者填寫，內裡的資訊都可以從該支付平台中獲取，填寫正確的資料後便可以輕輕鬆鬆在商店完成交易處理。以下為共通需要填寫的資料，使其付款方式可以於商店中顯示選項讓顧客選擇：</p>
+
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="30%">Total</th>
+		<td width="*">設定購物金額到指定數目才可以供顧客選用。</td>
+	</tr>
+  <tr>
+		<th>Order Status</th>
+		<td>當顧客確認訂單時，設定訂單狀態，有關修改訂單狀態的詳情請參閱系統 > 本地化中的<a href="zh-hk/system/localisation/order-status/">訂單狀態</a>。</td>
+	</tr>
+  <tr>
+		<th>Status</th>
+		<td>「啟用」或「不啟用」該付款方式。</td>
+	</tr>
+	<tr>
+		<th>Sort Order</th>
+		<td>顯示該付款方式的次序。</td>
+	</tr>
+</tbody>
+</table>
+
+<h3>結帳頁面</h3>
+<p>在此頁中的第5步，顧客需要在完成購買前選擇一種付款方式。只要合乎指定金額、地區等條件，顧客便可以選擇使用者已啟用的支付平台來完成購物程序。</p>
+<p class="text-center"><img src="image/extension/payment/payment-store-front-checkout.png" alt="Store Front - Checkout" class="img-responsive" /></p>
+
+<h3>交易紀錄</h3>
+<p class="text-center"><img src="image/extension/payment/account-store-front-order-history.png" alt="Store Front -  Order History" class="img-responsive" /></p>
+<p>完成購物後，顧客只要前往「我的賬戶」(My Account)中的「交易紀錄」(Order History)，如上圖所示可以看見最新的訂單狀態為「Pending」。因為設定將支付方式的訂單狀態預設為「Pending」。</p>
+
+<p class="text-center"><img src="image/extension/payment/sales-order-list.png" alt="Sales Order - List" class="img-responsive" /></p>
+
+<p>只要使用者檢查了交易完成或失敗，使用者可以前往管理者介面中的「銷售」(Sales)的「訂單」(Order)中編輯該訂單的狀態，詳情請參閱<a href="zh-hk/sale/order/">訂單</a>。</p>
+
+<h3>技術支援</h3>
+<p>如需獲得對部份付款方式(插件)的技術支援，請訪問官方論壇的<a href="http://forum.opencart.com/viewforum.php?f=113" target="_blank">付款方式擴展部分</a>。</p>
