@@ -1,30 +1,40 @@
 ---
 layout: default
-title: "Editing Modules - OpenCart 使用指引"
+title: "編輯模組 - OpenCart 使用指引"
 permalink: zh-hk/extension/module/edit/
 ---
-<h1>Editing a Module</h1>
-<h2>Editing a Module</h2>
-<p>Modules can vary widely in purpose and function, so naturally, customizing a module to fit a particular store may vary between modules. In general, there are 4 main features of modules that can be tinkered with in the Module section:</p>
-<ul>
-  <li>Layout</li>
-  <li>Position</li>
-  <li>Status</li>
-  <li>Sort Order</li>
-</ul>
-<h3>Layout</h3>
-<p>The layout affects which pages the module will be included on. The pages available are listed in the screenshot below. If the module needs to be included on multiple pages, you must individually &quot;Add Module&quot; for each page. The Layout can only select one page at a time..</p>
-<p class="text-center"><img src="image/extension-module-layout.png" alt="layout" class="img-thumbnail" /></p>
-<p>The screenshot below shows the Featured module, which displays a list of specified products on the left side of a random Category page. This was achieved by selecting &quot;Category&quot; under Layout. The Featured Products box will be available on every Category page. Selecting a layout page type will add it to every page of that type. Core modules can be assigned to layout pages, but not individual pages.</p>
-<p class="text-center"><img src="image/extension-module-featured.png" alt="featured layout" class="img-thumbnail" /></p>
-<h3>Position</h3>
-<p>The Position selection determines where the modules will be displayed on the page. On the page types selected in Layouts, the module box can be at the top, bottom, left, or right side of a page.</p>
-<p class="text-center"><img src="image/extension-module-position.png" alt="position" class="img-thumbnail" /></p>
+<h1>編輯模組</h1>
+<p>模組在用途和功能上可能會有很大差異，根據不同模組的不同，定制適合特定商店的模組也會有所不同。模組修改頁面內有四個常見項目：</p>
+
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="50%">Layout</th>
+		<td width="*">Position</td>
+	</tr>
+  <tr>
+		<th>Status</th>
+		<td>Sort Order</td>
+	</tr>
+</tbody>
+</table>
+
+<h3>Layout - 排版</h3>
+<p>排版可以決定模組於哪一頁中，在甚麼位置顯示出來。如下圖所示，進入「設計」(Design)選單的「排版」(Layout)後可以看到以下內容，系統於安裝時預設了的13頁不同類型的頁排版。如果模組須要在多個版面中呈現出來，那麼使用者必須要在每一個頁面中進行編輯。</p>
+<p class="text-center"><img src="image/extension/module/layout-list.png" alt="Layout - List" class="img-responsive" /></p>
+
+<p>下圖展示了，將一個精選項目加到「產品分類」的排版的左側中，所以只要顧客進入任何一頁的的「產品分類」中都會看見這個模組所呈現的內容。但核心模組可以呈顯在部份排版頁面中，但不能分配單獨的頁面。</p>
+<p class="text-center"><img src="image/extension/module/store-front-feature-sample.png" alt="Featured Sample" class="img-responsive" /></p>
+
+<h3>Position - 位置</h3>
+<p>排版位置選擇決定模組在頁面上的顯示位置。On the page types selected in Layouts, the module box can be at the top, bottom, left, or right side of a page.</p>
+<p class="text-center"><img src="image/extension-module-position.png" alt="position" class="img-responsive" /></p>
 <p>Using the same module from the Layout section, we will change the Featured box on the category page from the left column, to the top, by selecting &quot;Content Top&quot; under Position (below).</p>
-<p class="text-center"><img src="image/extension-module-featuredTop.png" alt="featured top" class="img-thumbnail" /></p>
+<p class="text-center"><img src="image/extension-module-featuredTop.png" alt="featured top" class="img-responsive" /></p>
 <p>The Featured box with its specified products is listed above the category products in the category page, moved from its original position on the left side.</p>
+
 <h3>Status</h3>
 <p>Disabling or enabling the status of the module will affect the visibility of the module on the store website. Disabling a module is different from uninstalling the module. Disabling the module keeps all the module information available to be edited in the administration, while hiding it from the store front. Uninstalling the module will remove the store module information. Selecting &quot;Enabled&quot; will make this module publicly available on the pages selected for the store.</p>
-<p class="text-center"><img src="image/extension-module-status.png" alt="Status enable disable" class="img-thumbnail" /></p>
+<p class="text-center"><img src="image/extension-module-status.png" alt="Status enable disable" class="img-responsive" /></p>
+
 <h3>Sort order</h3>
 <p>The sort order affects the order of a module in relation to other modules in the same position. A sorting order of 1 for a module would place it above another module placed in &quot;Content Bottom&quot; with a sorting order of 2. If two modules are in the same position and have the same sort order number, they will be arranged alphabetically according to the module name. A module named &quot;Featured&quot; would be placed above the Specials module</p>
