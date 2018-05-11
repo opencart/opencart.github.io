@@ -215,8 +215,9 @@ a:hover, a:focus, a:active {
   padding-left: 20px;
   color: #000; }
 #documentation #menu ul li > a.parent::after {
-  font-family: FontAwesome;
+  font-family: 'Font Awesome\ 5 Free';
   content: '\f0d7';
+  font-weight: 900;
   position: absolute;
   right: 20px;
   color: #4b525d;
@@ -293,5 +294,33 @@ a:hover, a:focus, a:active {
   }
   .list-payment-gateway ul li:nth-last-child(-n+2) {
     border-bottom: 0;
+  }
+}
+
+.panel-heading h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 475px;
+}
+
+@media screen and (max-width: 767px){
+  iframe {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px){
+  iframe {
+    height: 405px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px){
+  iframe {
+    height: 395px;
   }
 }

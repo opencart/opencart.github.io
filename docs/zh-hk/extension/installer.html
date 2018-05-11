@@ -1,31 +1,59 @@
 ---
 layout: default
-title: "Extension Installer - OpenCart 使用指引"
+title: "安裝插件 - OpenCart 使用指引"
 permalink: zh-hk/extension/installer/
 ---
-<h1>Extension Installer</h1>
-<h2>Extension Installer</h2>
+<h1>安裝插件</h1>
+<h2>預設的安裝程式</h2>
+<p>OpenCart 系統有專門的上載功能，這樣不但可以保留核心系統的文件不被破壞外，更方便使用者隨時安裝及卸載任何 OpenCart 插件。而在 OpenCart 3 的版本中，安裝功能更進一步改善了上傳方法及步驟，只要依照以下指引，使用者就可以輕輕鬆鬆安裝合適自己的功能到網店內。</p>
 
-<p>OpenCart 2 introduced a new <strong>&quot;Extension Installer&quot;</strong> feature. By means of the <strong>Extension Installer</strong> you can upload zip-packed extensions as well as single modification files by just a few clicks. In order to use the <strong>Installer</strong> you need to be aware of your <strong>FTP credentials</strong>.</p>
-<h2>Setting your FTP credentials</h2>
-<p>In order to set your FTP credentials, navigate to <strong>System -> Settings -> Store Settings.</strong></p>
-<p class="text-center"><img src="../../image/admin-extension-installer-ftp-credentials.png" alt="FTP Credentials" class="img-thumbnail" /></p>
-<p>Then, choose the <strong>FTP</strong> tab and fill in your FTP credentials. Make sure you check the <strong>Yes</strong> radio button for the <strong>Enable FTP</strong> field and click the blue <strong>Save</strong> button in the upper right corner of the page as shown:</p>
-<p class="text-center"><img src="../../image/admin-extension-installer-settings.png" alt="Settings" class="img-thumbnail" /></p>
-<p>Now the Extension Installer will know how to access your FTP and you will be able to install extensions with ease.</p>
-<h2>Installing an extension</h2>
-<p>Usually OpenCart 2.x extensions come packed in a zip, which contains installation and/or update instructions, sometimes a release log and another zip, whose name ends in &quot;<strong>.ocmod.zip</strong>&quot;. Extension Installer recognizes such zips and uploads their content directly to the FTP root of your store. That said, it will produce an error if you try to upload zips with a name that is not in the &quot;<strong>*.ocmod.zip&quot; format</strong>.</p>
-<p>In order to upload an extension, navigate to <strong>Extensions -> Extension Installer</strong>. Then click the blue <strong>Upload</strong> button and provide the route to your extension&#39;
-s&quot;<strong>*.ocmod.zip&quot; archive</strong>.</p>
-<p class="text-center"><img src="../../image/admin-extension-installer-extension-installer.png" alt="Extension Installer" class="img-thumbnail" /></p>
-<p>If the extension that you are installing contains files with names already existent in the current location, you will receive an alert about this in the grey &quot;<strong>Files that will be overwritten</strong>&quot; box. This means the extension is about to overwrite files that you already have on your site.  Here, you can either inspect all of the listed files and make sure no OpenCart core files are to be overwritten, or contact the extension&#39;s developer directly. Once you are sure it is safe to proceed, click the blue <strong>Continue</strong> button. On success, you should get a green &quot;<strong>Success: You have installed your extension!</strong>&quot; message.</p>
-<h2>Uploading a single modification file</h2>
-<p>Uploading single <strong>.xml</strong> modification files is just as easy as installing zip-packed extensions. The difference is only in the route you will provide the <strong>Installer</strong> with. Modification files&#39; names should end in &quot;<strong>.ocmod.xml</strong>&quot; when uploaded via the Installer. </p>
-<h2>Installation errors & Clear button</h2>
+
+<h2>安裝插件</h2>
+<p>OpenCart 3 的所有插件都必須以 <strong>*.ocmod.zip</strong> 的形式進行上傳並安裝及更新，所有的文件都會依照 儀表板(Dashboard) 中的設定，將文件放置在使用者指定的位置。假如，上傳的檔案有誤，系統會顯示錯誤訊息並無法上傳。</p>
+
+
+<p>從管理者介面中左側的選單展開 插件(Extension)，然後點選 安裝插件 (Installer)。在安裝頁面中，點擊&nbsp; <i class="fas fa-upload"></i> 上傳 &nbsp;後便從電腦中挑選所需的 <strong>*.ocmod.zip</strong> 然後確認。如無意外，按鈕下方的安裝進度棒會顯示為綠色。</p>
+
+<p class="text-center"><img src="image/extension/installer/install-success.png" alt="Extension Installer" class="img-thumbnail" /></p>
+
+<p>OpenCart 3版本內，安裝頁面全面簡化，完成安裝後，新安裝的插件會在頁面的底部顯示出來；如果想卸載插件，只要點擊插件右側的&nbsp; <i class="fas fa-trash-alt"></i> 刪除 &nbsp;按鈕即可。</p>
+
+<div class="alert alert-info">
+  <i class="fas fa-exclamation-circle"></i> 於 OpenCart 2版本，如果所上傳的插件經已存在，資料夾內的文件會於灰色框內列出，在上傳之前請先確認沒有重要文件會被覆蓋，如沒有可以按 &nbsp; <i class="fas fa-check"></i> 繼續 &nbsp;。成功上載後，頁面會顯示綠色的訊息表示成功。
+</div>
+
+
+<h2>上載單一模組檔案</h2>
+
+<p>OpenCart 3版本內的所有插件都必須使用 <strong>*.ocmod.zip</strong> 的形式來進行上載及安裝，即便是單一模組也要放置在 <strong>*.ocmod.zip</strong> 內並命名為 <strong>index.xml</strong> 才能完成安裝程序。</p>
+
+<p>如果從任何地方下載 OpenCart 的插件安裝程式，請確認上載的格式以及對應版本是否與其使用的系統相容。</p>
+
+<div class="alert alert-info">
+  <i class="fas fa-exclamation-circle"></i> 於 OpenCart 2版本，如果模組只需上傳一個文件，有別於 <strong>*.ocmod.zip</strong>，單一文件的格式必須為 <strong>*.ocmod.xml</strong> 才能上載到系統中。
+</div>
+
+<h2>安裝錯誤及清除功能</h2>
+
+<div class="alert alert-info">
+  <i class="fas fa-exclamation-circle"></i> 此功能介紹只適用於 OpenCart 2 版本。
+</div>
+
 <p>At times, an error could restrain the Installer from completely uploading an extension or modification file and cause it to abort the installation midway through. If this happens, the filling color in the <strong>Progress</strong> field will become red and will stop filling the bar. Right below it, you will get an error of some type. Example:</p>
-<p class="text-center"><img src="../../image/admin-extension-installer-upload-file.png" alt="Upload File" class="img-thumbnail" /></p>
+<p class="text-center"><img src="image/admin-extension-installer-upload-file.png" alt="Upload File" class="img-thumbnail" /></p>
 <p>When this happens, files that had already been uploaded before the error has occurred, will need to be cleared. OpenCart has the red Clear button for that. If you had forgotten to do that, you will also get an alert on the top of the page about this every time you access your <strong>Extension Installer</strong>.</p>
-<p class="text-center"><img src="../../image/admin-extension-installer-warning.png" alt="Warning" class="img-thumbnail" /></p>
+<p class="text-center"><img src="image/admin-extension-installer-warning.png" alt="Warning" class="img-thumbnail" /></p>
 <p>Upon clicking the <strong>Clear</strong> button, the alert should be replaced by the following &quot;<strong>Success</strong>&quot; message:</p>
-<p class="text-center"><img src="../../image/admin-extension-installer-success.png" alt="Success" class="img-thumbnail" /></p>
+<p class="text-center"><img src="image/admin-extension-installer-success.png" alt="Success" class="img-thumbnail" /></p>
 <p>You should always make sure all temporary files are cleared before uploading an extension or a modification file because at the very least, they will be taking up space on your server. </p>
+
+
+<h2>設定FTP帳戶</h2>
+<div class="alert alert-info">
+  <i class="fas fa-exclamation-circle"></i> 此部份只適用於 OpenCart 2版本，在 OpenCart 3 以後的版本更簡易及快捷安裝插件。
+</div>
+
+<p>從管理者介面左側的選單中展開 <strong>系統 (System)</strong> 選單並點擊 <strong>設定 (Setting)</strong>，從商店清單中點選 &nbsp; <i class="fas fa-pencil"></i> 編輯 &nbsp;進入編輯頁面。前往 <strong>FTP 標籤</strong> 內可以看見以下欄位。</p>
+
+<p class="text-center"><img src="image/extension/installer/opencart-2-store-setting-ftp.png" alt="OpenCart 2 Store Setting" class="img-thumbnail" /></p>
+<p>有關FTP的資料可以向伺服器供應商查詢，填好所有欄位後，請確認 <strong>Enable FTP</strong> 是啟用才儲存，否則也是無法可以安裝插件。完成這步驟後便可以到 <strong>Installer</strong> 的頁面繼續安裝。</p>

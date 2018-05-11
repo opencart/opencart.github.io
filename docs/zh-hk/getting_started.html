@@ -44,25 +44,56 @@ permalink: zh-hk/getting-started/
 <p class="text-center"><img src="image/getting-started/admin-setting-payment.png" alt="Extensions Payment Page" class="img-thumbnail" /></p>
 
 <h3>稅項計算</h3>
-<p>OpenCart offers a number of different <a href="system/localisation/tax/">Tax </a>options by default. Taxes are location dependent, so you can charge different tax rates to customers in different geographical locations, according to local tax rules. Tax rates are set up under System &gt; Localisation &gt; Taxes &gt; Tax Rates. If your required tax rate is not already present, you will need to create a new tax rate and add it. For example, the Tax Rate applicable to New Zealand is GST which is currently at 15%. New Zealand stores should therefore create a new Tax Rate called GST, set to 15%, and applicable to customers in the Geo Zone of New Zealand.</p>
-<p>If you have product specific tax rates, you need to define each of these tax rates under the Tax Rates page. You will later choose which tax rate applies to each product, so you will be able to manage your product specific taxes at the product level.</p>
+<p>OpenCart 預設了許多不同的稅務選項。稅收取決於不同地區，因此根據當地的稅收規定，使用者可以向不同地理位置的客戶收取不同的稅率。如果預設資料的稅率尚不存在，使用者需要自行創建一個新的稅率並添加它。</p>
+<table class="table table-bordered">
+  <tr>
+    <td>位置</td>
+    <td>模組 / 編輯項目</td>
+  </tr>
+  <tr>
+    <td>系統(System) <i class="fas fa-long-arrow-alt-right"></i> 本地化(Localisation) <i class="fas fa-long-arrow-alt-right"></i> 稅項(Tax) <i class="fas fa-long-arrow-alt-right"></i> 稅率(Tax Rate)</td>
+    <td>新增或編輯稅率項目</td>
+  </tr>
+</table>
+<p>例如，適用於新西蘭的稅率是GST，目前為15%。 新西蘭商店因此應該創建一個名為GST的新稅率，設定為15%，適用於新西蘭地區的客戶。詳情請參閱<a href="zh-hk/system/localisation/tax/">稅項計算</a>。</p>
+<p>如果商店中有特定的產品稅率，則需要在 <strong>稅率</strong>中定義這些稅率。接著將選擇適用於每種產品的稅率，以便可以在產品級別管理產品特定的稅收。</p>
 <hr/>
 
 
-<h2>運輸平台</h2>
-<p>Stores selling tangible goods will need to edit their shipping options. Shipping methods are selected under the Extensions &gt; Shipping menu item. Just as with the Tax Rates above, you will need to Install and Edit the settings for the Shipping Methods your store will support. The documentation contains full instructions on setting your <a href="extension/shipping/">Shipping Method</a>.</p>
+<h2>運輸方法</h2>
+<p>商店若銷售實體商品將需要設定運輸選項。 運輸方法可以在<strong>插件</strong>中找到，與上述稅項計算的情況一樣，使用者需要安裝和編輯商店將支持的運輸方式的設置。 詳情請參閱<a href="zh-hk/extension/shipping/">運輸方法</a>。</p>
 <p class="text-center"><img src="image/getting-started/admin-setting-shipping.png" alt="Extensions Shipping Page" class="img-thumbnail" /></p>
 <hr/>
 
 <h2>庫存管理</h2>
-<p>OpenCart&#39;s installation includes demonstration data to help you see how to setup your OpenCart store&#39;s inventory. This includes <a href="catalog/category/">Categories</a>, <a href="catalog/manufacturer/">Manufacturers</a>, <a href="catalog/option/">Options</a>, <a href="catalog/attribute/">Attributes</a> and <a href="catalog/product/">Products </a>and some home page Banners. These are the Apple iPods that you see when you first visit your store&#39;s frontend after installation. In order to get started with your store, you will need to replace these demo items with the actual categories, manufacturers and products your store will sell. There are two recommended ways to do this:</p>
+<p>OpenCart 系統在安裝時已預設部份示範用的資料幫助使用者更容易理解及建立自己的商店。當中包括了：<a href="zh-hk/catalog/category/">商品分類</a>、<a href="zh-hk/catalog/manufacturer/">廠商 / 品牌</a>、<a href="zh-hk/catalog/option/">選項</a>、<a href="zh-hk/catalog/attribute/">屬性</a>、<a href="zh-hk/catalog/product/">產品 </a>以及首頁中的橫額圖片。</p>
+<p>These are the Apple iPods that you see when you first visit your store&#39;s frontend after installation. In order to get started with your store, you will need to replace these demo items with the actual categories, manufacturers and products your store will sell. There are two recommended ways to do this:</p>
 <ol>
-  <li>You can manually edit these under the Catalog menu in your OpenCart store&#39;s admin.</li>
+  <li>編輯產品(Products)可於商店目錄(Catalog)清單內開啟進行修改；</li>
   <li>You can use an import tool to simplify the upload of your products in bulk. This is more practical for larger inventories or dropshippers, and will allow you to remove all existing items and replace them at the same time.</li>
 </ol>
 <hr/>
 
 <h2>插件、模組及主題</h2>
-<p>OpenCart的主要特色之一，功能及外觀主要由模組及主題兩部份所管理。要使自己的OpenCart商店變得更個性化就取決於插件及模組的使用。例如於首頁中的大型橫額是由設計(Design) <i class="fas fa-long-arrow-alt-right"></i> 横額(Banners)建立了<strong>Home Page Slideshow</strong>的項目，再從插件(Extensions) <i class="fas fa-long-arrow-alt-right"></i> 模組(Modules)中的<strong>Slideshow</strong>組合而成，最後再於設計(Design) <i class="fas fa-long-arrow-alt-right"></i> 外觀(Layout)裡的<strong>Home</strong>選擇對應位置顯示出來。如果移除任何一方的設定就使此功能無法成立並不會顯示於網頁上。</p>
-<p>OpenCart 系統在安裝時已預設小部份功能在內作示範用途，如果商店毋需使用這些功能只要移除該功能就可以；初次接觸OpenCart的使用者亦可以藉由預設的項目快速改動內容以便修改為自己的產品及完整商店。</p>
+<p>OpenCart的主要特色之一，功能及外觀主要由模組及主題兩部份所管理。要使自己的OpenCart商店變得更個性化就取決於插件及模組的使用。例如於首頁中的大型橫額是由設計(Design) <i class="fas fa-long-arrow-alt-right"></i> 横額(Banners)建立了<strong>Home Page Slideshow</strong>的項目，再從插件(Extensions) <i class="fas fa-long-arrow-alt-right"></i> 模組(Modules)中的<strong>Slideshow</strong>組合而成，最後再於設計(Design) <i class="fas fa-long-arrow-alt-right"></i> 外觀(Layout)裡的<strong>Home</strong>選擇對應位置顯示出來。
+<table class="table table-bordered">
+  <tr>
+    <td>位置</td>
+    <td>模組 / 編輯項目</td>
+  </tr>
+  <tr>
+    <td>設計(Design) <i class="fas fa-long-arrow-alt-right"></i> 横額(Banners)</td>
+    <td><strong>Home Page Slideshow</strong>項目</td>
+  </tr>
+  <tr>
+    <td>插件(Extensions) <i class="fas fa-long-arrow-alt-right"></i> 模組(Modules)</td>
+    <td><strong>Slideshow</strong>項目</td>
+  </tr>
+  <tr>
+    <td>設計(Design) <i class="fas fa-long-arrow-alt-right"></i> 外觀(Layout)</td>
+    <td>編輯<strong>Home</strong></td>
+  </tr>
+</table>
+<p>如果移除任何一方的設定就使此功能無法成立並不會顯示於網頁上。</p>
+<p>OpenCart 系統在安裝時已預設小部份功能在內作示範用途，如果商店毋需使用這些功能只要移除該功能就可以；初次接觸 OpenCart 的使用者亦可以藉由預設的項目快速改動內容以便修改為自己的產品及完整商店。</p>
 <p>若預設的模組並沒有合適的功能，使用者可安裝非官方插件，詳情請參閱<a href="zh-hk/extension/module/3rd-party/">非官方模組</a>。</p>

@@ -1,20 +1,36 @@
 ---
 layout: default
-title: "Languages - OpenCart 使用指引"
+title: "語言 - OpenCart 使用指引"
 permalink: zh-hk/system/localisation/language/
 ---
-<h1>Localisation Language</h1>
-<h2>Language</h2>
-<p>The language section lets you manage the languages available for the store front. OpenCart provides English as the default language after installation. To add multiple languages to the site you need to install a language pack. Language packs can be acquired from the <a href="http://www.opencart.com/index.php?route=extension/extension&amp;path=2">Extension Directory</a>. See <a href="administration/language/">Adding multiple languages</a> to learn how to add a language pack to OpenCart.</p>
-<p>The new language can be added to the site under System&gt;Localisation&gt;Language. The following information will be needed to save the language:</p>
-<ul>
-  <li><strong>Language Name</strong></li>
-  <li><strong>Code: </strong>The ISO language code. <a href="http://www.w3schools.com/tags/ref_language_codes.asp">W3Schools </a>has a complete list of ISO codes.</li>
-  <li><strong>Locale: </strong>The code used by browsers to auto-detect the language of the site. Locale codes can be viewed <a href="https://developer.chrome.com/webstore/i18n#localeTable">here</a>.</li>
-  <li><strong>Image: </strong>The image used to represent the language, that will be displayed in the header area of the store.</li>
-  <li><strong>Directory: </strong>The location of the language pack (do not include the catalog/language path).</li>
-  <li><strong>Filename: </strong>The name of the language file.</li>
-  <li><strong>Status: </strong>Enables or disables the language in the store front.</li>
-  <li><strong>Sort Order: </strong>Determines the position of the language among multiple languages in the header.</li>
-</ul>
-<p class="text-center"><img src="image/system-localisation-language.png?dc=201412181736-16" alt="language page backend" class="img-thumbnail" /></p>
+<h1>語言</h1>
+<p>語言功能可以使商店迎合使用不同語言的顧客，從而令他們可以在商店消費。OpenCart預設系統只支援英語，若果要為系統增添新語言必須前往<a href="https://www.opencart.com/index.php?route=extension/extension&amp;path=2" target="_blank">OpenCart 官方市場(Marketplace)</a>購買及下載合適系統所使用的語言包。有關如何安裝新的語言包，請查看<a href="zh-hk/administration/language/">新增語言</a>教學內容。</p>
+
+<p>假設已經成功安裝了一種新語言，前往語言清單的面頁，如下圖所示，點擊右上方的&nbsp; <i class="fas fa-plus"></i> 新增 &nbsp;按鈕前往下一頁。</p>
+<p class="text-center"><img src="image/system/localisation/language/language-list.png" alt="Language - List" class="img-thumbnail" /></p>
+<br/>
+
+<table class="table table-bordered">
+  <tr>
+    <td width="30%">Language Name *</td>
+    <td width="*">設定語言統稱於管理者介面中顯示。</td>
+  </tr>
+  <tr>
+    <td>Code *</td>
+    <td>國際通用的語言編碼(ISO language code)，如不清楚新增的語言編碼，可前往<a href="http://www.w3schools.com/tags/ref_language_codes.asp" target="_blank">W3Schools</a>查詢完整清單。</td>
+  </tr>
+  <tr>
+    <td>Locale *</td>
+    <td>瀏覽器用來自動檢測網站語言的代碼。 區域代碼可以查看<a href="https://developer.chrome.com/webstore/i18n#localeTable" target="_blank">這裡</a>。</td>
+  </tr>
+  <tr>
+    <td>Status</td>
+    <td>啟用或隱藏商店的語言選項</td>
+  </tr>
+  <tr>
+    <td>Sort Order</td>
+    <td>語言顯示排序</td>
+  </tr>
+</table>
+
+<p class="text-center"><img src="image/system/localisation/language/language-info.png" alt="Language - Info" class="img-thumbnail" /></p>

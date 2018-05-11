@@ -1,5 +1,5 @@
 <div id="menu">
-  <div id="en-gb">
+  <div id="en-gb" style="display: none;">
     <h4 class="hidden-xs hidden-sm">Categories</h4>
     <ul>
       <li><a href="introduction/">Home</a></li>
@@ -29,6 +29,7 @@
               <li><a href="catalog/category/">Overview</a></li>
               <li><a href="catalog/category/general/">General</a></li>
               <li><a href="catalog/category/data/">Data</a></li>
+              <li><a href="catalog/category/seo/">SEO</a></li>
               <li><a href="catalog/category/design/">Design</a></li>
             </ul>
           </li>
@@ -44,11 +45,12 @@
               <li><a href="catalog/product/special/">Special</a></li>
               <li><a href="catalog/product/image/">Image</a></li>
               <li><a href="catalog/product/reward/">Reward Points</a></li>
+              <li><a href="catalog/product/seo/">SEO</a></li>
               <li><a href="catalog/product/design/">Design</a></li>
             </ul>
           </li>
-          <li><a href="catalog/filter/">Filters</a></li>
           <li><a href="catalog/profile/">Profiles</a></li>
+          <li><a href="catalog/filter/">Filters</a></li>
           <li><a href="catalog/attribute/">Attributes</a></li>
           <li><a href="catalog/option/">Options</a></li>
           <li><a href="catalog/manufacturer/">Manufacturers</a></li>
@@ -63,9 +65,9 @@
           <li><a href="extension/installer/">Extension Installer</a></li>
           <li><a href="" class="parent">Extensions</a>
             <ul>
-              <li><a href="extension/analytics/">Analytics</a></li>
-              <li><a href="extension/captchas/">Captchas</a></li>
-              <li><a href="extension/dashboard/">Dashboard</a></li>
+              <li class="hidden"><a href="extension/analytics/">Analytics</a></li>
+              <li class="hidden"><a href="extension/captchas/">Captchas</a></li>
+              <li class="hidden"><a href="extension/dashboard/">Dashboard</a></li>
               <li><a href="extension/feed/">Feeds</a></li>
               <li><a href="extension/fraud/">Anti-Fraud</a></li>
               <li><a href="" class="parent">Modules</a>
@@ -77,7 +79,7 @@
                 </ul>
               </li>
               <li><a href="extension/payment/">Payment Gateways</a></li>
-              <li><a href="extension/reports/">Reports</a></li>
+              <li class="hidden"><a href="extension/reports/">Reports</a></li>
               <li><a href="extension/shipping/">Shipping</a></li>
               <li><a href="extension/theme/">Themes</a></li>
               <li><a href="extension/order-total/">Order Totals</a></li>
@@ -205,10 +207,11 @@
           <li><a href="developer/loading/">Loading files in the controller</a></li>
         </ul>
       </li>
+      <li><a href="upgrading/">Upgrading</a></li>
     </ul>
   </div>
 
-  <div id="zh-hk">
+  <div id="zh-hk" style="display: none;">
     <h4 class="hidden-xs hidden-sm">目錄</h4>
     <ul>
       <li><a href="introduction/">關於OpenCart</a></li>
@@ -231,17 +234,18 @@
           <li><a href="administration/vqmod/">vQmod</a></li>
         </ul>
       </li>
-      <li><a href="" class="parent">商店目錄</a>
+      <li><a href="" class="parent">產品目錄</a>
         <ul>
-          <li><a href="" class="parent">商品類別</a>
+          <li><a href="" class="parent">產品類別</a>
             <ul>
               <li><a href="catalog/category/">概覽</a></li>
               <li><a href="catalog/category/general/">一般</a></li>
               <li><a href="catalog/category/data/">資料</a></li>
-              <li><a href="catalog/category/design/">模面設計</a></li>
+              <li><a href="catalog/category/seo/">SEO</a></li>
+              <li><a href="catalog/category/design/">板面設計</a></li>
             </ul>
           </li>
-          <li><a href="" class="parent">貨品</a>
+          <li><a href="" class="parent">產品</a>
             <ul>
               <li><a href="catalog/product/">概覽</a></li>
               <li><a href="catalog/product/general/">一般</a></li>
@@ -253,17 +257,18 @@
               <li><a href="catalog/product/special/">特價優惠</a></li>
               <li><a href="catalog/product/image/">圖片</a></li>
               <li><a href="catalog/product/reward/">積分</a></li>
-              <li><a href="catalog/product/design/">模面設計</a></li>
+              <li><a href="catalog/product/seo/">SEO</a></li>
+              <li><a href="catalog/product/design/">板面設計</a></li>
             </ul>
           </li>
-          <li><a href="catalog/filter/">篩選</a></li>
           <li><a href="catalog/profile/">重複性配置</a></li>
+          <li><a href="catalog/filter/">篩選</a></li>
           <li><a href="catalog/attribute/">屬性</a></li>
           <li><a href="catalog/option/">選項</a></li>
           <li><a href="catalog/manufacturer/">廠商 / 品牌</a></li>
           <li><a href="catalog/download/">下載項目</a></li>
-          <li><a href="catalog/review/">商品口碑</a></li>
-          <li><a href="catalog/information/">資料</a></li>
+          <li><a href="catalog/review/">產品評級</a></li>
+          <li><a href="catalog/information/">資訊頁面</a></li>
         </ul>
       </li>
       <li><a href="" class="parent">插件</a>
@@ -272,11 +277,11 @@
           <li><a href="extension/installer/">安裝插件</a></li>
           <li><a href="" class="parent">插件</a>
             <ul>
-              <li><a href="extension/analytics/">分析</a></li>
-              <li><a href="extension/captchas/">認証</a></li>
-              <li><a href="extension/dashboard/">面板</a></li>
-              <li><a href="extension/feed/">Feeds</a></li>
-              <li><a href="extension/fraud/">反詐騙</a></li>
+              <li class="hidden"><a href="extension/analytics/">分析</a></li>
+              <li class="hidden"><a href="extension/captchas/">認証</a></li>
+              <li class="hidden"><a href="extension/dashboard/">面板</a></li>
+              <li><a href="extension/feed/">產品數據</a></li>
+              <li><a href="extension/fraud/">反欺詐</a></li>
               <li><a href="" class="parent">模組</a>
                 <ul>
                   <li><a href="extension/module/">核心模組</a></li>
@@ -286,10 +291,10 @@
                 </ul>
               </li>
               <li><a href="extension/payment/">支付平台</a></li>
-              <li><a href="extension/reports/">報告</a></li>
+              <li class="hidden"><a href="extension/reports/">報告</a></li>
               <li><a href="extension/shipping/">運輸平台</a></li>
               <li><a href="extension/theme/">主題</a></li>
-              <li><a href="extension/order-total/">總訂購數</a></li>
+              <li><a href="extension/order-total/">帳單金額</a></li>
             </ul>
           </li>
           <li><a href="extension/modifications/">修改</a></li>
@@ -414,6 +419,7 @@
           <li><a href="developer/loading/">Loading files in the controller</a></li>
         </ul>
       </li>
+      <li><a href="upgrading/">系統升級</a></li>
     </ul>
   </div>
 </div>

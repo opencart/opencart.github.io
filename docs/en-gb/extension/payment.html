@@ -68,17 +68,41 @@ permalink: en-gb/extension/payment/
 
 <h2>Editing a payment method</h2>
 <p>Editing payment methods in the administration for different transaction processors, like Paypal, will require a previously created account. The account and payment information should be obtained from these companies prior to editing the payment method in the administration. You will need to create an account with these companies to use their transaction processing for OpenCart. The information required for each payment method will be displayed in the Edit section. Across payment methods, there are a few details that are consistently asked for:</p>
-<ul>
-  <li><strong>Order Status</strong>: a default status of an order once the payment module has completed. Pending is considered one of the best default statuses because it gives the administrator some leeway to process the order.</li>
-  <li><strong>Status</strong>: Disables or enables the payment method.</li>
-  <li><strong>Sort Order</strong>: the position of the payment method in the store front when listed among all the available payment methods.</li>
-</ul>
-<h2>Payment method in the checkout</h2>
+
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="30%">Total</th>
+		<td width="*">Set the minimun price to reach the payment method.</td>
+	</tr>
+  <tr>
+		<th>Order Status</th>
+		<td>A default status of an order once the payment module has completed. Pending is considered one of the best default statuses because it gives the administrator some leeway to process the order.</td>
+	</tr>
+  <tr>
+		<th>Status</th>
+		<td>Disables or enables the payment method.</td>
+	</tr>
+	<tr>
+		<th>Sort Order</th>
+		<td>The position of the payment method in the store front when listed among all the available payment methods.</td>
+	</tr>
+</tbody>
+</table>
+
+
+<h3>Payment method in the checkout</h3>
 <p>Enabling a payment method in the administration will make it available in the Checkout. In Step 5 of the checkout, the customer will be given a radio type selection to select their preferred payment method.</p>
-<h2>Payment method in order history</h2>
+<p class="text-center"><img src="image/extension/payment/payment-store-front-checkout.png" alt="Store Front - Checkout" class="img-responsive" /></p>
+
+
+<h3>Payment method in order history</h3>
 <p>After the customer has confirmed the order, they can visit their Order History in their Account page to view its status. Immediately after checkout, the status will display the default order status you selected when editing the payment method details. In the screenshot below, you may chose &quot;Pending&quot; as the order status.</p>
-<p class="text-center"><img src="image/extension-payment-checkout.png" alt="payment method" class="img-thumbnail" /></p>
-<p>The screenshot below shows &quot;Pending&quot; as the order status in the customer&#39;s Order History page under &quot;My Account&quot; in the store front.</p>
-<p class="text-center"><img src="image/extension-payment-orderHistory.png" alt="payment method order history" class="img-thumbnail" /></p>
+<p class="text-center"><img src="image/extension/payment/account-store-front-order-history.png" alt="Store Front - Order History" class="img-responsive" /></p>
+<p>The screenshot above shows &quot;Pending&quot; as the order status in the customer&#39;s Order History page under &quot;My Account&quot; in the store front.</p>
+
+<p class="text-center"><img src="image/extension/payment/sales-order-list.png" alt="Sales Order - List" class="img-responsive" /></p>
+<p>After the order is finished, user can go to the administrator to change the order status. For details, please read the page <a href="en-gb/sale/order/">orders</a>.</p>
+
+
 <h3>Support</h3>
-<p>To receive support for payment extensions, please visit the <a href="http://forum.opencart.com/viewforum.php?f=113">Payment Extension section</a> of the support forum.</p>
+<p>To receive support for payment extensions, please visit the <a href="http://forum.opencart.com/viewforum.php?f=113" target="_blank">Payment Extension section</a> of the support forum.</p>

@@ -1,34 +1,75 @@
 ---
 layout: default
-title: "Updating OpenCart - OpenCart 使用指引"
+title: "更新OpenCart版本 - OpenCart 使用指引"
 permalink: zh-hk/upgrading/
 ---
-<h1>Updating OpenCart</h1>
-<h2>Updating OpenCart</h2>
-<p>OpenCart is periodically updated with new versions of itself. It is a good idea to update your store with each new version released to take advantage of bug fixes and new features. It may seem like a hassle to update the shop every time a new version comes out, but it is worth the effort in the long run. There are ways to avoid the pain of upgrades, such as using quality themes and modules that do not modify your OpenCart core, or using vQmod.</p>
-<p>This guide will explain how to upgrade from the v1.4.x up to the latest version of OpenCart. Versions earlier than 1.4.x will not be included since they are no longer available.</p>
-<h2>Checking the requirements for the new version</h2>
-<p>To see if the a store with an older version can upgrade to the newest version, your web server needs to meet the basic technical requirements. To see the latest technical requirements for the latest version of OpenCart, 2.0.3.1, see <a href="requirements/">System requirements</a>.</p>
-<h2>Updating from 1.4.x to 1.5.x</h2>
-<p>If you want to move your shop to the latest version and are currently using a 1.4.x version, you need to download a script from the OpenCart forum: <a href="http://forum.opencart.com/viewtopic.php?f=2&amp;t=50292">http://forum.opencart.com/viewtopic.php?f=2&amp;t=50292</a>.</p>
-<h2>Updating from 1.5.x to the latest version</h2>
-<p>Updating from a 1.5.x version to the newest version is a simpler process than updating from 1.4.x. To access the latest version of OpenCart, visit the <a href="https://www.opencart.com/index.php?route=cms/download">Download</a> page:</p>
-<p class="text-center"><img src="image/latest_version.png" alt="latest version" class="img-thumbnail" /></p>
-<p>The latest version will always be at the top of the Downloads list. Click &quot;Download&quot; to save the zip version. Unzip the zip file to a location that can be easily located later.&nbsp;</p>
-<p>The next step in updating is to upload the files from the latest version to the store&#39;s file directory via a FTP client. Transferring these files will overwrite the existing files, so it is a good idea to save the existing files from the store&#39;s root directory on the administrator&#39;s computer as a zip file. Also, if you haven&#39;t done so already, you should visit the <a href="system/backup/">Backup/Restore</a> section to save a backup sql file containing the store&#39;s database information.</p>
-<p>With the store&#39;s files backed up, the newest version can be uploaded with the FTP client. See <a href="installation/">Installation </a>to learn how to connect to the store&#39;s directory using Filezilla. In the Local site side, locate the OpenCart version&#39;s upload folder and open it to view its contents. <strong>There are two files that need to be excluded from the upload to the store&#39;s root directory: &quot;upload/config.php&quot;, and the &quot;upload/admin/config.php&quot;.</strong></p>
-<p class="text-center"><img src="image/delete-admin-config.png" alt="delete admin config" class="img-thumbnail" /> <img src="image/delete-config.png" alt="delete config" class="img-thumbnail" /></p>
-<p>The easiest way to upload the files of the latest version, without these two config.php files, is to delete them from the local site side before uploading. That way you can select everything within the upload folder without worrying if the config.php files were uploaded accidentally. In the screen shot below, the store is located at &quot;public_html/update&quot;, so all the files from &quot;upload&quot; are selected and dragged to the scroll bar. Every file within &quot;upload&quot; is automatically loaded to its proper path this way. These files should overwrite the existing files, so select &quot;Overwrite&quot; when asked by the FTP client.</p>
-<p class="text-center"><img src="image/ftp-update-155.png" alt="ftp update version155" class="img-thumbnail" /></p>
-<p>After uploading the files of the new version to the FTP client, the administrator must visit the install page. The install page is located at the store location followed by &quot;/install&quot; like so: www.&quot;mystore&quot;.com/install. The following screenshot displays the upgrade instructions after it finishes updating when viewing the install page.</p>
-<p class="text-center"><img src="image/upgrade-install.png" alt="upgrade install" class="img-thumbnail" /></p>
-<p>After letting OpenCart upgrade complete, the following success page will be displayed. The install directory can be deleted now.</p>
-<p class="text-center"><img src="image/upgrade%20complete.png" alt="upgrade complete" class="img-thumbnail" /></p>
-<p>Though the upgrade has completed, there are still a few things to do to get the administration side of your store in order:</p>
-<ul>
-  <li>Remove cookies from your browser.</li>
-  <li>Press CTRL+F5 three times in both the admin side and the store front.</li>
-  <li>Visit the store settings and fill in any missing information. See Settings to learn how to edit the store settings.</li>
-  <li>Visit the User Groups and give the Top Administrator all the privileges needed to run the administration. See Users for more information on how to edit User Groups.</li>
-</ul>
-<p>Once the administration is in order, you can resume the routine of managing your store; except now you are equipped with all the improved tools and features brought by the update.</p>
+<h1>更新OpenCart版本</h1>
+<p>OpenCart 會定期推出新版本，每次更新都會修正上一個版本的錯誤以及優化或新增部份功能。每當新版本出現時，更新系統可能顯得很麻煩，但從長遠來看，這是值得的。</p>
+<p>本指引將介紹如何從 OpenCart 2升級到最新版本的OpenCart 3。</p>
+<p>版本早於1.5.4將不會被包含，因為它們不再可用。</p>
+
+<h2>檢查新版本的要求</h2>
+<p>要查看舊版本的商店是否可以升級到最新版本，所使用的網頁伺服器需要滿足基本的技術要求。查看 OpenCart 3 最新版本最新技術要求，可參閱 <a href="zh-hk/requirements/">系統要求</a>。</p>
+
+<div class="alert alert-info" role="alert">
+  <i class="fas fa-info-circle"></i>
+  每當要進行更新時，請謹記要把現在的任何資料及檔案備份。
+  <ol>
+    <li>前往管理者介面，展開系統清單中的工具選項，點擊備份與重置，選取所有項目 並按下 <i class="fas fa-download"></i> 下載資料庫備份。</li>
+    <li>經 FTP 或 cPanel進入網頁寄存空間，將現有的檔案全部下載到電腦作備份。</li>
+  </ol>
+</div>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-oc23x2oc30x">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#oc23x2oc30x" aria-expanded="true" aria-controls="oc23x2oc30x">
+          從 2.x.x 升級至 3.0.x
+        </a>
+      </h4>
+    </div>
+    <div id="oc23x2oc30x" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-oc23x2oc30x">
+      <div class="panel-body">
+        <ol>
+          <li>下載 OpenCart 最新版本，上載所有檔案到存放OpenCart的位置內。注意：已存在的 config.php 及 admin/config.php 不能被覆寫，如果不幸被覆寫了，便從備份中重新上載這兩個文件。
+            <br/>
+            - #1 備份及移除所以Views資料夾中的檔案，因為從OpenCart 3 開始是使用TWIG作為系統顯示媒體。如果有完整備份整個OpenCart系統，其實只要保留 Image 資料夾，兩個 Config.php 並將其他檔案刪除就可以。<br/>
+            - #2 在進行升級前，必須檢查所有正在使用的插件是否與最新版本兼容，如果不清楚插件情況，可以先向編程師查詢。<br/>
+            - #3 除了插件外，主題也必須設定為預設(Default)，所有OpenCart 2的主題已經不能套用到OpenCart 3上，綜合而言，所有的插件及主題都要處於初期狀態。
+          </li>
+          <li>瀏覽 http://yourstore.com/install ，取代 yourstore.com 成為網站網址。</li>
+
+          <li>進入OpenCart系統升級頁面。<br/>
+            - 當輸入網址 http://yourstore.com/install 後看見是安裝版面，這表示其中一個 config.php 已經被覆蓋為空間文件，將備份文件重新上載到網存空間內再重新載入頁面即可以看見系統升級頁面。
+          </li>
+
+          <li>點擊 <a class="btn btn-primary">Upgrade</a> 後，耐心等待直至系統顯示完成。
+            <br/>
+            - 如發現任何錯誤提示，請立即前往OpenCart論壇回報錯誤事項。
+          </li>
+
+          <li>清除瀏覧器快取檔案。</li>
+
+          <li>前往管理者介面並，嘗試按 Ctrl+F5 及 Ctrl+Shift+R 數次以確保網站沒有被快取檔影響。然後登入管理者介面。</li>
+
+          <li>展開系統清單中的用戶選項，點擊用戶群組並進入該頁面，編輯「管理者」並將所有項目勾選後儲存設定。
+            <br/>
+            - 完成這個步驟後，才能看見新增的用戶群的權限，從而可以看見所有新版本的新增項目。</li>
+
+          <li>啟用所有可看見及可編輯的項目後，展開插件清單並點擊插件項目，從頁面中再選擇主題(Theme)並將預設主題重新啟用。</li>
+
+          <li>前往系統設定並編輯商店：
+            <br/>
+            - 更新所有新增的設定項目並儲存資料。<br/>
+            可以直接進入編輯頁面後再按儲存，使系統將新的欄位都記錄在系統資料庫中。</li>
+
+          <li>取決於將要升級的版本和現在運行的版本，升級前可能需要作出調整。這些內容按其添加的版本進行細分。</li>
+
+          <li>前往店面時，嘗試按 Ctrl+F5 及 Ctrl+Shift+R 數次以確保網站沒有被快取檔影響。如果沒有行後第8點的動作，將會看見一個錯誤回報。</li>
+      </div>
+    </div>
+  </div>
+
+
+</div>

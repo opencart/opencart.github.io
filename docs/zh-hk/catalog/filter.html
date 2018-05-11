@@ -1,11 +1,57 @@
 ---
 layout: default
-title: "Filter - OpenCart 使用指引"
+title: "篩選 - OpenCart 使用指引"
 permalink: zh-hk/catalog/filter/
 ---
-<h1>Filter</h1>
-<h2>Filter</h2>
-<p>Filter is a handy tool used regularly throughout the OpenCart administration. You may type into one of the information field for the item on the item list. Pressing Filter will &quot;filter out&quot; all the items in the list that do no match the criteria entered in the space, leaving only the items that match. With Filter, you can quickly locate any information stored in list form. Products, Categories, Customers, Reports, Orders, and more all use Filter as the main search tool to locate items in a list.</p>
-<p>For examples, if you would like to look up a product in the product list, you can use &quot;Filter&quot; as a shortcut to search for that product. This can be helpful when there is large amounts of product and you would like to edit a specific product without having to browse through every page for it. The search boxes are located in the first row above the product list.</p>
-<p class="text-center"><img src="image/catalog-filter.png" alt="look products filter" class="img-thumbnail" /></p>
-<p>In the screenshot above, &quot;nikon&quot; is typed into the &quot;Product Name&quot; information field. &quot;Filter&quot; only displays what matches &quot;nikon&quot;. The Nikon D300 is the only product displayed because it is the only product name containing the words &quot;nikon&quot; in this shop. If the &quot;nikon&quot; wording was present in more than one product name, the &quot;Filter&quot; button would display all of them.</p>
+<h1>篩選</h1>
+<p>篩選功能於產品類別及產品中的 <strong>資料(Data)</strong> 頁面中都會看見相關的欄位，但即使怎樣按下去還沒有反應，原因是這個功能還未有任何選項在內。</p>
+<p class="text-center"><img src="image/catalog/filter/filter-list.png" alt="Filter List" class="img-thumbnail" /></p>
+<p>當進入篩選清單內，見上圖，立即創建新的篩選項目再跳進下一個頁面。</p>
+<p class="text-center"><img src="image/catalog/filter/filter-info.png" alt="Filter Info" class="img-thumbnail" /></p>
+<p>到加創建頁面後，現在可以先試建立第一個篩選資訊，但要留意下列的欄位：</p>
+
+<h4>篩選類別 (Filter Group)</h4>
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="30%">Filter Group Name *</th>
+		<td width="*">篩選類別的名字</td>
+	</tr>
+  <tr>
+		<th>Sort Order</th>
+		<td>群組次序，這個次序會影響模組於前台時出現時的次序，並不是管理平台清單上所看見的次序。如沒有特定次序可填 0 或留空此欄。</td>
+	</tr>
+  <tr>
+		<td colspan="2" class="hints">* 為必填項目</td>
+	</tr>
+</tbody></table>
+
+
+<h4>篩選項目 (Filter Values)</h4>
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="30%">Filter Name *</th>
+		<td width="*">篩選項目的名字</td>
+	</tr>
+	<tr>
+		<th>Sort Order</th>
+		<td>篩選項目次序，這個次序會影響模組於前台時出現時的次序，並不是管理平台清單上所看見的次序。如沒有特定次序可填 0 或留空此欄。</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="hints">* 為必填項目</td>
+	</tr>
+</tbody></table>
+
+
+<h3>前往產品類別頁面</h3>
+<p class="text-center"><img src="image/catalog/filter/category-filters.png" alt="Category Filters" class="img-thumbnail" /></p>
+<p>假設現在我們在 <strong>Desktop</strong> 的類別中進行編輯，在 <strong>資料(Data)</strong> 標籤中找到 Filters 並將兩個顏色項目都加到這個類別內然後儲存修改。</p>
+
+
+<h3>前往產品頁面</h3>
+<p class="text-center"><img src="image/catalog/filter/product-filters.png" alt="Product Filters" class="img-thumbnail" /></p>
+<p>點擊貨品中 <strong>資料(Data)</strong> 標籤，於 Filters 的欄位中輸入相關的篩選項目，點選「Red」並儲存。</p>
+<p>完成後，在啟用了篩選功能模組的狀態下便可以看到該產品類別會有相關項目出現，有關如何啟用模組到店面，詳情請參閱<a href="zh-hk/system/design/layout/">頁面設計</a>。</p>
+
+<h3>店面效果</h3>
+<p>假設篩選的模組建立在產品類喇的頂部，這樣到店面的 <strong>Desktop</strong> 中便可以看見以下的效果：</p>
+<p class="text-center"><img src="image/catalog/filter/store-front-desktop-refine-search.png" alt="Store Front - Desktop Refine Search" class="img-thumbnail" /></p>

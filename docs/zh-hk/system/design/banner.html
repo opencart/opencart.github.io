@@ -1,20 +1,56 @@
 ---
 layout: default
-title: "Banners - OpenCart 使用指引"
+title: "橫額 - OpenCart 使用指引"
 permalink: zh-hk/system/design/banner/
 ---
-<h1>Banners</h1>
-<h2>Banners</h2>
-<p>Banners are pictures containing linkable images displayed in the store&#39;s store front. Banners can be utilized to catch the customer&#39;s eye and direct them to special products in the store. The Banners page under System&gt;Design&gt;Banners lets you customize the images and links displayed on the banners.</p>
-<h3>Using banners in modules</h3>
-<p>The <a href="extension/module/">Modules </a>section uses banners for two modules: Carousel and Banners. The Banners section lets you customize what page layout the banner will be included, and its position. The Carousel module acts like a slideshow, or carousel. The customer can click an arrow to look through a range of product images.</p>
-<p>If you want to create a new carousel banner displaying all the manufacturer logos, you need to go to System&gt;Design&gt;Banners, and click &quot;Insert&quot;. After coming up with a banner name for later reference, you would to click &quot;Add Banner&quot; to add a new icon to the banner. The following fields are needed to add a new icon to the banner:</p>
-<ul>
-  <li><strong>Title:</strong> when the customer hovers their mouse over the icon, the title will be displayed.</li>
-  <li><strong>Link:</strong> the address of the page that the customer will be directed to when clicking on the icon in the banner. In this case, you would want to link the image to a banner page. The link doesn&#39;t need the &quot;www.store.com&quot; portion of the link.</li>
-  <li><strong>Image:</strong> add an image using the <a href="administration/image-manager/">Image manager</a>.</li>
-</ul>
-<p class="text-center"><img src="image/design%20layout%20carousel.png" alt="add route page" class="img-thumbnail" /></p>
-<p>You may add as many banners to the banner as necessary. Under <a href="extension/module/">Modules</a>, you can edit the Carousel to display the &quot;Manufacturers Banner&quot;. The image below is the screenshot of the home page after the Carousel was assigned the Manufacturers banner. All the manufacturer logos that were added to the Manufacturers banner in the administration can be scrolled through in the store front.</p>
-<p class="text-center"><img src="image/system-design-banner.png" alt="Carousel frond end" class="img-thumbnail" /></p>
-<p>It its a advised that you test the links by clicking on the images on the banner. If the clicks do not direct the user to the manufacturer location, double check to see if the page address was typed in correctly in the administration.</p>
+<h1>橫額</h1>
+
+<p>這裡的橫額是指店面首頁中的巨大橫額，可以加上連結使其與網站內外進行連結。橫額的主要功用是可以吸引顧客的眼睛，並引導他們到設定好的頁面或產品資料中。如要編輯所有橫額項目可從管理者介面前往 <strong>設計(Design)</strong> 選單的 <strong>橫額(Banner)</strong>頁面。</p>
+
+
+<h3>模組與橫額</h3>
+<p class="text-center"><img src="image/system/design/banner/banner-list.png" alt="Banner - List" class="img-thumbnail" /></p>
+
+<p>在系統預設中，橫額有三個經已設置了：首頁的巨大橫額幻燈片、下方的商標 Carousel 以及產品分類的牌品精選產品示範。在橫額清單中主要是管理每一個項中有哪一張圖片在同一個項目內，完成該項目後，使用者就必須前往<a href="zh-hk/extension/module/">模組</a>頁面到 <strong>Slideshow</strong> 和 <strong>Carousel</strong> 內建立新的橫額項目，將在前者已建立的項目都新增一個模組，儲存後就可以在<a href="zh-hk/system/design/layout/">頁面設計</a>中使用。</p>
+
+<p class="text-center"><img src="image/system/design/banner/banner-info.png" alt="Banner - Info" class="img-thumbnail" /></p>
+
+<table class="table table-bordered">
+  <tr>
+    <th width="30%">Banner Name</th>
+    <td width="*">設定橫額的標題，方便於模組時尋找</td>
+  </tr>
+  <tr>
+    <th>Status</th>
+    <td>設定此項的的狀態，隱藏時此項目就無法在前台顯示</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td>滑鼠指向橫額時，會顯示此標題</td>
+  </tr>
+  <tr>
+    <th>Link</th>
+    <td>連結到指定頁面</td>
+  </tr>
+  <tr>
+    <th>Image</th>
+    <td>透過系統的圖片管理可以選擇顯示的橫額圖片</td>
+  </tr>
+  <tr>
+    <th>Sort Order</th>
+    <td>設定圖片的顯示次序</td>
+  </tr>
+</table>
+
+<p class="text-center"><img src="image/system/design/banner/extension-module-list.png" alt="Extension Module - List" class="img-thumbnail" /></p>
+
+
+<p>前往店面的首頁位置可以看到以下兩個橫額的示範：</p>
+
+<h4>Slideshow</h4>
+<p class="text-center"><img src="image/system/design/banner/store-front-slideshow.png" alt="Store Front - Slider Show" class="img-thumbnail" /></p>
+
+<h4>Carousel</h4>
+<p class="text-center"><img src="image/system/design/banner/store-front-carousel.png" alt="Store Front - Carousel" class="img-thumbnail" /></p>
+
+<p>如果使用者為每張圖片加上了連結，在正式展示出來前必須再三檢查清楚連結是否正確。</p>

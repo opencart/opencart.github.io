@@ -1,13 +1,49 @@
 ---
 layout: default
-title: "Review - OpenCart 使用指引"
+title: "產品評級 - OpenCart 使用指引"
 permalink: zh-hk/catalog/review/
 ---
-<h1>Reviews</h1>
-<h2>Reviews</h2>
-<p>Product reviews can be both submitted and viewed by customers on the product page. A customer can fill out a review form and submit it to be approved for publication on the site.</p>
-<p>In the Dashboard the administrator can view how many customer reviews are awaiting approval in the Overview section. To approve these reviews, the administrator may visit Catalog &gt; Reviews, select the review, and click &quot;edit&quot;. OpenCart will display the author, product, and text review in separate text boxes. Selecting &quot;enabled&quot; under status will make the review publicly available on the product page.</p>
-<p class="text-center"><img src="image/catalog-reviews-edit.png" alt="look reviews" class="img-thumbnail" /></p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> We can&#39;t recommend the editing of customer submitted reviews, even though there is a space to. The point of having reviews is to receive customer input on that specific product to help other customers make an informed decision with their purchase. If you would like to to disable reviews altogether, you can visit the Options tab under System &gt; Settings. See <a href="system/setting/option/">Settings &gt; Options &gt; Products</a> for more information..</div>
-<p>The result of a customer review approval can be seen in the screenshot below. Every review is made publicly available on the product&#39;s main page after administrative approval. The average rating per product is tabulated by OpenCart and shown out of 5 stars under &#39;Available Options&#39;.</p>
-<p class="text-center"><img src="image/catalog-reviews-product.png" alt="look reviews product page" class="img-thumbnail" /></p>
+<h1>產品評級</h1>
+
+<p>產品評級可以於管理者介面中讓使用者查看哪一種產品寫下了甚麼評級，當中資訊包括了評級者、日期、評級內容，如果使用者檢閱後沒有問題使可以批准該評級並顯示到店面上。</p>
+<p>前往 <strong>產品目錄(Catalog)</strong> 的第九項可以看見 <strong>產品評級(Reviews)</strong>，進入頁面後按右上方的&nbsp; <i class="fas fa-plus"></i> 新增 &nbsp;就可以創建新的評級項目，或按下已評級的項目中右側的&nbsp; <i class="fas fa-pencil-alt"></i> 編輯 &nbsp;。</p>
+
+<p class="text-center"><img src="image/catalog/review/review-info.png" alt="look reviews" class="img-thumbnail" /></p>
+
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="30%">Author *</th>
+		<td width="*">摘寫此評級的顧客名字。</td>
+	</tr>
+	<tr>
+		<th>Product *</th>
+		<td>貨品，輸入相關字眼便可以搜尋該貨品。</td>
+	</tr>
+	<tr>
+		<th>Text *</th>
+		<td>評級的內容。</td>
+	</tr>
+	<tr>
+		<th>Rating *</th>
+		<td>貨品評級分數，最少為1，最多為5。</td>
+	</tr>
+	<tr>
+		<th>Date Added</th>
+		<td>此評級新增的日期。</td>
+	</tr>
+	<tr>
+		<th>Status</th>
+		<td>凡顧客從店面填寫的新評級都會預設為隱藏，如果檢查內容沒有問題，便可以點選顯示。</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="hints">* 為必填項目</td>
+	</tr>
+</tbody></table>
+
+<div class="alert alert-info" role="alert">
+  <i class="fas fa-info-circle"></i>
+  如果不想啟用評級系統，可以前往 <strong>系統(System)</strong> 下的 <strong>設定(Setting)</strong> 選擇編輯商店。於第五個標籤 <strong>選項(Option)</strong> 內可以將評級功能關閉或是可以開放給非會員也能評級，詳情請參閱<a href="zh-hk/system/setting/option/"></a>。
+</div>
+
+<p>顧客的評級通過後可以在產品面頁中看見，如下圖，而每個產品的平均評分都由系統計算後並顯示於 <strong>Available Options</strong> 的下方。</p>
+<p class="text-center"><img src="image/catalog/review/store-front-product-review.png" alt="look reviews product page" class="img-thumbnail" /></p>

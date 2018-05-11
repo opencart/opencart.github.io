@@ -1,37 +1,68 @@
 ---
 layout: default
-title: "Manufacturers - OpenCart 使用指引"
+title: "品牌 - OpenCart 使用指引"
 permalink: zh-hk/catalog/manufacturer/
 ---
-<h1>Manufacturers</h1>
-<h2>Manufacturers in the administration interface</h2>
-<p>The Manufacturer section is used to categorize products by manufacturer. This section can be accessed under Catalog &gt; Manufacturers.</p>
-<p>The Manufacturer names below came with the install. They can be deleted, and new manufacturer information can be added in its place. The manufacturer information should be created before products are added, so the manufacturer category can be selected when adding the product. Saving a product without including the manufacturer isn&#39;t advised, because customers can search for products in the store front through their manufacturer page. With the manufacturer missing from the product information, the product will not be available on those pages.</p>
-<p class="text-center"><img src="image/catalog-manufacturers-list.png" alt="look manufacturer" class="img-thumbnail" /></p>
-<p>To insert a new manufacturer, the following information is required:</p>
-<ul>
-  <li><strong>Manufacturer name</strong></li>
-  <li><strong>Stores</strong>: Default will be selected if there is only one store. If you have more than one store using OpenCart, you can add a manufacturer to multiple stores by checking on them.</li>
-  <li><strong>SEO Keyword</strong>: the keyword used for search engine optimization (optional)</li>
-  <li><strong>Image</strong>: an image of the manufacturer (optional). See the <a href="administration/image-manager/">Image manager</a> to learn how to upload images.</li>
-  <li><strong>Sort Order</strong>: the position the manufacturer will be sorted among multiple manufacturers (optional)</li>
-</ul>
-<p class="text-center"><img src="image/catalog-manufacturers-add.png" alt="manufacture inset" class="img-thumbnail" /></p>
-<p>To edit existing manufacturers you can locate &quot;Edit&quot; under &quot;Action&quot;. Clicking edit will direct you to the form above with the previously filled-in manufacturer information.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> The product will need to be reassigned to the newly changed manufacturer, if the manufacturer name is changed. If the manufacturer name remains unchanged, but any of the other information is edited, the product will automatically adopt the new manufacturer information.</div>
-<h2>Manufacturers in the store front</h2>
-<p>Manufacturers will always need to be assigned to products in the store inventory to affect the store front. See the <a href="catalog/product/">Products </a>section for more information on how to assign manufacturers to products in the administration. In the store front, the manufacturer &quot;categories&quot; serve to organize products under manufacturers. To illustrate how products are organized under manufacturers in the store front, we will create a new manufacturer and assign it to a product.</p>
-<p class="text-center"><img src="image/catalog-manufacturers-acer.png" alt="manufacture acer" class="img-thumbnail" /></p>
-<p>In the Catalog &gt; Manufacturer section we created an &#39;Acer&#39; manufacturer; added it to our only store (&#39;Default&#39;), while including an SEO keyword, manufacturer image, and sort order. Under Products we assigned the &quot;Acer&quot; manufacturer to the &quot;Acer Aspire&quot; product.</p>
-<h3>The Manufacturers page</h3>
-<p>To access the Acer manufacturer page, the customer can go to the footer of any page; and under Extras they can click on Manufacturers.</p>
+<h1>品牌</h1>
+
+<p>此功能可以將產品以同一品牌的情況下列出，也是另一種篩選功能之一。從產品目錄中往下數第七項就可以前往品牌的清單頁面。</p>
+<p>OpenCart 系統經已有了六個示範資料在內：Apple、Canon、Hewlett-Packard、HTC、Palm及Sony。如果這些品牌並不適用，使用者可自行點選刪除。在建立產品之，使用者可以考慮先創建品牌，雖然系統沒有規定每件產品都必須有品牌資訊，但若果後期整理品牌資訊必定比前期預先準備較煩瑣；而沒有標上品牌的產品是不會於任何品牌面中出現。</p>
+
+<p class="text-center"><img src="image/catalog/manufacturer/manufacturer-list.png" alt="Manufacture List" class="img-thumbnail" /></p>
+<p>建立新品牌便可以點擊右上方的新增按鈕，進入下一個頁面後便要填寫以下幾項：</p>
+<h4>Gerneal (一般)</h4>
+<p class="text-center"><img src="image/catalog/manufacturer/manufacturer-info-general.png" alt="Manufacture Info - Gerenal" class="img-thumbnail" /></p>
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="30%">Manufacturer Name *</th>
+		<td width="*">品牌名字</td>
+	</tr>
+	<tr>
+		<th>Stores</th>
+		<td>設定於哪一間OpenCart商店中使用，如沒有多重OpenCart商店就不用理會。</td>
+	</tr>
+	<tr>
+		<th>Image</th>
+		<td>可上載品牌的商標，有關如何上載圖片可參閱<a href="zh-hk/administration/image-manager/">圖片管理</a>。</td>
+	</tr>
+	<tr>
+		<th>Sort Order</th>
+		<td>群組次序，這個次序會影響品牌於前台時出現時的次序，並不是管理平台清單上所看見的次序。如沒有特定次序可填 0 或留空此欄。</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="hints">* 為必填項目</td>
+	</tr>
+</tbody></table>
+<p><br/></p>
+
+<h4>SEO</h4>
+<p class="text-center"><img src="image/catalog/manufacturer/manufacturer-info-seo.png" alt="Manufacture Info - SEO" class="img-thumbnail" /></p>
+<p>這部份與貨品及類別相同，填寫後，如果系統使用SEO URL功能就可以利用簡短的路徑進入該頁。</p>
+
+<p>如需要修改現有的品牌資訊，於清單面頁按下項目最右側的編輯按鈕（見鉛筆圖示），並依據上述的內容進行修改就可以。</p>
+
+<div class="alert alert-info" role="alert"><i class="fas fa-info-circle"></i> 即便使用者之後將品牌資訊修改了，但都毋需重新為相關產品再修改品牌訊息。因為OpenCart會因應作出的改動而自動將訊息更新；另外，若果要刪除品牌資訊，使用者必須將所有相闗產品都品牌都除去或是刪除相關的所有產品才能刪除該品牌。</div>
+
+
+<h2>建立新的品牌資訊</h2>
+<p>為了提升商店的印象，品牌是一家商店不能缺少的元素，所有產品最好都有相闗品牌會較容易使顧客留下印象。有關如何設定品牌於產品內，詳情請參閱管理者介面中<a href="zh-hk/catalog/product/">產品</a>頁面。為了使用者便具體了解品牌的操作，以下步驟將會示範如何創鍵新的品牌於 OpenCart 系統內。</p>
+
+<p class="text-center"><img src="image/catalog/manufacturer/manufacturer-info-general-acer.png" alt="Manufacture New Acer Gerneal" class="img-thumbnail" /></p>
+<p>創建新的品牌 <strong>Acer</strong> 於 OpenCart 系統中，由於暫時只有一個商店，所以預設已點選了 <strong>Default</strong>，如有圖片及排序資料便可以自行輸入，然後跳到 <strong>SEO標籤</strong> 中填寫 keyword 為 <strong>acer</strong>。</p>
+<p class="text-center"><img src="image/catalog/manufacturer/manufacturer-info-seo-acer.png" alt="Manufacture New Acer SEO" class="img-thumbnail" /></p>
+<p>接著前往產品頁面，建立一個新產品命名 <strong>Acer Aspire</strong> 並將其品牌設定為 <strong>Acer</strong>，填寫好所需的資料後便可以儲存新產品。</p>
+
+<h3>前往店面的品牌頁面</h3>
+<p>接下來到店面的頁尾位置，於 <strong>Extras</strong> 的欄位第一項 <strong>Brands</strong> 可以進入所有品牌的頁面。</p>
 <p class="text-center"><img src="image/catalog-manufacturers-brands.png" alt="extras brands" class="img-thumbnail" /></p>
-<p>The customer will then be directed to the manufacturers page, where all the manufacturer names are displayed alphabetically. We can see that our &quot;Acer&quot; manufacturer was automatically added to this page upon creation.</p>
-<p class="text-center"><img src="image/catalog-manufacturers-favorite.png" alt="brands page" class="img-thumbnail" /></p>
-<p>When the customer clicks on the &quot;Acer&quot; link, they will be directed to a page listing all the products within this &quot;Acer&quot; manufacturer. On this page, we can see that the &quot;Acer Aspire&quot; product is displayed because it was assigned the manufacturer,&quot;Acer&quot;, in the Products section.</p>
-<p class="text-center"><img src="image/catalog-manufacturers-acerlist.png" alt="acer brand page" class="img-thumbnail" /></p>
-<p>Clicking on the &quot;Acer Aspire&quot; will take the customer to its product page.</p>
-<p class="text-center"><img src="image/catalog-manufacturers-product.png" alt="acer inspire product page" class="img-thumbnail" /></p>
-<p>The &quot;Acer&quot; manufacturer page can also be accessed from the product page, under &quot;Manufacturer&quot;. This link is helpful for exposing customers to different products of the same manufacturer in the shop. The customer can click on &quot;Acer&quot; to be directed to the manufacturer page, where they can browse other Acer products in the store.</p>
-<h3>The carousel module</h3>
-<p>Adding a new manufacturer will not add the manufacturer icon to the carousel banner on the home page. The newly created manufacturer must be added to the manufacturer banner under System &gt; Design &gt; Banners for the icon to be displayed in the carousel. See the <a href="system/design/layout/">Layout</a>section for more information on how to add the manufacturer icon to the banner.</p>
+<p>當顧客前往品牌頁面後，便可以立即發現所有品牌並已首一個字母順序排列，而 <strong>Acer</strong> 剛好就在 <strong>A</strong> 行的第一個。</p>
+<p class="text-center"><img src="image/catalog/manufacturer/store-front-manufacturer-list.png" alt="Store Front Manufacturer Page" class="img-thumbnail" /></p>
+<p>點擊了 <strong>Acer</strong> 後，系統便會抽出所有屬於該品牌的產品並列出來，如下圖中，只有剛剛建立的 <strong>Acer Aspire</strong> 會顯示在頁面內。</p>
+<p class="text-center"><img src="image/catalog/manufacturer/store-front-manufacturer-acer.png" alt="Store Front Manufacturer Acer" class="img-thumbnail" /></p>
+<p>點擊 </strong>Acer Aspire</strong> 後會連接到該產品頁面，顧客亦可從頁面內，見藍色框的位置，品牌亦會從這裡顯示出來，可以讓顧客更容易尋找該品牌於店內的其他產品。</p>
+<p class="text-center"><img src="image/catalog/manufacturer/store-front-manufacturer-acer-aspire.png" alt="Store Front Manufacturer Acer Aspire" class="img-thumbnail" /></p>
+
+
+<h3>Carousel 模組</h3>
+<p>在系統預設的 <strong>Carousel</strong> 中是放置了品牌的商標並由模組和橫額群運算而生成，但新增了新的品牌後是不會自動產生到 <strong>Carousel</strong> 當中，原因是新的品牌資訊需要再進一步到橫額群內編輯。使用者必須將品牌圖片加到該群組內再儲存才能於店面顯示出來。</p>
+<p>有關新增及設置詳情，可參閱系統目錄中的設計的<a href="zh-hk/system/design/banner/">横額</a>及<a href="zh-hk/system/design/layout/">頁面設計</a>。</p>

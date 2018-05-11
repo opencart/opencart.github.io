@@ -1,10 +1,20 @@
 
 $(document).ready(function(){
 
-		$('#menu > div').hide();
-
 		// Check the language and make changes when select language
 		var pathname = window.location.pathname;
+
+		// Checking the url has language tag or not
+		if(window.location.href.indexOf('en-gb') < 1 && window.location.href.indexOf('zh-hk') < 1) {
+			language = 'en-gb';
+			if(pathname == '/' || pathname == '/introduction/'){
+				window.location.replace(language + '/introduction/');
+			} else {
+				window.location.replace(language + pathname);
+			}
+		}
+
+		$('#menu > div').hide();
 
 		if(pathname != '' || pathname != null){
 			var href = pathname.slice(6);

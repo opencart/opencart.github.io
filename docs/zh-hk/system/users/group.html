@@ -1,24 +1,39 @@
 ---
 layout: default
-title: "User Group - OpenCart 使用指引"
+title: "用戶群組 - OpenCart 使用指引"
 permalink: zh-hk/system/users/groups/
 ---
-<h1>User Groups</h1>
-<h2>User Groups</h2>
+<h1>用戶群組</h1>
+<p>用戶群組主要的目的是修改每一個此群內的成員可於管理者介面中的使用權限。如果想建立新的用戶前，或許可以先查看用戶群組的權限設定，完成後再於創建新用戶時選擇合適的群組。</p>
+<p>OpenCart 的特色之一，可以讓使用者為不同的用戶群設定可檢視或管理每一個部份的頁面，自由度甚高。</p>
 
-<p>As an Administrator, OpenCart allows you to use the User Groups section to set the permissions and access of the user profiles. You can access it from your Dashboard by clicking on System > Users > User Groups:</p>
-<p class="text-center"><img src="../../../image/system-users-usergroup-dashboard.jpg" alt="OpenCart Dashboard" class="img-thumbnail" /></p>
-<p>In the User Groups section, you can create groups and determine which admin pages can be viewed and modified by each group. Note that you must know which pages can be accessed or modified with the Access and Modify permissions.</p>
-<p class="text-center"><img src="../../../image/system-users-usergroup-groups.jpg" alt="User Groups" class="img-thumbnail" /></p>
-<p>You have two pre-defined user groups in your default OpenCart installation - Administrator and Demonstration. While the Administrator group has all the permissions, the Demonstration group has none. You can delete both of these groups and create new ones. Click on the Action button for one of the user groups to see the permission fields.</p>
-<p class="text-center"><img src="../../../image/system-users-usergroup-admin.jpg" alt="Edit Administrator" class="img-thumbnail" /></p>
-<p>The Edit User Group section gives you two main fields - Access Permission and Modify Permission. Respectively, the Administrator user group has all the access and modifying permissions. However, users assigned to the Demonstration group will have no permissions to access or modify any of the Admin panel pages.</p>
-<p class="text-center"><img src="../../../image/system-users-usergroup-editgroup.jpg" alt="Edit User Group" class="img-thumbnail" /></p>
-<p>If you decide that a certain user group should not have modifying permissions, simply remove the ticks from the categories you wish to prevent from being modified.</p>
-<p>For example, analytics/google_analytics refers to the Analytics section in the Category menu of your OpenCart Dashboard. The same goes for all the rest - they are the Admin panel pages of your online store and you can decide which group has the rights to view or modify each of the pages.</p>
-<p>Scroll down in each field to see all of the Admin panel pages that you can give and take away permissions for.</p>
-<p>To create a new user group, go back to the main User Groups section and click on the Add New button on the top right side.</p>
-<p class="text-center"><img src="../../../image/system-users-usergroup-addnew.jpg" alt="Add New Group" class="img-thumbnail" /></p>
-<p>After you assign a User Group Name, you will see that you can setup the permissions right away, while you are opening a new user group.</p>
-<p class="text-center"><img src="../../../image/system-users-usergroup-addgroup.jpg" alt="Add Group" class="img-thumbnail" /></p>
-<p>To learn how to assign users to user groups, see the <a href="http://docs.opencart.com/system/users/user/">Users</a> documentation page for more information.</p>
+<p class="text-center"><img src="image/system/users/group/group-list.png" alt="User Group - List" class="img-thumbnail" /></p>
+
+<p>OpenCart允許使用者自定義哪些管理端頁面可以被特定用戶組訪問。使用者必須檢查哪些頁面可以在訪問權限下訪問，哪些頁面內容可以在修改權限下修改。例如，<strong>catalog/attribute</strong> 是左側選單中產品目錄下的部分。</p>
+
+<p class="text-center"><img src="image/system/users/group/group-info.png" alt="User Group - Info" class="img-thumbnail" /></p>
+
+<table class="table table-bordered">
+  <tr>
+    <th width="30%">User Group Name *</th>
+    <td width="*">用戶群組名字</td>
+  </tr>
+  <tr>
+    <th>Access Permission</th>
+    <td>設定訪問權限</td>
+  </tr>
+  <tr>
+    <th>Modify Permission</th>
+    <td>設定修改權限</td>
+  </tr>
+</table>
+
+<div class="alert alert-info" role="alert">
+  <i class="fas fa-info-circle"></i>
+  注意事項：<br/>
+  <strong>Access Permission</strong> 是設定用戶能否檢視該頁，如果該用戶群組被點選了頁面的檢視權限，那麼相關群組的用戶就可以看見頁面的選項。
+  <br/>
+  <strong>Modify Permission</strong> 是設定用戶能否修改頁面內的內容，一旦用戶群組沒有授權去修改，即使做了任何改動都不能儲存的事項。
+</div>
+
+<p>當完成修改或創建新用戶群組，在更改或建立用戶時，可以參考<a href="zh-hk/system/users/user/">用戶</a>簡介。</p>

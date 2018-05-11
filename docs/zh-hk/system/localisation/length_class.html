@@ -1,13 +1,52 @@
 ---
 layout: default
-title: "Length class - OpenCart 使用指引"
+title: "長度單位 - OpenCart 使用指引"
 permalink: zh-hk/system/localisation/length-class/
 ---
-<h1>Localisation Length class</h1>
-<h2>Length class</h2>
-<p>Length classes are used to assign length specifications to products in the <a href="catalog/product/data/">Data tab</a>. The values added to products will be displayed in the product page in the store front. The following information is required to create a new length class:</p>
-<ul>
-  <li><strong>Length title</strong>: The name of the length measurement, (i.e. Centimeter)</li>
-  <li><strong>Length unit</strong>: The units of measurement (i.e. cm)</li>
-  <li><strong>Value</strong>: Set 1 for the default value. Every value added to other lengths, such as km, will need to be relative to that. There are 10 mm in one 1cm, so the value of mm would be set to 10.</li>
-</ul>
+<h1>長度單位</h1>
+<p>設定長度單位的作用是使建立產品時，可以精確將產品資料呈現在網頁中。更重要是，按照系統的計算，在送貨選項的會自動調整運費。</p>
+<p class="text-center"><img src="image/system/localisation/length/length-list.png" alt="Length - List" class="img-thumbnail" /></p>
+
+<p>建立後的長度單位可以於產品中的<a href="zh-hk/catalog/product/data/">資料標籤</a>內作出選擇，添加到產品的數值也將顯示在商店前面的產品頁面中。下圖是建立單位所需要的填寫項目：</p>
+
+<p class="text-center"><img src="image/system/localisation/length/length-info.png" alt="Length - Info" class="img-thumbnail" /></p>
+
+<table class="table table-bordered">
+  <tr>
+    <td width="30%">Length title *</td>
+    <td width="*">長度名稱</td>
+  </tr>
+  <tr>
+    <td>Length unit *</td>
+    <td>長度單位</td>
+  </tr>
+  <tr>
+    <td>Value</td>
+    <td>預設的數值填寫為1.0000，其他的轉換數值則以此倍大或減少</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="hints">* 為必填項目</td>
+  </tr>
+</table>
+
+
+<table class="table table-bordered">
+  <tr>
+    <td width="25%">名稱</td>
+    <td width="25%" class="text-center">厘米(預設)</td>
+    <td width="25%" class="text-center">米</td>
+    <td width="25%" class="text-center">毫米</td>
+  </tr>
+  <tr>
+    <td>單位</td>
+    <td class="text-center">cm</td>
+    <td class="text-center">m</td>
+    <td class="text-center">mm</td>
+  </tr>
+  <tr>
+    <td>數值</td>
+    <td class="text-center">1.0000</td>
+    <td class="text-center">0.0100</td>
+    <td class="text-center">10.0000</td>
+  </tr>
+</table>

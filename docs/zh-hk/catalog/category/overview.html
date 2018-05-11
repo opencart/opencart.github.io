@@ -1,21 +1,49 @@
 ---
 layout: default
-title: "Categories Overview - OpenCart 使用指引"
+title: "產品類別 - OpenCart 使用指引"
 permalink: zh-hk/catalog/category/
 ---
-<h1>Category Overview</h1>
-<h2>Categories</h2>
-<p>In the default theme of the store front, parent categories are listed in the top menu of the home page, and on the left side of product pages. This navigational feature is used to guide customers to similar products within the same category. Exposing customers to different products within a category lets the customer compare the similarities and differences between products to make the most informed purchase. When adding products to the store, you will be asked for a product category to sort them in. It is a good idea to establish these categories before adding products, to save yourself the trouble of adding the category name to the products later.</p>
-<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> When adding a product without a product category, the product will not show up under any categories in the front end of the store. The product page can only be accessible if the customer types in the product name, one of the product tags in the search box, or visits the product through a manufacturer page. If you want this product to be more visible to your customers in the store front, we suggest that the category is created prior to adding the product.</div>
-<p>To access the Category page in the administration, hover over the Catalog button and click on Category in the drop-down. You will be a directed to a page that displays the category names of the store products (as seen below).</p>
-<p class="text-center"><img src="image/catalog-categories.png" alt="look category" class="img-thumbnail" /></p>
-<p>The categories above were included with the default products provided by the install. You may delete them to make room for the store&#39;s product categories. To delete, check the box next to the row that the category is listed on. When the products selected for deletion are checked, &quot;Delete&quot; can be clicked on in the upper right corner. This should remove the product categories completely.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> The &quot;&gt;&quot; symbol points from a parent category to a sub-category. &quot;Laptops &amp; Notebooks &gt; Windows&quot; indicates that &quot;Windows&quot; is a sub-category sorted under the parent category &quot;Laptops &amp; Notebooks&quot;.</div>
-<p>The Sort Order indicates the order that the categories are displayed in the top menu and category box on the product page. Desktop (sort order-1) will be sorted above Laptops &amp; Notebooks (sort order-2) because it has a higher priority.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> Leaving &quot;Sort Order&quot; blank will organize the sections in alphabetical order.</div>
-<p>Clicking &quot;Edit&quot; under &quot;Action&quot; will direct the administrator to a form to change the category information. Clicking &quot;Insert&quot; will allow the shop owner to insert more products to the site.</p>
-<h2>Create a category</h2>
-<p>Before you learn how to add products, you will need to understand how to create product categories. Product category is an essential organizational feature in OpenCart. OpenCart organizes the structure of an online store around these product categories. Every product category gets their own space in the store to display all the available products for that category.</p>
-<p>Organizing products into categories is useful for navigating a store&#39;s inventory in both the store front and administration side. In the administration, creating categories for products will help the shop owner keep track of specific products within a category. In the store front, customers will be able to browse their favorite products by category. Category pages can be accessed in the top menu and from the category box in the product page.</p>
-<div class="alert alert-success" role="alert"><i class="fa  fa-check-circle"></i> Before inserting products into OpenCart, you should take some time to brainstorm and establish categories for your products. Think of how the products in your store can be organized into groups in a logical manner. Generally, you would want to start with creating a broad parent category, and move narrower into specification with each sub-category below it. For example, a broad category such as Electronics is a good parent category. Under the Electronics, a sub-category named &quot;Computers&quot; can be created; and under that category, &quot;Laptops&quot;. You can see how each category becomes more specific as we progress. Putting effort into this task will improve a store&#39;s usability, ultimately bringing customers to other products in the store that may interest them.</div>
-<p>Go to Catalog &gt; Category in the administration. If this is your first time in the category section you will see a list of categories created for the default products. You should feel free to delete them to make room for your store&#39;s products. To create a new category for products you can click &quot;Insert&quot; in the upper right corner. You will be directed to the category&#39;s information page. Category information can be filled out under three tabs: &quot;General&quot;, &quot;Data&quot;, &quot;Design&quot;.</p>
+<h1>產品類別概覽</h1>
+
+<h2>產品類別</h2>
+<p>於預設主題而言，主要類別(Parent Categories)會於網頁的頂部以及產品頁面的左側空間顯示出來。類別功能主要是將類同的產品細分，這好讓顧客可以更容易找到他們所需的東西。同時間店內的產品做好類別後，顧客即使要作出資訊及數據上的比較時也可以容易看出差別而更快速作出決定。</p>
+<p>每當新增一款產品時，使用者都必須為產品載入其類別，所以必須先建立了產品類別才能加入產品到店內，這樣的流程可以減少產品資料變得混亂以及減少不必要的重覆編輯動作。</p>
+
+<div class="alert alert-danger" role="alert">
+  <i class="fas fa-exclamation-circle"></i>
+  OpenCart商店中的產品都必須點選所屬的類別，若果沒有被類別，產品會無法於前台任何類別中顯示。除非於產品搜索中輸入關鍵字或從品牌選項中尋找。
+</div>
+
+<p>在管理者介面中點擊左側<strong>目錄 (Catalog)</strong>展開次目錄，進入產品類別的清單頁面可以看見每項類別名稱，如下圖。</p>
+<p class="text-center"><img src="image/catalog/category/catalog-categories.png" alt="List Category" class="img-thumbnail" /></p>
+
+<p>圖中的類別資料於安裝時經已預設載入商店中，使用者可以點選類別旁邊的空格或表格頂部的空格把這頁面的全部項目刪除。剔取了所刪除項目後，點擊右上方的紅色按鈕後便可以完成刪除程序。</p>
+<p class="text-center"><img src="image/catalog/category/catalog-categories-delete.png" alt="Delete Category" class="img-thumbnail" /></p>
+
+<div class="alert alert-info" role="alert"><i class="fas fa-info-circle"></i>
+  <strong>&gt;</strong> 符號會出現於類別與類別之間，這代表了後者是前者的次類別。例子：<br/>
+  <strong>Laptops &amp; Notebooks &gt; Windows</strong><br/>
+  在這裡 <strong>Windows</strong> 是 <strong>Laptops &amp; Notebooks</strong> 的次類別，所以在店面中會看見 <strong>Windows</strong> 會顯示在  <strong>Laptops &amp; Notebooks</strong> 的下拉式表單中。
+</div>
+
+<p>排序(Sort Order)功能主要負責將產品類別按使用者的意向順序顯示在產品網頁頂部及產品頁面左側的清單中。</p>
+
+<div class="alert alert-info" role="alert">
+  <i class="fas fa-info-circle"></i>
+  若填寫資料時把排序欄留空，系統會自動設置為 0 並自動排列
+</div>
+
+<p>使用者想編輯現有的產品類別時，只要點擊清單中最右側的藍色按鈕就可以進入編輯頁面。</p>
+<p class="text-center"><img src="image/catalog/category/catalog-categories-edit.png" alt="Edit Category" class="img-thumbnail" /></p>
+
+<h2>創建新產品類別</h2>
+<p>以上大致講述了產品類別的特性，以下的部份將會介紹如果創建新的產品類別。產品類別是 OpenCart 系統中的特色之一，整個系統基本上是圍繞這些產品類別而構成。每個產品類別在商店中都擁有獨立一頁來顯示其下類別的產品。</p>
+
+<div class="alert alert-success" role="alert">
+  <i class="fas fa-check-circle"></i>
+  使用者於開始加入產品前，當前先要決定如何將產品類別。一般來說，需要從創建一個廣泛的主要類別開始，然後將其縮小到每個次類別。這樣可以提高商店的可用性，從而將顧客帶到商店中他們亦可能感興趣的產品。
+</div>
+
+<p>前往產品類別清單頁面，若要創建一個全新的類別，只要點擊於面頁右上方的藍色按鈕，系統就會跳至創建畫面。進入新的畫面後便會看到四個主要填寫的類別：General、Data、SEO、Design</p>
+
+<p class="text-center"><img src="image/catalog/category/catalog-categories-create.png" alt="Create New Category" class="img-thumbnail" /></p>
