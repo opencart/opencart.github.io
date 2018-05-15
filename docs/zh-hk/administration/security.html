@@ -24,20 +24,19 @@ permalink: zh-hk/administration/security/
 <p>假設，把管理者資料夾由 <strong>admin</strong> 改為 <strong>cookiemonster</strong>，現在的管理者登入路徑就會變成 &quot;www.yourstore.com/cookiemonster&quot;。接著就是開啟 cookiemonster/config.php 文件，將內裡的 <strong>admin</strong> 改為 <strong>cookiemonster</strong> 後便儲存。請注意！如果改動後在安裝 OCmod 或 vQmod 時會有很大的影響，所以重新命名後如要使用任何插件，請先與開發者聯系及查詢。</p>
 
 <h4>.htaccess 及 .htpasswd</h4>
-<p>A .htaccess and .htpasswd file in the admin folder will prevent hackers from accessing your store, even if they discover the admin login location. Using .htaccess, you can deny all IP addresses from viewing your store, except the admin&#39;s IP address. A .htpasswd in the admin folder will require an additional password for the allowed administrator to access this directory.</p>
-
+<p>管理者資料夾中的 .htaccess 和.htpasswd 將可以防止駭客訪問您的商店，即使他們發現了管理員登錄位置。使用 .htaccess，除了管理員的IP地址外，可以拒絕其他IP地址查看您的商店。>管理者資料夾中的 .htpasswd 將需要額外的密碼才能允許管理員訪問此目錄下的內容。</p>
 
 <h3>Catalog - 目錄資料夾</h3>
-<p>該資料夾可以被 .htaccess 文件保護。使用匹配的文件可以用於保護系統中重要的文件類型，例如 .php 及 .txt，而不是全部。以下代碼可用於目錄文件夾中的.htaccess：</p>
+<p>該資料夾可以被 .htaccess 保護，又或者指定的檔案類型例如 .php 及 .txt 受到保謢，而不是全部。以下代碼可用於目錄文件夾中的.htaccess：</p>
 <div class="well">
-  <code>&lt;FilesMatch &quot;\.(php|tpl|txt)$&quot;&gt;<br />
+  <code>&lt;FilesMatch &quot;\.(php|twig|txt)$&quot;&gt;<br />
     Order Deny,Allow<br />
     Deny from all<br />
     Allow from &quot;<strong>your ip address</strong>&quot;<br />
     &lt;/FilesMatch&gt;</code>
 </div>
 
-<p>這將拒絕所有模板，.php 及 .txt 文件的訪問。</p>
+<p>這將拒絕所有 .twig、.php 及 .txt 文件的訪問。</p>
 
 <h3>System - 系統資料夾</h3>
 <p>系統資料夾包含兩個需要保護的文件：logs / error.txt 及 start_up.php。 如有必要，logs / error.txt 可以重新命名。</p>
