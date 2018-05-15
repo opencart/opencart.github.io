@@ -18,15 +18,15 @@ permalink: en-gb/administration/security/
 <h4>.htaccess &amp; .htpasswd</h4>
 <p>A .htaccess and .htpasswd file in the admin folder will prevent hackers from accessing your store, even if they discover the admin login location. Using .htaccess, you can deny all IP addresses from viewing your store, except the admin&#39;s IP address. A .htpasswd in the admin folder will require an additional password for the allowed administrator to access this directory.</p>
 <h3>Catalog</h3>
-<p>The catalog can be protected with the traditional .htaccess file. Using file match can be useful for protecting important file types for your store, such as php and txt, rather than all of them. The following code can be used for .htaccess in your catalog folder:</p>
+<p>The catalog can be protected with the traditional .htaccess file. Using file match can be useful for protecting important file types for your store, such as .php and .txt, rather than all of them. The following code can be used for .htaccess in your catalog folder:</p>
 <div class="well">
-  <code>&lt;FilesMatch &quot;\.(php|tpl|txt)$&quot;&gt;<br />
+  <code>&lt;FilesMatch &quot;\.(php|twig|txt)$&quot;&gt;<br />
     Order Deny,Allow<br />
     Deny from all<br />
     Allow from &quot;<strong>your ip address</strong>&quot;<br />
     &lt;/FilesMatch&gt;</code>
 </div>
-<p>This will deny access to all template, php, and txt files.</p>
+<p>This will deny access to all .twig, .php, and .txt files.</p>
 <h3>System folder</h3>
 <p>The system folder contains two files that need to be protected: logs/error.txt and start_up.php. The logs/error.txt can be renamed if necessary.</p>
 <h4>.Htaccess</h4>
