@@ -9,13 +9,14 @@ permalink: zh-hk/administration/seo/
 <h3>啟用SEO關鍵字功能</h3>
 <p>如想啟用SEO關鍵字功能，可前往系統中的 <strong>設定 (Setting)</strong> 頁面，在<a href="zh-hk/system/setting/server/">伺服器設定</a>中可以找到啟用此功能的按鈕。</p>
 
-<p class="text-center"><img src="image/administration/admin-enable-seo-url.png" alt="System Setting - SEO URL" class="img-resonsive" /></p>
+<p class="text-center"><img src="image/administration/admin-enable-seo-url.png" alt="System Setting - SEO URL" class="img-responsive" /></p>
 
 <h3>伺服器設定文件</h3>
 <p>當下載整個 OpenCart 時，當中已包含了可以使伺服器銜接SEO關鍵字功能的編碼。從 Upload 資料夾中可以找到一個命名為 .htaccess.txt 的文件(如果沒有選擇查看文件副檔名稱的選項，請先開啟。)，將 .txt 的副檔名刪去後，便可以啟用SEO關鍵字功能。但如果還未有效果，請向網頁寄存公司查詢能否支援此功能。</p>
 <p>下列為 .htaccess 文件中的編碼：</p>
 <div class="code">
-  <p><code># 1.To use URL Alias you need to be running apache with mod_rewrite enabled.<br />
+  <code>
+    # 1.To use URL Alias you need to be running apache with mod_rewrite enabled.<br />
     # 2. In your opencart directory rename htaccess.txt to .htaccess.<br />
     # For any support issues please visit: http://www.opencart.com<br />
     Options +FollowSymlinks<br />
@@ -52,7 +53,8 @@ permalink: zh-hk/administration/seo/
     # 6. set max time for input to be recieved. Uncomment this line if you have a lot of product options or are getting errors where forms are not saving all fields<br />
     # php_value max_input_time 200<br />
     # 7. disable open_basedir limitations<br />
-    # php_admin_value open_basedir none </code></p>
+    # php_admin_value open_basedir none
+    </code>
 </div>
 
 <p>The .htaccess.txt file should be present in your store&#39;s root folder. If not, copy and paste the text above into a text editor and save it as &quot;.htaccess&quot;. If the .htaccess.txt file is present, please change its name to &quot;.htaccess&quot;. With the .htaccess file changed, you should be able to add unique SEO keywords to individual products, manufacturers, categories, and information pages.</p>
