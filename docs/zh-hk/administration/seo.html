@@ -13,9 +13,9 @@ permalink: zh-hk/administration/seo/
 
 <h3>伺服器設定文件</h3>
 <p>當下載整個 OpenCart 時，當中已包含了可以使伺服器銜接SEO關鍵字功能的編碼。從 Upload 資料夾中可以找到一個命名為 .htaccess.txt 的文件(如果沒有選擇查看文件副檔名稱的選項，請先開啟。)，將 .txt 的副檔名刪去後，便可以啟用SEO關鍵字功能。但如果還未有效果，請向網頁寄存公司查詢能否支援此功能。</p>
-<p>下列為 .htaccess 文件中的編碼：<a role="button" data-toggle="collapse" href="#collapse-htaccess" aria-expanded="false" aria-controls="collapse-htaccess">(展開或收納)</a></p>
+<p>下列為 .htaccess 文件中的編碼：<a role="button" class="btn btn-default btn-sm" data-toggle="collapse" href="#collapse-htaccess" aria-expanded="false" aria-controls="collapse-htaccess">顯示 / 隱藏</a></p>
 
-<div class="collapse" id="collapse-htaccess">
+<div class="collapse in" id="collapse-htaccess">
   <div class="well">
     <code>
       # 1.To use URL Alias you need to be running apache with mod_rewrite enabled.<br />
@@ -60,8 +60,32 @@ permalink: zh-hk/administration/seo/
   </div>
 </div>
 
+<p>.htaccess 文件必須放置在商店的主要資料夾(Root Folder)內，否則整個功能是不能夠運作。假如從cPanel內找不到這個文件，可以先嘗試從設定中查看是否隱藏了部份格式的文件。但真的沒有這個檔案的存在，可以複製上方的編碼並命名文件為 .htaccess 亦可。</p>
 
-<p>The .htaccess.txt file should be present in your store&#39;s root folder. If not, copy and paste the text above into a text editor and save it as &quot;.htaccess&quot;. If the .htaccess.txt file is present, please change its name to &quot;.htaccess&quot;. With the .htaccess file changed, you should be able to add unique SEO keywords to individual products, manufacturers, categories, and information pages.</p>
-<p>The SEO keywords you add will be displayed in the url of the page, so they must be unique for each product, product category, etc. Let&#39;s see what happens when we add the SEO keyword, &quot;nikon-camera&quot;, to our Nikon D300 product under the <a href="zh-hk/administration/seo/">Data </a>tab:</p>
-<p class="text-center"><img src="image/nikon%20seo.png" alt="nikon seo" class="img-thumbnail" /></p>
-<p>If our store is located at &quot;<a href="http://www.mystore.com">www.mystore.com</a>&quot;, the new URL of the Nikon D300 product page will be located at &quot;<a href="http://www.mystore.com/nikon-camera">www.mystore.com/nikon-camera</a>&quot;. Overall, creating SEO keywords will clean up your store page&#39;s URL and optimize your page for search engines.</p>
+<p>如果OpenCart存放的位置是 <strong>public_html/store</strong> 時，便要將以下的編碼改成：</p>
+<div class="well">
+  <code>RewriteBase /store</code>
+</div>
+
+<p>文件預設時，重寫引擎是啟用的，如果使用者並不是從 OpenCart 官方網站自行下載時，而功能並未成功啟用，可以查看以下的編碼是否被設成 Off</p>
+<div class="well">
+  <code>RewriteEngine On</code>
+</div>
+
+<p>每一個SEO關鍵字也是獨一無二的，不能重覆使用。所以定立SEO關鍵字時，都必須清晰代表每頁。而SEO關鍵字只可以使用&quot;-&quot;作為字與字之間的分隔，空白鍵或其他符號是不允許使用的。</p>
+<div class="well">
+  <code><i class="fas fa-check"></i> nikon-camera</code>
+  <code><i class="fas fa-times"></i> nikon camera</code>
+</div>
+
+<p class="text-center"><img src="image/administration/admin-product-seo-url-example.png" alt="Admin Product - SEO Example" class="img-responsive" /></p>
+
+<p>上述圖片以產品「Nikon D300」為例，將產品的SEO關鍵字設定為 <strong>nikon-d300</strong>，之後儲存變更。在第一及第二步的設定確認經已啟用後，再於網址中輸入下列字眼：
+
+<div class="well">
+  <code>www.mystore.com/nikon-d300</code>
+</div>
+
+<p class="text-center"><img src="image/administration/store-front-seo-url-example.png" alt="Store front - SEO Example" class="img-responsive" /></p>
+
+<p>總括而言，創建SEO關鍵字將有助整理商店頁面的網址並優化網站於搜索引擎的評分。</p>
