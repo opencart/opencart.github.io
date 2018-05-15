@@ -1,13 +1,21 @@
 ---
 layout: default
-title: "Moving Server - OpenCart 使用指引"
+title: "遷移OpenCart至新伺服器 - OpenCart 使用指引"
 permalink: zh-hk/administration/moving-server/
 ---
-<h1>Moving OpenCart to a new server</h1>
-<h2>Moving OpenCart to a new server</h2>
-<p>OpenCart can be easily migrated to a new web server. The steps are listed below:</p>
+<h1>遷移OpenCart至新伺服器</h1>
+<p>假如要轉換伺服器，OpenCart的系統可以很容易就將其檔案及資料備份，只要按著以下步驟就可以輕鬆完成資料轉移：</p>
 <ol>
-  <li>Copy all the OpenCart files from your existing web server to the new web server.</li>
-  <li>Export the OpenCart database and import it into the new server.</li>
-  <li>Edit config.php and admin/config.php. These files contain the filesystem paths to OpenCart folders, URLs to OpenCart frontend and admin, and database access details. The paths and database details will most likely need to be updated, and the URLs will need to be changed only if the OpenCart store&#39;s domain has changed.</li>
+  <li>從現有的伺服器中，透過 FTP 工具 或 cPanel 下載所以 OpenCart的檔案，當中包括已安裝的插件、上載的產品圖片、config.php 等檔案。當擁有一個完整的文件備份後，便可以上載到新的伺服器中。</li>
+  <li>備份資料庫所有資料：
+    <ol>
+      <li>從 OpenCart 管理者平台匯出資料<br/>
+        登入現有的伺服器 OpenCart 管理者平台，前往 <strong>備份及重置 (Backup &amp; Restore)</strong> 將所有資料從頁中 <a class="btn btn-default btn-sm"><i class="fas fa-download"></i></a> 匯出。
+      </li>
+      <li>經由cPanel進入資料庫後台<br/>
+        尋找安裝了 OpenCart 的資料庫，直接將整個資料庫匯出並下載到電腦中作備份。
+      </li>
+    </ol>
+  </li>
+  <li>從備份了的文件中，編輯 config.php 及 admin/config.php (建議複製此文件作備份之用)，將文件內的資料庫資訊及OpenCart在新伺服器內的路徑重新改寫，完成後就可以上載到新伺服器內。此部份會影響到整個 OpenCart 系統的運作，如有任何疑問可以前往 <a href="https://forums.opencart.com" target="_blank">OpenCart 官方論壇</a> 或 <a href="https://www.opencart.com/index.php?route=support/contact" target="_blank">OpenCart 技術支援</a>查詢。</li>
 </ol>
