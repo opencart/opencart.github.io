@@ -1,21 +1,33 @@
 ---
 layout: default
-title: "Security Practices - OpenCart 使用指引"
+title: "基本安全措施 - OpenCart 使用指引"
 permalink: zh-hk/administration/security/
 ---
-<h1>Basic Security Practices</h1>
-<p>OpenCart is not responsible for the securing your website, therefore it is up you to ensure your server&#39;s level of safety. The following suggestions aim to improve your OpenCart store&#39;s security.</p>
-<p>These additional steps can be taken immediately after OpenCart is installed to your server; or whenever you store becomes active. See <a href="zh-hk/installation/">Installation</a> for more information on how to install your OpenCart store.</p>
-<h2>Delete the install folder</h2>
-<p>Deleting the install folder is advised by OpenCart immediately after installation. OpenCart will warn you in the administration if the install folder is not deleted.</p>
-<h2>Directory protection</h2>
-<h3>Admin folder</h3>
-<p>The admin directory is where you have access to your store&#39;s administration. People with access to your store administration will have access your editing your products, customer information, store settings, and more valuable information. Therefore, it is very important that the admin login be difficult to find and access.</p>
-<h4>Rename admin</h4>
-<p>Renaming the admin directory to something unrelated to the the admin is necessary to prevent unwanted eyes from discovering it&#39;s location. You can access your admin login through entering your store&#39;s location, then the path to the admin. For example, if the admin folder was changed to &quot;cookiemonster&quot;, the admin login would be at &quot;www.yourstore.com/cookiemonster&quot;. You will also need to update the admin/config.php file (or, in the example, the cookiemonster/config.php file), replacing instances of "admin" with the new name, e.g., "cookiemonster". Note that doing this may make life more difficult down the line, such as if you decide to install vQmod.</p>
-<h4>.htaccess &amp; .htpasswd</h4>
+<h1>基本安全措施</h1>
+<p>雖然 OpenCart 已經有了某程度上的程式保護，但使用者也有責任去提高自我系統保護義識，下列建議可以提高 OpenCart 商店的安全性。</p>
+
+<p>OpenCart 安裝到伺服器後可以立即執行這些額外步驟。有關如何安裝 OpenCart 商店，請參閱<a href="zh-hk/installation/">安裝</a>。</p>
+
+<hr/>
+
+<h2>刪除安裝資料夾</h2>
+<p>完成整個安裝流程後，強力建議立即通過 FTP 或 cPanel 刪除 <strong>install</strong> 資料夾。以防止他人惡意行為去破壞您的系統。</p>
+<hr/>
+
+<h2>保護資料夾</h2>
+
+<h3>Admin - 管理者資料夾</h3>
+<p>管理者資料夾是您管理整個商店系統的地方。有權訪問商店的管理人員可以登入進行編輯產品、客戶信息、商店設置以及更多資訊。因此，如果較難找到登入管理者平台的頁面是比較安全。</p>
+
+<h4>重新命名管理者資料夾</h4>
+<p>將管理者資料夾重命名後，可以減低無關人事發現到登入後台的路徑，從而減低了被他人入侵的風險。一旦重新命名後，登入的路徑也會隨之而改變，相對 admin/config.php 內的設定也要即時作出修改，否則就無法登入管理者介面。</p>
+<p>假設，把管理者資料夾由 <strong>admin</strong> 改為 <strong>cookiemonster</strong>，現在的管理者登入路徑就會變成 &quot;www.yourstore.com/cookiemonster&quot;。接著就是開啟 cookiemonster/config.php 文件，將內裡的 <strong>admin</strong> 改為 <strong>cookiemonster</strong> 後便儲存。請注意！如果改動後在安裝 OCmod 或 vQmod 時會有很大的影響，所以重新命名後如要使用任何插件，請先與開發者聯系及查詢。</p>
+
+<h4>.htaccess 及 .htpasswd</h4>
 <p>A .htaccess and .htpasswd file in the admin folder will prevent hackers from accessing your store, even if they discover the admin login location. Using .htaccess, you can deny all IP addresses from viewing your store, except the admin&#39;s IP address. A .htpasswd in the admin folder will require an additional password for the allowed administrator to access this directory.</p>
-<h3>Catalog</h3>
+
+
+<h3>Catalog - 目錄資料夾</h3>
 <p>The catalog can be protected with the traditional .htaccess file. Using file match can be useful for protecting important file types for your store, such as php and txt, rather than all of them. The following code can be used for .htaccess in your catalog folder:</p>
 <div class="code">
   <p><code>&lt;FilesMatch &quot;\.(php|tpl|txt)$&quot;&gt;<br />
@@ -25,7 +37,8 @@ permalink: zh-hk/administration/security/
     &lt;/FilesMatch&gt;</code></p>
 </div>
 <p>This will deny access to all template, php, and txt files.</p>
-<h3>System folder</h3>
+
+<h3>System - 系統資料夾</h3>
 <p>The system folder contains two files that need to be protected: logs/error.txt and start_up.php. The logs/error.txt can be renamed if necessary.</p>
 <h4>.Htaccess</h4>
 <p>The .htaccess will work to protect these files and the subfolders of System from being accessed by anyone except the designated administrator. To do so, insert the code below into your .htaccess:</p>
@@ -36,8 +49,9 @@ permalink: zh-hk/administration/security/
     Allow from &quot;<strong>your ip address</strong>&quot;<br />
     &lt;/Files&gt;</code></p>
 </div>
-<h2>File permissions</h2>
-<p>The following files need to be set to 644 or 444 to prevent anyone else from writing to them:</p>
+<hr/>
+<h2>文件權限</h2>
+<p>以下文件需要設置為 644 或 444 以防止他人入侵它們導致資料流失：</p>
 <ul>
   <li>config.php</li>
   <li>index.php</li>
