@@ -131,6 +131,10 @@ footer #social li:first-child {
 footer #social li:last-child {
   padding-right: 0; }
 
+hr {
+  border-top: 1px solid #eeeeee;
+}
+
 a:hover, a:focus, a:active {
   text-decoration: none; }
 
