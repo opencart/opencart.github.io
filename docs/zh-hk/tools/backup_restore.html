@@ -3,9 +3,14 @@ layout: default
 title: "Backup/Restore - OpenCart 使用指引"
 permalink: zh-hk/tools/backup/
 ---
-<h1>Backup/Restore</h1>
-<h2>Backup and restore</h2>
-<p>One of the most devastating events that can happen to an online store is the loss of a database. The store database contains important customer and product information. It is difficult for a store to recover after losing a database, and certainly takes up too much time to re-enter this necessary information. You need to be vigilant with downloading updated backups of the store&#39;s database to their computer, just in case something happens.</p>
-<p>OpenCart lets you download a backup of the store&#39;s current database or restore the database to the administration in System&gt;Backup/Restore. The Backup section seen below contains all the data tables in the MySQL database available for download. You can choose what files you want to download by checking on them. Clicking the &quot;Backup&quot; button will download the selected tables to your computer.</p>
-<p>If you need to restore a backup file that you previously saved to your computer, all you need to do is click &quot;Choose File&quot; from Restore Backup, select the sql file from their computer, and the database will be restored.</p>
-<p class="text-center"><img src="image/backup%20restore.png" alt="backup restore backend" class="img-thumbnail" /></p>
+<h1>備份 / 重置</h1>
+
+<p>遺失數據是網上商店最有可能發生的事件之一。商店數據庫包含客戶和產品信息這些重要資料，一旦失去所有資料後是難以恢復，並且肯定需要大量時間才能重新輸入或建立信息。所以您必須警惕將商店數據作定期備份，如每週一次，備份下載到自己的電腦內以防萬一發生。</p>
+
+
+<p>OpenCart 系統設有數據備份及恢復功能，登入管理者平台後，展開系統清單中的維修選單可以看見 <strong>備份 / 重置 (Backup / Restore)</strong> 選項。備份包含可供下載的 MySQL 數據庫中的所有數據表，或可以選擇所需的數據表而作出備份。點擊 <a class="btn btn-default btn-sm"><i class="fas fa-download"></i></a> 匯出按鈕將可以得到數據庫的備份。</p>
+<p class="text-center"><img src="image/tools/admin-backup.png" alt="Admin Backup Tag" class="img-responsive" /></p>
+
+
+<p>如果您需要恢復先前保存到電腦內的備份文件，則只需要點擊  <a class="btn btn-primary btn-sm"><i class="fas fa-upload"></i></a> 匯入按鈕，從電腦中選擇所需的 SQL檔案，系統使會將數據庫重置。</p>
+<p class="text-center"><img src="image/tools/admin-restore.png" alt="Admin Restore Tag" class="img-responsive" /></p>
