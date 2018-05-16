@@ -1,17 +1,17 @@
 ---
 layout: default
-title: "運輸平台 - OpenCart 使用指引"
+title: "貨運平台 - OpenCart 使用指引"
 permalink: zh-hk/extension/shipping/
 ---
-<h1>運輸方式</h1>
-<p>運輸方式可於插件頁中的下拉式表單中選取，有部份較當用的運輸方法經已預設在OpenCart系統中，只要按需要而啟用該運輸方式即可。</p>
+<h1>貨運方式</h1>
+<p>貨運方式可於插件頁中的下拉式表單中選取，有部份較常用的貨運方法經已預設在OpenCart系統中，只要按需要而啟用該貨運方式即可。</p>
 
 <p class="text-center"><img src="image/extension/shipping/shipping-method.png" alt="Extension - Shipping Method" class="img-responsive" /></p>
 
-<p>如上圖所看見的，當未安裝的運輸方式會以綠色按鈕呈現出來，按使用者的需要，點擊 &nbsp;<i class="fas fa-plus-circle"></i> 啟用&nbsp; 再按 &nbsp;<i class="fas fa-pencil-alt"></i> 編輯&nbsp; 就可以設定運輸方式的詳情；若不再需要該選項，使用者可以點擊 &nbsp;<i class="fas fa-minus-circle"></i> 卸載&nbsp; 即可。</p>
+<p>如上圖所看見的，當未安裝的貨運方式會以綠色按鈕呈現出來，按使用者的需要，點擊 &nbsp;<i class="fas fa-plus-circle"></i> 啟用&nbsp; 再按 &nbsp;<i class="fas fa-pencil-alt"></i> 編輯&nbsp; 就可以設定貨運方式的詳情；若不再需要該選項，使用者可以點擊 &nbsp;<i class="fas fa-minus-circle"></i> 卸載&nbsp; 即可。</p>
 
-<h2>編輯運送方式</h2>
-<p>每種運輸方式都需要單獨編輯，以滿足使用者商店的運輸要求並指定該服務的價格。所有運輸方式中都有一些細節：</p>
+<h2>編輯貨運方式</h2>
+<p>每種貨運方式都需要單獨編輯，以滿足使用者商店的貨運要求並指定該服務的價格。所有貨運方式中都有一些細節：</p>
 <table class="table table-bordered">
 	<tbody><tr>
 		<th width="30%">Total</th>
@@ -19,31 +19,31 @@ permalink: zh-hk/extension/shipping/
 	</tr>
   <tr>
 		<th>Geo Zone</th>
-		<td>選擇該運輸方式可使用的<a href="zh-hk/system/localisation/geo-zone/">地理區域</a></td>
+		<td>選擇該貨運方式可使用的<a href="zh-hk/system/localisation/geo-zone/">地理區域</a></td>
 	</tr>
 	<tr>
 		<th>Status</th>
-		<td>設定運輸方式「啟用」或「不啟用」以開放給顧客使用</td>
+		<td>設定貨運方式「啟用」或「不啟用」以開放給顧客使用</td>
 	</tr>
 	<tr>
 		<th>Sort Order</th>
-		<td>該運輸方的顯示次序，如沒有特定則可以填寫 0 或空白</td>
+		<td>該貨運方的顯示次序，如沒有特定則可以填寫 0 或空白</td>
 	</tr>
 </tbody>
 </table>
 
 <h2>店面</h2>
-<p>於管理者介面內啟用了的運輸方式將會於店面 <strong>購物車</strong> 及 <strong>結帳</strong> 頁面供顧客選擇。</p>
+<p>於管理者介面內啟用了的貨運方式將會於店面 <strong>購物車</strong> 及 <strong>結帳</strong> 頁面供顧客選擇。</p>
 
 <h3>購物車頁面</h3>
 <p class="text-center"><img src="image/extension/shipping/shipping-store-front-cart.png" alt="Store Front - Shipping Field" class="img-responsive" /></p>
-<p>在此頁中有一個「估計運費和稅金」的特別功能於下方的位置，可以計算客戶訂單的運費，詳情可參閱<a href="zh-hk/extension/order-total/">帳單金額</a>以啟用或禁用此功能。當顧客輸入他們的地區信息時，再按下 <strong>取得報價</strong> 按鈕後便會出現一個新窗口會要求顧客選擇一種送貨方式以及顯示其費用。在下圖中，啟用的每種運輸方式都將根據其排序順序列出。以下商店啟用免運費和平郵費率作為其兩種可用送貨方式。</p>
+<p>在此頁中有一個「估計運費和稅金」的特別功能於下方的位置，可以計算客戶訂單的運費，詳情可參閱<a href="zh-hk/extension/order-total/">帳單金額</a>以啟用或禁用此功能。當顧客輸入他們的地區信息時，再按下 <strong>取得報價</strong> 按鈕後便會出現一個新窗口會要求顧客選擇一種送貨方式以及顯示其費用。在下圖中，啟用的每種貨運方式都將根據其排序順序列出。以下商店啟用免運費和平郵費率作為其兩種可用送貨方式。</p>
 <p class="text-center"><img src="image/extension/shipping/shipping-store-front-cart-get-quote.png" alt="Store Front - Shipping Get Quote" class="img-responsive" /></p>
-<p>客戶選擇了運輸方法後，運輸方式及其費用將顯示在下方的總數位置作為預覽用途。</p>
+<p>客戶選擇了貨運方法後，貨運方式及其費用將顯示在下方的總數位置作為預覽用途。</p>
 
 <h3>結帳頁面</h3>
-<p>在此頁中的第4步，顧客需要在完成購買前選擇送貨方式。<strong>運輸方式</strong>將顯示管理中已啟用的所有送貨方式，如購物車頁面中所描述相同，在下圖中，啟用的每種運輸方式都將根據其排序順序列出。但在這部份，顧客可以於下方的欄位填寫備註資訊，以便應付特別的需求。</p>
+<p>在此頁中的第4步，顧客需要在完成購買前選擇送貨方式。<strong>貨運方式</strong>將顯示管理中已啟用的所有送貨方式，如購物車頁面中所描述相同，在下圖中，啟用的每種貨運方式都將根據其排序順序列出。但在這部份，顧客可以於下方的欄位填寫備註資訊，以便應付特別的需求。</p>
 <p class="text-center"><img src="image/extension/shipping/shipping-store-front-checkout.png" alt="Store Front - Checkout Delivery Method" class="img-responsive" /></p>
 
 <h3>技術支援</h3>
-<p>如需獲得對部份運輸方式(插件)的技術支援，請訪問<a href="http://forum.opencart.com/viewforum.php?f=114" target="_blank">官方論壇</a>的運輸擴展部分。</p>
+<p>如需獲得對部份貨運方式(插件)的技術支援，請訪問<a href="http://forum.opencart.com/viewforum.php?f=114" target="_blank">官方論壇</a>的貨運擴展部分。</p>
