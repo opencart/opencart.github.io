@@ -1,0 +1,33 @@
+---
+layout: default
+title: "Multiple Languages - OpenCart Documentation"
+permalink: en-gb/administration/language/
+---
+<h1>Adding multiple languages</h1>
+<p>With shops serving a wider array of customers across multiple countries, it may become necessary to add multiple language options for your customers. The default language provided from the installation is English. Other available languages can be viewed on the OpenCart <a href="http://www.opencart.com/index.php?route=feature/feature&amp;path=17">Language</a> page.These language packs can be downloaded through the <a href="http://www.opencart.com/index.php?route=extension/extension&amp;path=2">Extension Directory.</a></p>
+
+<h3>Install language pack by Extension Installer</h3>
+<p>OpenCart 3 is much more user friendly to install a new language pack than before, user only need to download the <strong>*.ocmod.zip</strong> and goto the <a href="en-gb/extension/installer/">Installer</a> page, upload the zip file and wait for the install completed.</p>
+
+<p>Similer with the other extensions, after install the <strong>*.ocmod.zip</strong>, click into the <strong>Modification</strong> page, press &nbsp; <i class="fas fa-eraser"></i> Clear &nbsp; and &nbsp; <i class="fas fa-sync-alt"></i> Refresh &nbsp; button to make sure the cache is removed. Then goto the Languages from System Localisation menu and create the new language. For details about add and edit Language, click <a href="en-gb/system/localisation/language/">here</a>.</p>
+
+<p class="text-center"><img src="image/administration/admin-system-languages-list.png" alt="Installed language in Language List" class="img-responsive" /></p>
+
+<p>When the new language is endable to use in the OpenCart system, goto the System <strong>Setting</strong> page and choose the language for store front and admin side, just like the figure show below.</p>
+
+<p class="text-center"><img src="image/administration/admin-languages-store-setting.png" alt="Select language for store front and admin" class="img-responsive" /></p>
+
+<p>Once the language already install, the store front will display the language option on the top left conrner, next to the currency. (Example for default theme below)</p>
+
+<p class="text-center"><img src="image/administration/store-front-languages-select.png" alt="Store Front - Multi Languages Select" class="img-responsive" /></p>
+
+<hr/>
+
+<h3>FTP a language pack to an OpenCart store</h3>
+<p>Any language pack that isn&#39;t English needs to be uploaded to OpenCart, post installation, using an FTP client like FileZilla. Before we continue, please make sure that you have downloaded your language pack from the Extension Directory and uncompressed the download contents to a location on your computer. Connect to your OpenCart store in the FTP client. Locate the root directory of where the OpenCart store was installed. From there, open the path Catalog&gt;Language. If this is your first time here, you will see an &quot;english&quot; folder already in this location. In Catalog&gt;Language, upload your new language pack to this location.</p>
+<p class="text-center"><img src="image/ftp%20language.png" alt="ftp language" class="img-thumbnail" /></p>
+<h3>Adding a language to the administration</h3>
+<p>The OpenCart administration requires some specific information in the System area about the language after you FTP it. Visit <a href="en-gb/system/localisation/language/">Localisation </a>to see what fields are required. After the language is saved there, the language name will appear in the language list under Localisation&gt;Language.</p>
+<h3>Changing a language in the store front</h3>
+<p>Saving a language pack in Localisation will make it immediately available in the store front. The language area is located in the header of every page, from the left top corner. In achieve the example below, a French language pack was downloaded and FTP&#39;d to OpenCart. By assigning French an assorting order of 2, it is displayed below of English in the header of every page of our store. The customer can click on the French flag in the header to change the language.</p>
+<p class="text-center"><img src="image/admin-interface-language.png" alt="multi language frontend" class="img-thumbnail" /></p>

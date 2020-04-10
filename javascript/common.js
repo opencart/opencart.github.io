@@ -5,8 +5,8 @@ $(document).ready(function(){
 		var pathname = window.location.pathname;
 
 		// Checking the url has language tag or not
-		if(window.location.href.indexOf('en-gb') < 1 && window.location.href.indexOf('zh-hk') < 1) {
-			language = 'en-gb';
+	if (window.location.href.indexOf('en-gb') < 1 && window.location.href.indexOf('ru-ru') < 1 && window.location.href.indexOf('zh-hk') < 1) {
+			language = 'ru-ru';
 			if(pathname == '/' || pathname == '/introduction/'){
 				window.location.replace(language + '/introduction/');
 			} else {
@@ -30,6 +30,15 @@ $(document).ready(function(){
 			}
 	    window.location.href = href;
 	  });
+
+	$('#button-ru-ru').on('click', function () {
+		if (href != '') {
+			href = 'ru-ru' + href;
+		} else {
+			href = 'ru-ru/introduction/';
+		}
+		window.location.href = href;
+	});
 
 	  $('#button-zh-hk').on('click', function(){
 			if(href != ''){
@@ -64,6 +73,7 @@ $(document).ready(function(){
 		// Menu Language
 		switch(language){
 			case 'en-gb': $('#menu #en-gb').show(); break;
+			case 'ru-ru': $('#menu #ru-ru').show(); break;
 			case 'zh-hk': $('#menu #zh-hk').show(); break;
 		}
 

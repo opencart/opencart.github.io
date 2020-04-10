@@ -1,0 +1,108 @@
+---
+layout: default
+title: " Extension Payments - OpenCart Documentation"
+permalink: en-gb/extension/payment/
+---
+<h1>Payments</h1>
+<h2>Core payment methods</h2>
+<p>The OpenCart package offers a variety of payment methods, from bank transfers to online payment gateways. The following core payment methods are available with an OpenCart installation:</p>
+
+<div class="list-payment-gateway">
+	<ul class="list-inline">
+		<li>2Checkout</li>
+		<li>Alipay Pay</li>
+		<li>Alipay Cross-border</li>
+	  <li>Amazon Pay</li>
+		<li>Authorize.Net (AIM)</li>
+		<li>Authorize.Net (SIM)</li>
+		<li>Bank Transfer</li>
+		<li>BluePay Hosted Form</li>
+		<li>BluePay Redirect (Requires SSL)</li>
+		<li>CardConnect</li>
+		<li>Cardinity</li>
+		<li>Cheque / Money Order</li>
+		<li>Cash On Delivery</li>
+		<li>Divido</li>
+	  <li>eWAY Payment</li>
+		<li>First Data EMEA Connect (3DSecure enabled))</li>
+		<li>First Data EMEA Web Service API)</li>
+		<li>Free Checkout</li>
+		<li>G2A Pay</li>
+		<li>Globalpay Redirect</li>
+		<li>Globalpay Remote</li>
+		<li>Klarna Account</li>
+		<li>Klarna Checkout</li>
+		<li>Klarna Invoice</li>
+		<li>Lay-Buy</li>
+		<li>LIQPAY</li>
+		<li>NOCHEX</li>
+		<li>Paymate</li>
+		<li>PayPal (Powered By Braintree)</li>
+		<li>PayPal Express Checkout</li>
+		<li>PayPal Payflow Pro</li>
+		<li>PayPal Payflow Pro iFrame</li>
+		<li>PayPal Payments Standard</li>
+		<li>PayPal Pro</li>
+		<li>PayPal Pro iFrame</li>
+		<li>PayPoint</li>
+		<li>Payza</li>
+		<li>Perpetual Payments</li>
+		<li>Pilibaba for Chinese Checkout</li>
+		<li>Perpetual Payments</li>
+		<li>Realex Redirect</li>
+		<li>Realex Remote</li>
+		<li>SagePay Direct</li>
+		<li>SagePay Server</li>
+		<li>Sage Payment Solutions (US)</li>
+		<li>Secure Trading Payment Pages</li>
+		<li>Secure Trading Web Service</li>
+		<li>Skrill</li>
+		<li>Square</li>
+		<li>Web Payment Software</li>
+		<li>WorldPay Online Payments</li>
+	</ul>
+</div>
+
+
+<p>Additional payment methods can be downloaded from the OpenCart <a href="https://www.opencart.com/index.php?route=marketplace/extension&filter_category_id=3" target="_blank">Extension Directory.</a></p>
+
+<h2>Editing a payment method</h2>
+<p>Editing payment methods in the administration for different transaction processors, like Paypal, will require a previously created account. The account and payment information should be obtained from these companies prior to editing the payment method in the administration. You will need to create an account with these companies to use their transaction processing for OpenCart. The information required for each payment method will be displayed in the Edit section. Across payment methods, there are a few details that are consistently asked for:</p>
+
+<table class="table table-bordered">
+	<tbody><tr>
+		<th width="30%">Total</th>
+		<td width="*">Set the minimun price to reach the payment method.</td>
+	</tr>
+  <tr>
+		<th>Order Status</th>
+		<td>A default status of an order once the payment module has completed. Pending is considered one of the best default statuses because it gives the administrator some leeway to process the order.</td>
+	</tr>
+  <tr>
+		<th>Status</th>
+		<td>Disables or enables the payment method.</td>
+	</tr>
+	<tr>
+		<th>Sort Order</th>
+		<td>The position of the payment method in the store front when listed among all the available payment methods.</td>
+	</tr>
+</tbody>
+</table>
+
+
+<h3>Payment method in the checkout</h3>
+<p>Enabling a payment method in the administration will make it available in the Checkout. In Step 5 of the checkout, the customer will be given a radio type selection to select their preferred payment method.</p>
+<p class="text-center"><img src="image/extension/payment/payment-store-front-checkout.png" alt="Store Front - Checkout" class="img-responsive" /></p>
+
+
+<h3>Payment method in order history</h3>
+<p>After the customer has confirmed the order, they can visit their Order History in their Account page to view its status. Immediately after checkout, the status will display the default order status you selected when editing the payment method details. In the screenshot below, you may chose &quot;Pending&quot; as the order status.</p>
+<p class="text-center"><img src="image/extension/payment/account-store-front-order-history.png" alt="Store Front - Order History" class="img-responsive" /></p>
+<p>The screenshot above shows &quot;Pending&quot; as the order status in the customer&#39;s Order History page under &quot;My Account&quot; in the store front.</p>
+
+<p class="text-center"><img src="image/extension/payment/sales-order-list.png" alt="Sales Order - List" class="img-responsive" /></p>
+<p>After the order is finished, user can go to the administrator to change the order status. For details, please read the page <a href="en-gb/sale/order/">orders</a>.</p>
+
+
+<h3>Support</h3>
+<p>To receive support for payment extensions, please visit the <a href="http://forum.opencart.com/viewforum.php?f=113" target="_blank">Payment Extension section</a> of the support forum.</p>
