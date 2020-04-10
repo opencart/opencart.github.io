@@ -30,48 +30,48 @@
 </head>
 <body id="documentation">
 <header>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-			<button type="button" data-toggle="collapse" data-target="#navbar-collapse-header" class="navbar-toggle collapsed"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-			<a href="https://www.opencart.com/index.php?route=common/home" class="navbar-brand"><img src="image/opencart-logo.png" title="OpenCart - Open Source Shopping Cart Solution" alt=""></a></div>
-			<div class="collapse navbar-collapse" id="navbar-collapse-header">
-				<ul class="nav navbar-nav">
-					<li><a href="https://www.opencart.com/index.php?route=cms/feature">Features</a></li>
-					<li><a href="https://www.opencart.com/index.php?route=cms/demo">Demo</a></li>
-					<li><a href="https://www.opencart.com/index.php?route=marketplace/extension">Marketplace</a></li>
-					<li><a href="https://www.opencart.com/index.php?route=cms/blog">Blog</a></li>
-					<li><a href="https://www.opencart.com/index.php?route=cms/showcase">Showcase</a></li>
-					<li class="dropdown"><a href="#" data-toggle="dropdown">Resources <span class="caret"></span></a>
-						<ul class="dropdown-menu">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+      <button type="button" data-toggle="collapse" data-target="#navbar-collapse-header" class="navbar-toggle collapsed"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+      <a href="https://www.opencart.com/index.php?route=common/home" class="navbar-brand"><img src="image/opencart-logo.png" title="OpenCart - Open Source Shopping Cart Solution" alt=""></a></div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-header">
+        <ul class="nav navbar-nav">
+          <li><a href="https://www.opencart.com/index.php?route=cms/feature">Features</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/demo">Demo</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=marketplace/extension">Marketplace</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/blog">Blog</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/showcase">Showcase</a></li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown">Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu">
               <li><a href="https://www.opencart.com/index.php?route=cms/download">Download</a></li>
               <li><a href="https://www.opencart.com/index.php?route=cloud/landing">OpenCart Cloud</a></li>
-							<li><a href="https://www.opencart.com/index.php?route=support/partner">OpenCart Partners</a></li>
-							<li><a href="https://forum.opencart.com">Community Forums</a></li>
-							<li><a href="http://docs.opencart.com">OpenCart Documentation</a></li>
-							<li><a href="http://docs.opencart.com/#additional-reading">OpenCart Books</a></li>
-							<li><a href="https://github.com/opencart/opencart/issues">GitHub Bug Tracker</a></li>
-							<li><a href="http://docs.opencart.com/developer/module/">Developer</a></li>
-						</ul>
-					</li>
-					<li class="visible-xs"><a href="https://www.opencart.com/index.php?route=account/login">Login</a></li>
-					<li class="visible-xs"><a href="https://www.opencart.com/index.php?route=account/register">Register</a></li>
-				</ul>
-			<div class="navbar-right hidden-xs"><a href="https://www.opencart.com/index.php?route=account/login" class="btn btn-link navbar-btn">Login</a> <a href="https://www.opencart.com/index.php?route=account/register" class="btn btn-black navbar-btn">Register</a></div>
-			</div>
-		</div>
-	</nav>
+              <li><a href="https://www.opencart.com/index.php?route=support/partner">OpenCart Partners</a></li>
+              <li><a href="https://forum.opencart.com">Community Forums</a></li>
+              <li><a href="http://docs.opencart.com">OpenCart Documentation</a></li>
+              <li><a href="http://docs.opencart.com/#additional-reading">OpenCart Books</a></li>
+              <li><a href="https://github.com/opencart/opencart/issues">GitHub Bug Tracker</a></li>
+              <li><a href="http://docs.opencart.com/developer/module/">Developer</a></li>
+            </ul>
+          </li>
+          <li class="visible-xs"><a href="https://www.opencart.com/index.php?route=account/login">Login</a></li>
+          <li class="visible-xs"><a href="https://www.opencart.com/index.php?route=account/register">Register</a></li>
+        </ul>
+      <div class="navbar-right hidden-xs"><a href="https://www.opencart.com/index.php?route=account/login" class="btn btn-link navbar-btn">Login</a> <a href="https://www.opencart.com/index.php?route=account/register" class="btn btn-black navbar-btn">Register</a></div>
+      </div>
+    </div>
+  </nav>
 </header>
 
-<div id="catrgories-top-menu" class="container-fluid visible-xs visible-sm">
-	<div class="container">
-		<buttom data-toggle="collapse" data-target="#collapse-menu" class="btn btn-block"><i class="fa fa-indent"></i> Categories</button>
-	</div>
+<div id="categories-top-menu" class="container-fluid visible-xs visible-sm">
+  <div class="container">
+    <buttom data-toggle="collapse" data-target="#collapse-menu" class="btn btn-block"><i class="fa fa-indent"></i> Categories</button>
+  </div>
 </div>
 <div class="container visible-xs visible-sm">
-	<div id="collapse-menu" class="collapse">
-		{% include menu.html %}
-	</div>
+  <div id="collapse-menu" class="collapse">
+    {% include menu.html %}
+  </div>
 </div>
 <div class="container">
   <div class="row">
@@ -84,6 +84,7 @@
         </button>
         <ul class="dropdown-menu">
           <li><a role="button" id="button-en-gb">English</a></li>
+          <li><a role="button" id="button-ru-ru">Русский</a></li>
           <li><a role="button" id="button-zh-hk">繁體中文</a></li>
         </ul>
       </div>
@@ -94,73 +95,73 @@
 </div>
 
 <footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-2">
-				<section>
-				<h5>OpenCart</h5>
-				<ul class="list-unstyled">
-					<li><a href="https://www.opencart.com/index.php?route=cms/feature">Features</a></li>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <section>
+        <h5>OpenCart</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.opencart.com/index.php?route=cms/feature">Features</a></li>
           <li><a href="https://www.opencart.com/index.php?route=cloud/landing">OpenCart Cloud</a></li>
-					<li><a href="https://www.opencart.com/index.php?route=cms/showcase">Showcase</a></li>
-					<li><a href="https://www.opencart.com/index.php?route=cms/demo">Demo</a></li>
-					<li><a href="https://www.opencart.com/index.php?route=cms/download">Download</a></li>
-					<li><a href="https://www.opencart.com/index.php?route=marketplace/extension">Marketplace</a></li>
-					<li><a href="https://www.opencart.com/index.php?route=account/login">Login</a></li>
-				</ul>
-				</section>
-			</div>
-			<div class="col-sm-2">
-				<section>
-				<h5>Company</h5>
-				<ul class="list-unstyled">
+          <li><a href="https://www.opencart.com/index.php?route=cms/showcase">Showcase</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/demo">Demo</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/download">Download</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=marketplace/extension">Marketplace</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=account/login">Login</a></li>
+        </ul>
+        </section>
+      </div>
+      <div class="col-sm-2">
+        <section>
+        <h5>Company</h5>
+        <ul class="list-unstyled">
           <li><a href="https://www.opencart.com/index.php?route=support/contact">Contact Us</a></li>
           <li><a href="https://www.opencart.com/index.php?route=cms/company">About Us</a></li>
-					<li><a href="https://www.opencart.com/index.php?route=cms/information&information_id=2">Extension Developer</a></li>
-				</ul>
-				</section>
-			</div>
-			<div class="col-sm-2">
-				<section>
-					<h5>Support</h5>
-					<ul class="list-unstyled">
-						<li><a href="https://forum.opencart.com">Community Forum</a></li>
-						<li><a href="https://www.opencart.com/index.php?route=support/support">Dedicated Support</a></li>
-						<li><a href="https://www.opencart.com/index.php?route=support/partner">OpenCart Partners</a></li>
-						<li><a href="https://www.opencart.com/index.php?route=support/support">Marketplace Support</a></li>
-					</ul>
-				</section>
-			</div>
-			<div class="col-sm-2">
-				<section>
-					<h5>Resources</h5>
-					<ul class="list-unstyled">
-						<li><a href="https://www.opencart.com/index.php?route=cms/blog">OpenCart Blog</a></li>
-						<li><a href="http://docs.opencart.com">OpenCart Documentation</a></li>
-						<li><a href="http://docs.opencart.com/#additional-reading">OpenCart Books</a></li>
-						<li><a href="https://github.com/opencart/opencart/issues">GitHub Bug Tracker</a></li>
-						<li><a href="http://docs.opencart.com/developer/module/">Developer</a></li>
-					</ul>
-				</section>
-			</div>
-			<div class="col-sm-2 col-md-4">
-				<section id="newsletter">
-	        <h5>Newsletter</h5>
-	        <p>Subscribe to our newsletters and stay informed of new releases and other OpenCart events.</p>
-	        <div class="input-group newsletter">
-	          <input type="text" name="newsletter" value="" placeholder="Enter your email address" class="form-control">
-	          <div class="input-group-btn">
-	            <button type="button" id="quick-email" class="btn btn-primary" data-toggle="modal" data-target="#modal-newsletter"><i class="fa fa-angle-right"></i> </button>
-	          </div>
-	        </div>
+          <li><a href="https://www.opencart.com/index.php?route=cms/information&information_id=2">Extension Developer</a></li>
+        </ul>
         </section>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6 col-md-6">
-				<div id="copyright">
-					<ul class="list-unstyled">
-						<li class="company-logo"><img src="image/opencart-logo-white.png" alt-"opencart"="" title="OpenCart"></li>
+      </div>
+      <div class="col-sm-2">
+        <section>
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://forum.opencart.com">Community Forum</a></li>
+            <li><a href="https://www.opencart.com/index.php?route=support/support">Dedicated Support</a></li>
+            <li><a href="https://www.opencart.com/index.php?route=support/partner">OpenCart Partners</a></li>
+            <li><a href="https://www.opencart.com/index.php?route=support/support">Marketplace Support</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-sm-2">
+        <section>
+          <h5>Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://www.opencart.com/index.php?route=cms/blog">OpenCart Blog</a></li>
+            <li><a href="http://docs.opencart.com">OpenCart Documentation</a></li>
+            <li><a href="http://docs.opencart.com/#additional-reading">OpenCart Books</a></li>
+            <li><a href="https://github.com/opencart/opencart/issues">GitHub Bug Tracker</a></li>
+            <li><a href="http://docs.opencart.com/developer/module/">Developer</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-sm-2 col-md-4">
+        <section id="newsletter">
+          <h5>Newsletter</h5>
+          <p>Subscribe to our newsletters and stay informed of new releases and other OpenCart events.</p>
+          <div class="input-group newsletter">
+            <input type="text" name="newsletter" value="" placeholder="Enter your email address" class="form-control">
+            <div class="input-group-btn">
+              <button type="button" id="quick-email" class="btn btn-primary" data-toggle="modal" data-target="#modal-newsletter"><i class="fa fa-angle-right"></i> </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-6">
+        <div id="copyright">
+          <ul class="list-unstyled">
+            <li class="company-logo"><img src="image/opencart-logo-white.png" alt="opencart" title="OpenCart"></li>
             <li class="copyright-text">© Copyright 2016 OpenCart</li>
           </ul>
         </div>
@@ -495,7 +496,7 @@
   </div>
 </div>
 
-<script type="text/javascript"><!--
+<script type="text/javascript">
 $('button#quick-email').on('click',function(){
   if ($('input[name="newsletter"').val()!='') {
     $('input[name="cm-tridduh-tridduh"]').val($('input[name="newsletter"').val());
@@ -503,37 +504,37 @@ $('button#quick-email').on('click',function(){
 });
 $('#button-newsletter').on('click', function(e) {
 
-  	e.preventDefault();
+    e.preventDefault();
 
-  	$('#form-newsletter .form-group').removeClass('has-error');
+    $('#form-newsletter .form-group').removeClass('has-error');
 
-  	var element = this;
+    var element = this;
 
     if ($('input[name="cm-tridduh-tridduh"]').val() == '') {
       $('#fieldEmail').parent().addClass('has-error');
     }
 
-  	if ($('select[name="cm-fo-jrayki"]').val() == '') {
-  		$('select[name="cm-fo-jrayki"]').parent().addClass('has-error');
-  	}
+    if ($('select[name="cm-fo-jrayki"]').val() == '') {
+      $('select[name="cm-fo-jrayki"]').parent().addClass('has-error');
+    }
 
-  	if (!$('input[name="cm-fo-jrydjiy"]:checked').length) {
-  		$('input[name="cm-fo-jrydjiy"]').parent().parent().parent().addClass('has-error');
-  	}
+    if (!$('input[name="cm-fo-jrydjiy"]:checked').length) {
+      $('input[name="cm-fo-jrydjiy"]').parent().parent().parent().addClass('has-error');
+    }
 
-  	if (!$('#form-newsletter .has-error').length) {
-  	   $.getJSON('https://opencartlimited.createsend.com/t/r/s/tridduh/?callback=?', $('#form-newsletter').serialize(), function(json) {
-  			if (json.Status === 400) {
-  				alert('Error: ' + json.Message);
-  			} else { // 200
-  				alert('Success: ' + json.Message);
+    if (!$('#form-newsletter .has-error').length) {
+       $.getJSON('https://opencartlimited.createsend.com/t/r/s/tridduh/?callback=?', $('#form-newsletter').serialize(), function(json) {
+        if (json.Status === 400) {
+          alert('Error: ' + json.Message);
+        } else { // 200
+          alert('Success: ' + json.Message);
 
-  				$('#modal-newsletter').modal('hide');
-  				$('#modal-newsletter').remove();
-  			}
-  		});
-  	}
+          $('#modal-newsletter').modal('hide');
+          $('#modal-newsletter').remove();
+        }
+      });
+    }
 });
-//--></script>
+</script>
 </body>
 </html>
