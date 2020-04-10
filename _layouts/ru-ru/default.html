@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="image/favicon.ico">
+<title>{{ page.title }}</title>
+<base href="https://docs.opencart.name/" />
+<meta name="description" content="{{ page.description }}" />
+<link rel="stylesheet" type="text/css" href="https://www.opencart.com/application/view/stylesheet/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="libraries/font-awesome/css/fontawesome-all.min.css" />
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="stylesheet/stylesheet.css" />
+</head>
+<body id="documentation">
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+      <button type="button" data-toggle="collapse" data-target="#navbar-collapse-header" class="navbar-toggle collapsed"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+      <a href="https://www.opencart.com/index.php?route=common/home" target="_blank" class="navbar-brand"><img src="image/opencart-logo.png" title="OpenCart - Open Source Shopping Cart Solution" alt=""></a></div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-header">
+        <ul class="nav navbar-nav">
+          <li><a href="https://www.opencart.com/index.php?route=cms/feature" target="_blank">Особенности</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/demo" target="_blank">Демо</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=marketplace/extension" target="_blank">Магазин дополнений</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/blog" target="_blank">Блог</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/showcase" target="_blank">Витрина</a></li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown">Ресурсы <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://www.opencart.com/index.php?route=cms/download" target="_blank">Скачать</a></li>
+              <li><a href="https://www.opencart.com/index.php?route=cloud/landing" target="_blank">OpenCart Облако</a></li>
+              <li><a href="https://www.opencart.com/index.php?route=support/partner" target="_blank">OpenCart Партнеры</a></li>
+              <li><a href="https://forum.opencart.com" target="_blank">Форумы сообщества</a></li>
+              <li><a href="http://docs.opencart.com" target="_blank">Документация OpenCart</a></li>
+              <li><a href="http://docs.opencart.com/#additional-reading" target="_blank">Книги OpenCart</a></li>
+              <li><a href="https://github.com/opencart/opencart/issues" target="_blank">GitHub баг-трекер</a></li>
+              <li><a href="http://docs.opencart.com/developer/module/" target="_blank">Разработчик</a></li>
+            </ul>
+          </li>
+          <li class="visible-xs"><a href="https://www.opencart.com/index.php?route=account/login" target="_blank">Вход</a></li>
+          <li class="visible-xs"><a href="https://www.opencart.com/index.php?route=account/register" target="_blank">Регистрация</a></li>
+        </ul>
+      <div class="navbar-right hidden-xs">
+        <a href="https://www.opencart.com/index.php?route=account/login" class="btn btn-link navbar-btn" target="_blank">Вход</a>
+        <a href="https://www.opencart.com/index.php?route=account/register" class="btn btn-black navbar-btn" target="_blank">Регистрация</a>
+      </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div id="categories-top-menu" class="container-fluid visible-xs visible-sm">
+  <div class="container">
+    <buttom data-toggle="collapse" data-target="#collapse-menu" class="btn btn-block"><i class="fa fa-indent"></i> Категории</button>
+  </div>
+</div>
+<div class="container visible-xs visible-sm">
+  <div id="collapse-menu" class="collapse">
+    {% include ru-ru/menu.html %}
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm">{% include ru-ru/menu.html %}</div>
+    <div class="col-md-9">
+
+      <div class="pull-right dropdown">
+        <button type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Язык<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a role="button" id="button-en-gb">English</a></li>
+          <li><a role="button" id="button-ru-ru">Русский</a></li>
+          <li><a role="button" id="button-zh-hk">繁體中文</a></li>
+        </ul>
+      </div>
+
+      {{ content }}
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <section>
+        <h5>OpenCart</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.opencart.com/index.php?route=cms/feature">Features</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cloud/landing">OpenCart Cloud</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/showcase">Showcase</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/demo">Demo</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/download">Download</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=marketplace/extension">Marketplace</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=account/login">Login</a></li>
+        </ul>
+        </section>
+      </div>
+      <div class="col-sm-2">
+        <section>
+        <h5>Company</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.opencart.com/index.php?route=support/contact">Contact Us</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/company">About Us</a></li>
+          <li><a href="https://www.opencart.com/index.php?route=cms/information&information_id=2">Extension Developer</a></li>
+        </ul>
+        </section>
+      </div>
+      <div class="col-sm-2">
+        <section>
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://forum.opencart.com">Community Forum</a></li>
+            <li><a href="https://www.opencart.com/index.php?route=support/support">Dedicated Support</a></li>
+            <li><a href="https://www.opencart.com/index.php?route=support/partner">OpenCart Partners</a></li>
+            <li><a href="https://www.opencart.com/index.php?route=support/support">Marketplace Support</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-sm-2">
+        <section>
+          <h5>Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://www.opencart.com/index.php?route=cms/blog">OpenCart Blog</a></li>
+            <li><a href="http://docs.opencart.com">OpenCart Documentation</a></li>
+            <li><a href="http://docs.opencart.com/#additional-reading">OpenCart Books</a></li>
+            <li><a href="https://github.com/opencart/opencart/issues">GitHub Bug Tracker</a></li>
+            <li><a href="http://docs.opencart.com/developer/module/">Developer</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-sm-2 col-md-4">
+        <section id="newsletter">
+          <h5>Newsletter</h5>
+          <p>Subscribe to our newsletters and stay informed of new releases and other OpenCart events.</p>
+          <div class="input-group newsletter">
+            <input type="text" name="newsletter" value="" placeholder="Enter your email address" class="form-control">
+            <div class="input-group-btn">
+              <button type="button" id="quick-email" class="btn btn-primary" data-toggle="modal" data-target="#modal-newsletter"><i class="fa fa-angle-right"></i> </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-6">
+        <div id="copyright">
+          <ul class="list-unstyled">
+            <li class="company-logo"><img src="image/opencart-logo-white.png" alt="opencart" title="OpenCart"></li>
+            <li class="copyright-text">© Copyright 2020 OpenCart</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <div id="social">
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/OpenCart-477182382328323/?ref=aymt_homepage_panel" target="_blank">Facebook</a></li>
+            <li><a href="https://plus.google.com/communities/100813108320137387687" target="_blank">Google Plus</a></li>
+            <li><a href="https://twitter.com/opencart" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="javascript/jquery.1.11.2.min.js"></script>
+<script type="text/javascript" src="javascript/bootstrap.3.3.2.min.js"></script>
+<script type="text/javascript" src="javascript/common.js"></script>
+
+<div id="modal-newsletter" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Sign up to our newsletter</h4>
+      </div>
+      <div class="modal-body">
+        <form id="form-newsletter">
+          <div class="form-group required">
+            <label class="control-label" for="fieldEmail">E-Mail</label>
+            <input type="email" name="cm-tridduh-tridduh" value="" placeholder="E-Mail" id="fieldEmail" class="form-control" />
+          </div>
+          <div class="form-group required">
+            <label class="control-label" for="fieldjrayki">Country</label>
+            <select name="cm-fo-jrayki" id="fieldjrayki" class="form-control">
+              <option value=""></option>
+              <option value="4155563">Afghanistan</option>
+              <option value="4155564">Albania</option>
+              <option value="4155565">Algeria</option>
+              <option value="4155566">American Samoa</option>
+              <option value="4155567">Andorra</option>
+              <option value="4155568">Angola</option>
+              <option value="4155569">Anguilla</option>
+              <option value="4155570">Antigua &amp; Barbuda</option>
+              <option value="4155571">Argentina</option>
+              <option value="4155572">Armenia</option>
+              <option value="4155573">Aruba</option>
+              <option value="4155574">Australia</option>
+              <option value="4155575">Austria</option>
+              <option value="4155576">Azerbaijan</option>
+              <option value="4155577">Azores</option>
+              <option value="4155578">Bahamas</option>
+              <option value="4155579">Bahrain</option>
+              <option value="4155580">Bangladesh</option>
+              <option value="4155581">Barbados</option>
+              <option value="4155582">Belarus</option>
+              <option value="4155583">Belgium</option>
+              <option value="4155584">Belize</option>
+              <option value="4155585">Benin</option>
+              <option value="4155586">Bermuda</option>
+              <option value="4155587">Bhutan</option>
+              <option value="4155588">Bolivia</option>
+              <option value="4155589">Bonaire</option>
+              <option value="4155590">Bosnia &amp; Herzegovina</option>
+              <option value="4155591">Botswana</option>
+              <option value="4155592">Brazil</option>
+              <option value="4155593">British Indian Ocean Ter</option>
+              <option value="4155594">Brunei</option>
+              <option value="4155595">Bulgaria</option>
+              <option value="4155596">Burkina Faso</option>
+              <option value="4155597">Burundi</option>
+              <option value="4155598">Cambodia</option>
+              <option value="4155599">Cameroon</option>
+              <option value="4155600">Canada</option>
+              <option value="4155601">Canary Islands</option>
+              <option value="4155602">Cape Verde</option>
+              <option value="4155603">Cayman Islands</option>
+              <option value="4155604">Central African Republic</option>
+              <option value="4155605">Chad</option>
+              <option value="4155606">Channel Islands</option>
+              <option value="4155607">Chile</option>
+              <option value="4155608">China</option>
+              <option value="4155609">Christmas Island</option>
+              <option value="4155610">Cocos Island</option>
+              <option value="4155611">Colombia</option>
+              <option value="4155612">Comoros</option>
+              <option value="4155613">Congo</option>
+              <option value="4155614">Congo Democratic Rep</option>
+              <option value="4155615">Cook Islands</option>
+              <option value="4155616">Costa Rica</option>
+              <option value="4155617">Cote D&#x27;Ivoire</option>
+              <option value="4155618">Croatia</option>
+              <option value="4155619">Cuba</option>
+              <option value="4155620">Curacao</option>
+              <option value="4155621">Cyprus</option>
+              <option value="4155622">Czech Republic</option>
+              <option value="4155623">Denmark</option>
+              <option value="4155624">Djibouti</option>
+              <option value="4155625">Dominica</option>
+              <option value="4155626">Dominican Republic</option>
+              <option value="4155627">East Timor</option>
+              <option value="4155628">Ecuador</option>
+              <option value="4155629">Egypt</option>
+              <option value="4155630">El Salvador</option>
+              <option value="4155631">Equatorial Guinea</option>
+              <option value="4155632">Eritrea</option>
+              <option value="4155633">Estonia</option>
+              <option value="4155634">Ethiopia</option>
+              <option value="4155635">Falkland Islands</option>
+              <option value="4155636">Faroe Islands</option>
+              <option value="4155637">Fiji</option>
+              <option value="4155638">Finland</option>
+              <option value="4155639">France</option>
+              <option value="4155640">French Guiana</option>
+              <option value="4155641">French Polynesia</option>
+              <option value="4155642">French Southern Ter</option>
+              <option value="4155643">Gabon</option>
+              <option value="4155644">Gambia</option>
+              <option value="4155645">Georgia</option>
+              <option value="4155646">Germany</option>
+              <option value="4155647">Ghana</option>
+              <option value="4155648">Gibraltar</option>
+              <option value="4155649">Great Britain</option>
+              <option value="4155650">Greece</option>
+              <option value="4155651">Greenland</option>
+              <option value="4155652">Grenada</option>
+              <option value="4155653">Guadeloupe</option>
+              <option value="4155654">Guam</option>
+              <option value="4155655">Guatemala</option>
+              <option value="4155656">Guernsey</option>
+              <option value="4155657">Guinea</option>
+              <option value="4155658">Guinea-Bissau</option>
+              <option value="4155659">Guyana</option>
+              <option value="4155660">Haiti</option>
+              <option value="4155661">Honduras</option>
+              <option value="4155662">Hong Kong</option>
+              <option value="4155663">Hungary</option>
+              <option value="4155664">Iceland</option>
+              <option value="4155665">India</option>
+              <option value="4155666">Indonesia</option>
+              <option value="4155667">Iran</option>
+              <option value="4155668">Iraq</option>
+              <option value="4155669">Ireland</option>
+              <option value="4155670">Isle of Man</option>
+              <option value="4155671">Israel</option>
+              <option value="4155672">Italy</option>
+              <option value="4155673">Jamaica</option>
+              <option value="4155674">Japan</option>
+              <option value="4155675">Jersey</option>
+              <option value="4155676">Jordan</option>
+              <option value="4155677">Kazakhstan</option>
+              <option value="4155678">Kenya</option>
+              <option value="4155679">Kiribati</option>
+              <option value="4155680">Korea North</option>
+              <option value="4155681">Korea South</option>
+              <option value="4155682">Kuwait</option>
+              <option value="4155683">Kyrgyzstan</option>
+              <option value="4155684">Laos</option>
+              <option value="4155685">Latvia</option>
+              <option value="4155686">Lebanon</option>
+              <option value="4155687">Lesotho</option>
+              <option value="4155688">Liberia</option>
+              <option value="4155689">Libya</option>
+              <option value="4155690">Liechtenstein</option>
+              <option value="4155691">Lithuania</option>
+              <option value="4155692">Luxembourg</option>
+              <option value="4155693">Macau</option>
+              <option value="4155694">Macedonia</option>
+              <option value="4155695">Madagascar</option>
+              <option value="4155696">Malawi</option>
+              <option value="4155697">Malaysia</option>
+              <option value="4155698">Maldives</option>
+              <option value="4155699">Mali</option>
+              <option value="4155700">Malta</option>
+              <option value="4155701">Marshall Islands</option>
+              <option value="4155702">Martinique</option>
+              <option value="4155703">Mauritania</option>
+              <option value="4155704">Mauritius</option>
+              <option value="4155705">Mayotte</option>
+              <option value="4155706">Mexico</option>
+              <option value="4155707">Midway Islands</option>
+              <option value="4155708">Moldova</option>
+              <option value="4155709">Monaco</option>
+              <option value="4155710">Mongolia</option>
+              <option value="4155711">Montenegro</option>
+              <option value="4155712">Montserrat</option>
+              <option value="4155713">Morocco</option>
+              <option value="4155714">Mozambique</option>
+              <option value="4155715">Myanmar</option>
+              <option value="4155716">Namibia</option>
+              <option value="4155717">Nauru</option>
+              <option value="4155718">Nepal</option>
+              <option value="4155719">Netherland Antilles</option>
+              <option value="4155720">Netherlands</option>
+              <option value="4155721">Nevis</option>
+              <option value="4155722">New Caledonia</option>
+              <option value="4155723">New Zealand</option>
+              <option value="4155724">Nicaragua</option>
+              <option value="4155725">Niger</option>
+              <option value="4155726">Nigeria</option>
+              <option value="4155727">Niue</option>
+              <option value="4155728">Norfolk Island</option>
+              <option value="4155729">Norway</option>
+              <option value="4155730">Oman</option>
+              <option value="4155731">Pakistan</option>
+              <option value="4155732">Palau Island</option>
+              <option value="4155733">Palestine</option>
+              <option value="4155734">Panama</option>
+              <option value="4155735">Papua New Guinea</option>
+              <option value="4155736">Paraguay</option>
+              <option value="4155737">Peru</option>
+              <option value="4155738">Philippines</option>
+              <option value="4155739">Pitcairn Island</option>
+              <option value="4155740">Poland</option>
+              <option value="4155741">Portugal</option>
+              <option value="4155742">Puerto Rico</option>
+              <option value="4155743">Qatar</option>
+              <option value="4155744">Reunion</option>
+              <option value="4155745">Romania</option>
+              <option value="4155746">Russia</option>
+              <option value="4155747">Rwanda</option>
+              <option value="4155748">Saipan</option>
+              <option value="4155749">Samoa</option>
+              <option value="4155750">Samoa American</option>
+              <option value="4155751">San Marino</option>
+              <option value="4155752">Sao Tome &amp; Principe</option>
+              <option value="4155753">Saudi Arabia</option>
+              <option value="4155754">Senegal</option>
+              <option value="4155755">Serbia</option>
+              <option value="4155756">Serbia &amp; Montenegro</option>
+              <option value="4155757">Seychelles</option>
+              <option value="4155758">Sierra Leone</option>
+              <option value="4155759">Singapore</option>
+              <option value="4155760">Slovakia</option>
+              <option value="4155761">Slovenia</option>
+              <option value="4155762">Solomon Islands</option>
+              <option value="4155763">Somalia</option>
+              <option value="4155764">South Africa</option>
+              <option value="4155765">South Sudan</option>
+              <option value="4155766">Spain</option>
+              <option value="4155767">Sri Lanka</option>
+              <option value="4155768">St Barthelemy</option>
+              <option value="4155769">St Eustatius</option>
+              <option value="4155770">St Helena</option>
+              <option value="4155771">St Kitts-Nevis</option>
+              <option value="4155772">St Lucia</option>
+              <option value="4155773">St Maarten</option>
+              <option value="4155774">St Pierre &amp; Miquelon</option>
+              <option value="4155775">St Vincent &amp; Grenadines</option>
+              <option value="4155776">Sudan</option>
+              <option value="4155777">Suriname</option>
+              <option value="4155778">Swaziland</option>
+              <option value="4155779">Sweden</option>
+              <option value="4155780">Switzerland</option>
+              <option value="4155781">Syria</option>
+              <option value="4155782">Tahiti</option>
+              <option value="4155783">Taiwan</option>
+              <option value="4155784">Tajikistan</option>
+              <option value="4155785">Tanzania</option>
+              <option value="4155786">Thailand</option>
+              <option value="4155787">Togo</option>
+              <option value="4155788">Tokelau</option>
+              <option value="4155789">Tonga</option>
+              <option value="4155790">Trinidad &amp; Tobago</option>
+              <option value="4155791">Tunisia</option>
+              <option value="4155792">Turkey</option>
+              <option value="4155793">Turkmenistan</option>
+              <option value="4155794">Turks &amp; Caicos Is</option>
+              <option value="4155795">Tuvalu</option>
+              <option value="4155796">Uganda</option>
+              <option value="4155797">Ukraine</option>
+              <option value="4155798">United Arab Emirates</option>
+              <option value="4155799">United Kingdom</option>
+              <option value="4155800">United States of America</option>
+              <option value="4155801">Uruguay</option>
+              <option value="4155802">Uzbekistan</option>
+              <option value="4155803">Vanuatu</option>
+              <option value="4155804">Vatican City State</option>
+              <option value="4155805">Venezuela</option>
+              <option value="4155806">Vietnam</option>
+              <option value="4155807">Virgin Islands (Brit)</option>
+              <option value="4155808">Virgin Islands (USA)</option>
+              <option value="4155809">Wake Island</option>
+              <option value="4155810">Wallis &amp; Futana Is</option>
+              <option value="4155811">Yemen</option>
+              <option value="4155812">Zambia</option>
+              <option value="4155813">Zimbabwe</option>
+            </select>
+          </div>
+          <div class="form-group required">
+            <label class="control-label">Type</label>
+            <div class="checkbox">
+              <label for="fieldjrydjiy-0">
+                <input type="checkbox" name="cm-fo-jrydjiy" value="4161839" id="fieldjrydjiy-0" />
+                Agency<div class="check"></div></label>
+            </div>
+            <div class="checkbox">
+              <label for="fieldjrydjiy-1">
+                <input type="checkbox" name="cm-fo-jrydjiy" value="4161840" id="fieldjrydjiy-1" />
+                Retailer (sells online)<div class="check"></div></label>
+            </div>
+            <div class="checkbox">
+              <label for="fieldjrydjiy-2">
+                <input type="checkbox" name="cm-fo-jrydjiy" value="4161841" id="fieldjrydjiy-2" />
+                Independent developer<div class="check"></div></label>
+            </div>
+            <div class="checkbox">
+              <label for="fieldjrydjiy-3">
+                <input type="checkbox" name="cm-fo-jrydjiy" value="4161842" id="fieldjrydjiy-3" />
+                Other<div class="check"></div></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Additional subscriptions</label>
+            <div>
+              <div class="checkbox">
+                <label for="fieldjrayky-0">
+                  <input type="checkbox" name="cm-fo-jrayky" value="4155562" id="fieldjrayky-0" />
+                  Selected 3rd party promotions<div class="check"></div></label>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="text-center">
+            <button type="submit" id="button-newsletter" class="btn btn-success btn-lg">Subscribe</button>
+          </div>
+          <br />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$('button#quick-email').on('click',function(){
+  if ($('input[name="newsletter"').val()!='') {
+    $('input[name="cm-tridduh-tridduh"]').val($('input[name="newsletter"').val());
+  }
+});
+$('#button-newsletter').on('click', function(e) {
+
+    e.preventDefault();
+
+    $('#form-newsletter .form-group').removeClass('has-error');
+
+    var element = this;
+
+    if ($('input[name="cm-tridduh-tridduh"]').val() == '') {
+      $('#fieldEmail').parent().addClass('has-error');
+    }
+
+    if ($('select[name="cm-fo-jrayki"]').val() == '') {
+      $('select[name="cm-fo-jrayki"]').parent().addClass('has-error');
+    }
+
+    if (!$('input[name="cm-fo-jrydjiy"]:checked').length) {
+      $('input[name="cm-fo-jrydjiy"]').parent().parent().parent().addClass('has-error');
+    }
+
+    if (!$('#form-newsletter .has-error').length) {
+       $.getJSON('https://opencartlimited.createsend.com/t/r/s/tridduh/?callback=?', $('#form-newsletter').serialize(), function(json) {
+        if (json.Status === 400) {
+          alert('Error: ' + json.Message);
+        } else { // 200
+          alert('Success: ' + json.Message);
+
+          $('#modal-newsletter').modal('hide');
+          $('#modal-newsletter').remove();
+        }
+      });
+    }
+});
+</script>
+</body>
+</html>
