@@ -1,9 +1,3 @@
----
-layout: default
-title: "System Requirements - OpenCart Documentation"
-permalink: en-gb/requirements/
----
-
 <h1>System Requirements</h1>
 
 <p>OpenCart has certain technical requirements for the software to operate properly. The software must be uploaded to a web server, which will make the store publicly available on the web. If you do not already have a domain or web hosting account, those can easily be purchased for an affordable price at various places online.</p>
