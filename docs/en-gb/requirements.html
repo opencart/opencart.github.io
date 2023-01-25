@@ -3,24 +3,31 @@ layout: default
 title: "System Requirements - OpenCart Documentation"
 permalink: en-gb/requirements/
 ---
-<h1>System / Server requirements</h1>
-<h2>System Requirements</h2>
-<p>OpenCart requires certain technical requirements to be met for the store to operate properly. First, a web server must be created to make the OpenCart store publicly available on the web. Domain names and hosting services can easily be purchased for an affordable price.</p>
-<p>When selecting a hosting service, you should check to see that these server requirements are provided and installed on their web servers:</p>
-<p>These extensions must be enabled for OpenCart to install properly on the web server.</p>
+
+<h1>System Requirements</h1>
+
+<p>OpenCart has certain technical requirements for the software to operate properly. The software must be uploaded to a web server, which will make the store publicly available on the web. If you do not already have a domain or web hosting account, those can easily be purchased for an affordable price at various places online.</p>
+
+<p>When selecting a hosting service, an Apache server is recommended. You will also need a database server that supports MySQLi, PDO, or PostgreSQL. (MySQLi is recommended if possible.) Finally, you will need to have the following PHP libraries installed in your PHP configuration:</p>
+
 <ul>
-  <li>Web Server (Apache suggested)</li>
-  <li>PHP 5.4+</li>
-  <li>Database (MySQLi suggested)</li>
+<li>PHP 8.0 or later</li>
+<li>Curl</li>
+<li>GD Library</li>
+<li>Iconv</li>
+<li>Mbstring</li>
+<li>OpenSSL Encrypt</li>
+<li>ZipArchive</li>
+<li>Zlib</li>
 </ul>
-<p><strong>Required PHP libraries / modules</strong></p>
+
+<p>Additionally, you will want to turn on the following PHP settings:</p>
+
 <ul>
-  <li>Curl</li>
-  <li>ZIP</li>
-  <li>Zlib</li>
-  <li>GD Library</li>
-  <li>Mcrypt</li>
-  <li>Mbstrings</li>
-  <li>Xml</li>
+<li>file_uploads</li>
+<li>magic_quotes_gpc</li>
+<li>register_globals</li>
+<li>session_auto_start</li>
 </ul>
-<p>The above PHP extensions should be available by almost all hosting providers, during the install process it will check you have them all enabled. You should contact your hosting provider if one is missing.</p>
+
+<p>During the OpenCart installation process it will check to make sure you have those libraries and settings enabled. Typically they are already enabled by default with most hosting providers. However, if you receive an error warning during installation that one of them is not active, you should contact your hosting provider and ask them to add it to your PHP configuration.</p>
