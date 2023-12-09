@@ -12,7 +12,7 @@ Edit it - and the are no API-key so generate it, by pressing the button and set 
 Next, add you'r IP to list of permitted for API access on another tab.</p>
 
 <p>API is avaliable via URL like</p>
-<pre><code>http://myopencart.example.com/index.php?route=api/cart/add</pre></code>
+<pre><code>https://myopencart.example.com/index.php?route=api/cart/add</pre></code>
 <p>where route is using choose appropriate controller.</p>
 
 <h3>NOTES:</h3>
@@ -33,7 +33,7 @@ key='L3MYyzlYMRL8gBcpCm6CdrVarFUXtPORZkJKP7vgaY8M8EIZWOr3EJxq'
 # Actually, key is 256 character-long
 
 s.post(
-    'http://myopencart.example.com/index.php?route=api/login',
+    'https://myopencart.example.com/index.php?route=api/login',
     data={'username':username, 'key':key}
 ).text
 </code></pre>
@@ -55,7 +55,7 @@ EXAMPLE:</p>
 
 <pre><code>
 session.post(
-    'http://myopencart.example.com/index.php?route=api/shipping/address',
+    'https://myopencart.example.com/index.php?route=api/shipping/address',
     params={'api_token':'768ef1810185cd6562478f61d2'},
     data={
         'username':username,
@@ -76,7 +76,7 @@ EXAMPLE:</p>
 
 <pre><code>
 session.post(
-    'http://myopencart.example.com/index.php?route=api/currency',
+    'https://myopencart.example.com/index.php?route=api/currency',
     params={'api_token':'768ef1810185cd6562478f61d2'},
     data={'currency':'USD'}
 )
@@ -96,7 +96,7 @@ EXAMPLE:</p>
 
 <pre><code>
 session.post(
-    'http://myopencart.example.com/index.php?route=api/cart/add',
+    'https://myopencart.example.com/index.php?route=api/cart/add',
     params={'api_token':'768ef1810185cd6562478f61d2'},
     data={
         'product_id':'100'
@@ -116,7 +116,7 @@ quantity:quantity from table oc_cart<br />
 EXAMPLE:</p>
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/cart/edit',
+    'https://myopencart.example.com/index.php?route=api/cart/edit',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
         'key':'10'
@@ -135,7 +135,7 @@ key:cart_id from table oc_cart<br />
 EXAMPLE:</p>
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/cart/remove',
+    'https://myopencart.example.com/index.php?route=api/cart/remove',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
         'key':'10'
@@ -152,7 +152,7 @@ DATA:<br />
 EXAMPLE:</p>
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/cart/products',
+    'https://myopencart.example.com/index.php?route=api/cart/products',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={}
 )
@@ -171,7 +171,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/coupon',
+    'https://myopencart.example.com/index.php?route=api/coupon',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
         'coupon':'2222'
@@ -195,7 +195,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/customer',
+    'https://myopencart.example.com/index.php?route=api/customer',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     'firstname':'Dear',
@@ -218,7 +218,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/voucher',
+    'https://myopencart.example.com/index.php?route=api/voucher',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
         'voucher':'VOU-7271'
@@ -242,7 +242,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/voucher/add',
+    'https://myopencart.example.com/index.php?route=api/voucher/add',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
         'from_name':'MyOpenCart Admin'
@@ -273,7 +273,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/shipping/address',
+    'https://myopencart.example.com/index.php?route=api/shipping/address',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     'firstname':'Customer',
@@ -296,7 +296,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/shipping/methods',
+    'https://myopencart.example.com/index.php?route=api/shipping/methods',
   params={'api_token':'768ef1810185cd6562478f61d2'},
 )
 </code></pre>
@@ -312,7 +312,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/shipping/method',
+    'https://myopencart.example.com/index.php?route=api/shipping/method',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     'shipping_method':'pickup.pickup'
@@ -332,7 +332,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/reward',
+    'https://myopencart.example.com/index.php?route=api/reward',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     }
@@ -349,7 +349,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/reward/maximum',
+    'https://myopencart.example.com/index.php?route=api/reward/maximum',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     }
@@ -366,7 +366,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/reward/avaliable',
+    'https://myopencart.example.com/index.php?route=api/reward/avaliable',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     }
@@ -385,7 +385,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/order/add',
+    'https://myopencart.example.com/index.php?route=api/order/add',
   params={'api_token':'768ef1810185cd6562478f61d2'},
 )
 </code></pre>
@@ -400,7 +400,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/order/edit',
+    'https://myopencart.example.com/index.php?route=api/order/edit',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     }
@@ -417,7 +417,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/order/delete',
+    'https://myopencart.example.com/index.php?route=api/order/delete',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     }
@@ -434,7 +434,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/order/info',
+    'https://myopencart.example.com/index.php?route=api/order/info',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     }
@@ -451,7 +451,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/order/history',
+    'https://myopencart.example.com/index.php?route=api/order/history',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     }
@@ -476,7 +476,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/payment/address',
+    'https://myopencart.example.com/index.php?route=api/payment/address',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     'firstname':'Customer',
@@ -499,7 +499,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/payment/methods',
+    'https://myopencart.example.com/index.php?route=api/payment/methods',
   params={'api_token':'768ef1810185cd6562478f61d2'},
 )
 </code></pre>
@@ -515,7 +515,7 @@ EXAMPLE:</p>
 
 
 <pre><code>session.post(
-    'http://myopencart.example.com/index.php?route=api/payment/method',
+    'https://myopencart.example.com/index.php?route=api/payment/method',
   params={'api_token':'768ef1810185cd6562478f61d2'},
   data={
     'payment_method':'bank_transfer'
